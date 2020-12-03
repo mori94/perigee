@@ -2,7 +2,6 @@
 import networkx as nx
 from math import radians, cos, sin, asin, sqrt
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 import random
 import data
@@ -12,7 +11,6 @@ import math
 import initnetwork
 import readfiles
 import writefiles
-from scipy.stats import  truncexpon
 test_num       = 1000                   # graph size
 len_of_neigh   = int(sys.argv[3])       # outbound neighbors
 len_of_test    = int(sys.argv[5])       # maximum neighbors may switch each round
@@ -25,17 +23,23 @@ unlimit        = 9999                   # how do we value the unresponded nodes
 sys.setrecursionlimit(19999999)
 
 
+
 # Recursive function on broadcasting. Check whether any neighbors can send a newer block, and boradcast it to the other neighbors
-def broad(broad_node,receive_time_table, LinkDelay, delay, NeighborSets):
+def broad(broad_node, receive_time_table, LinkDelay, delay, NeighborSets):
     new_block=np.zeros(int(NeighborSets[broad_node][0]))
     for node_count in range(int(NeighborSets[broad_node][0])):
-        receive_node_id=int(NeighborSets[broad_node][node_count+1])
-        if receive_time_table[receive_node_id] + LinkDelay[broad_node][receive_node_id] + delay[receive_node_id] < receive_time_table[broad_node]:
-            receive_time_table[broad_node] = receive_time_table[receive_node_id] + LinkDelay[broad_node][receive_node_id] + delay[receive_node_id]
+        # for each neighbor of this broadcast node
+        receive_node_id= int(NeighborSets[broad_node][node_count+1])
+        rx_time = receive_time_table[receive_node_id] + LinkDelay[broad_node][receive_node_id] + delay[receive_node_id]
+        if rx_time < receive_time_table[broad_node]:
+            receive_time_table[broad_node] = rx_time
+            
     for node_count in range(int(NeighborSets[broad_node][0])):
+        # for each neighbor of this broadcast node
         receive_node_id=int(NeighborSets[broad_node][node_count+1])
-        if receive_time_table[broad_node] + LinkDelay[broad_node][receive_node_id] + delay[broad_node] < receive_time_table[receive_node_id]:
-            receive_time_table[receive_node_id] = receive_time_table[broad_node] + LinkDelay[broad_node][receive_node_id] + delay[broad_node]
+        rx_time = receive_time_table[broad_node] + LinkDelay[broad_node][receive_node_id] + delay[broad_node]
+        if rx_time < receive_time_table[receive_node_id]:
+            receive_time_table[receive_node_id] = rx_time
             new_block[node_count]=1
     if sum(new_block)>0:
         for node_count in range(int(NeighborSets[broad_node][0])):

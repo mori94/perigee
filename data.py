@@ -2,7 +2,6 @@
 import networkx as nx
 from math import radians, cos, sin, asin, sqrt
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 import random
 #####

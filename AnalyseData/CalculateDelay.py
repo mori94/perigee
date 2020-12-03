@@ -2,9 +2,19 @@
 import networkx as nx
 from math import radians, cos, sin, asin, sqrt
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
+import sys
 test_num=1000
+
+if len(sys.argv) < 1:
+    print("need round list")
+    sys.exit(0)
+
+data_method = [sys.argv[1]]
+
+round_list = []
+for i in range(2, len(sys.argv)):
+    round_list.append(int(sys.argv[i]))
 
 def delaytopercenthash(hash_table,length_buff,DelayPercantage):
     LengthDict={}
@@ -25,10 +35,9 @@ def delaytopercenthash(hash_table,length_buff,DelayPercantage):
 number=1000
 x=range(number)
 hash=np.zeros(number)
-address="/Users/maoyifan/Desktop/redoband430/"
 
 hash1=np.zeros(number)
-file = open(address+"hash1.txt",'r',errors='replace')
+file = open("../hash1.txt",'r',errors='replace')
 line=file.readlines()
 a=line[0].split("  ")
 for j in range(number):
@@ -36,7 +45,7 @@ for j in range(number):
 file.close()
 
 hash2=np.zeros(number)
-file = open(address+"hash2.txt",'r',errors='replace')
+file = open("../hash2.txt",'r',errors='replace')
 line=file.readlines()
 a=line[0].split("  ")
 for j in range(number):
@@ -44,7 +53,7 @@ for j in range(number):
 file.close()
 
 hash3=np.zeros(number)
-file = open(address+"hash3.txt",'r',errors='replace')
+file = open("../hash3.txt",'r',errors='replace')
 line=file.readlines()
 a=line[0].split("  ")
 for j in range(number):
@@ -88,9 +97,10 @@ low3=low3/9
 fileh.close()
 
 '''
+
 for datacount in [1]:
-    for method in ['subset','localucb']:
-        for r in [0,4,8,16,32,64,128]:
+    for method in data_method: #,'localucb'
+        for r in round_list: #,8,16,32,64,128
             filename="unhash_"+str(method)+"V"+str(datacount)+"Round"+str(r)+".txt"
             file = open(filename,'r',errors='replace')
             top101=np.zeros(number)
@@ -118,35 +128,33 @@ for datacount in [1]:
                 fwl.write(str(mean1_0[i])+'  ')
             fwl.close()
             
-            
-            
-            filename="hash_"+str(method)+"V"+str(datacount)+"Round"+str(r)+".txt"
-            file = open(filename,'r',errors='replace')
-            top101=np.zeros(number)
-            mean1=np.zeros(number)
-            buff=np.zeros(number)
-            line=file.readlines()
-            for i in range(number):
-                a=line[i].split("  ")
-                for j in range(number):
-                    buff[j]=int(float(a[j]))
-                hash_buff=locals()['hash'+str(datacount)]
-                mean1[i]= delaytopercenthash(hash_buff,buff,50)
-            buff=np.zeros(number)
-            for i in range(number):
-                a=line[i].split("  ")
-                for j in range(number):
-                    buff[j]=int(float(a[j]))
-                hash_buff=locals()['hash'+str(datacount)]
-                top101[i]= delaytopercenthash(hash_buff,buff,90)
-            top101_0=sorted(top101)
-            mean1_0=sorted(mean1)
-            file.close()
-            outputfilename="result90"+filename
-            fwl=open(outputfilename,'a')
-            for i in range(test_num):
-                fwl.write(str(top101_0[i])+'  ')
-            fwl.close()
+            # filename="hash_"+str(method)+"V"+str(datacount)+"Round"+str(r)+".txt"
+            # file = open(filename,'r',errors='replace')
+            # top101=np.zeros(number)
+            # mean1=np.zeros(number)
+            # buff=np.zeros(number)
+            # line=file.readlines()
+            # for i in range(number):
+                # a=line[i].split("  ")
+                # for j in range(number):
+                    # buff[j]=int(float(a[j]))
+                # hash_buff=locals()['hash'+str(datacount)]
+                # mean1[i]= delaytopercenthash(hash_buff,buff,50)
+            # buff=np.zeros(number)
+            # for i in range(number):
+                # a=line[i].split("  ")
+                # for j in range(number):
+                    # buff[j]=int(float(a[j]))
+                # hash_buff=locals()['hash'+str(datacount)]
+                # top101[i]= delaytopercenthash(hash_buff,buff,90)
+            # top101_0=sorted(top101)
+            # mean1_0=sorted(mean1)
+            # file.close()
+            # outputfilename="result90"+filename
+            # fwl=open(outputfilename,'a')
+            # for i in range(test_num):
+                # fwl.write(str(top101_0[i])+'  ')
+            # fwl.close()
             '''
             outputfilename="result50"+filename
             fwl=open(outputfilename,'a')

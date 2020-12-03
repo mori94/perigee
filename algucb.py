@@ -2,7 +2,6 @@
 import networkx as nx
 from math import radians, cos, sin, asin, sqrt
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 import random
 import data
@@ -11,7 +10,6 @@ import sys
 import math
 import initnetwork
 import communicate
-from scipy.stats import  truncexpon
 test_num       = 1000                   # graph size
 len_of_neigh   = int(sys.argv[3])       # outbound neighbors
 len_of_test    = int(sys.argv[5])       # maximum neighbors may switch each round
@@ -51,17 +49,17 @@ def UCBelection(G, neighbor, len_of_neigh, len_of_test, NetworkType, LinkDelay, 
         for i in range(test_num):
         # calculte the empircal 90% delays, and estimate the upper and lower confidence bounds based on the responded times. If one nneighbor's lower confidence bound is higher than some neighbors' upper confidence bound, switch it
             
-            #upper_score_table=np.zeros([test_num,len_of_neigh])
-            #lower_score_table=np.zeros([test_num,len_of_neigh])
+            upper_score_table=np.zeros([test_num,len_of_neigh])
+            lower_score_table=np.zeros([test_num,len_of_neigh])
 
-            upper_score_hashTable=dick()
-            lower_score_hashTable=dick()
+            #upper_score_hashTable={}#dick()
+            #lower_score_hashTable={}#dick()
             for j in range(len_of_neigh):
                 hist_score_table[i][j][int(hist_score_length[i][j])] = neighbor_forward_table[i][j][sbcount]
                 hist_score_length[i][j] = hist_score_length[i][j]+1
                 hist_score_table[i][j][0:int(hist_score_length[i][j])] = sorted(hist_score_table[i][j][0:int(hist_score_length[i][j])])
-                upper_score_hashTable.add(hash(upper_score_hashTable),hist_score_table[i][j][int(hist_score_length[i][j]*DelayPercantage/100)] + 125*np.sqrt(math.log(100)/(2*int(hist_score_length[i][j]))))
-                lower_score_hashTable.add(hash(lower_score_hashTable),hist_score_table[i][j][int(hist_score_length[i][j]*DelayPercantage/100)] - 125*np.sqrt(math.log(100)/(2*int(hist_score_length[i][j]))))
+                #upper_score_hashTable.add(hash(upper_score_hashTable),hist_score_table[i][j][int(hist_score_length[i][j]*DelayPercantage/100)] + 125*np.sqrt(math.log(100)/(2*int(hist_score_length[i][j]))))
+                #lower_score_hashTable.add(hash(lower_score_hashTable),hist_score_table[i][j][int(hist_score_length[i][j]*DelayPercantage/100)] - 125*np.sqrt(math.log(100)/(2*int(hist_score_length[i][j]))))
             # check is the node with worst lower confidence bound need to be switchde
             min_upper_score = min(upper_score_table[i])
             max_lower_score = max(lower_score_table[i])

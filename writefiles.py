@@ -2,7 +2,6 @@
 import networkx as nx
 from math import radians, cos, sin, asin, sqrt
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 import random
 import data
@@ -11,7 +10,6 @@ import sys
 import math
 import initnetwork
 import readfiles
-from scipy.stats import  truncexpon
 test_num       = 1000                   # graph size
 len_of_neigh   = int(sys.argv[3])       # outbound neighbors
 len_of_test    = int(sys.argv[5])       # maximum neighbors may switch each round
@@ -27,10 +25,17 @@ sys.setrecursionlimit(19999999)
 # Generate the shortest delay between all node pairs
 def WriteDelay(OutputDelayFile, G, delay):
     fwl=open(OutputDelayFile,'a')
+    print("delay len", len(delay))
     for i in range(test_num):
         length, path=nx.single_source_dijkstra(G, i)
         for j in range(test_num):
-            length[j]=round(length[j]+delay[int(i)]/2-delay[int(j)]/2,6)
+            # TODO why start node delays minus destination delay
+            if len(length) < 1000:
+                print("len change", len(length))
+            length[j]=round(
+                    length[j]
+                    + delay[int(i)]/2
+                    - delay[int(j)]/2, 6)
             fwl.write(str(length[j])+'  ')
         fwl.write('\n')
     fwl.close()
