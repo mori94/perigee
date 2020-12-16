@@ -1,0 +1,61 @@
+#!/bin/bash
+trap kill_batch INT
+
+
+if [ $1 = "help" ]; then
+	echo "./batch_cmd name[string] startSeed[int] endSeed[int] useNodeHash[y/n] roundList[intList]"
+	echo "./batch_cmd two-hop-subset 1 6 y 0 1 2 3"
+	exit 0
+fi
+
+if [ "$#" -le 5 ]; then
+  echo "Error. Argument invalid"
+	exit 0
+fi
+
+function kill_batch() {
+	exit 0
+}
+
+# 1. run experiments with various seeds
+
+record_round="${@:5}"
+max_round=0
+for num in ${record_round}; do
+	if [ $num -gt ${max_round} ] ; then
+		max_round=$num
+	fi
+done
+
+name=$1
+seed_start=$2
+seed_end=$3
+use_node_hash=$4
+for (( i=${seed_start}; i<=${seed_end} ; i++ )); do
+	dirname="AnalyseData/${name}_seed${i}"
+	mkdir $dirname
+	echo $dirname
+	python main.py $i ${use_node_hash} ${max_round}
+	mv AnalyseData/*.txt $dirname
+done
+
+# 2. group experiments
+cd AnalyseData
+group_dir="group_${name}"
+mkdir $group_dir
+
+for seeddir in ${name}_seed*;
+do
+	cmd="mv ${seeddir}  ${group_dir}"
+	$cmd
+done
+
+# Calculate it
+./batch_calculate.sh ${group_dir} ${use_node_hash} ${record_round}
+
+# plot it
+plot_cmd="./plot_fig_set.py ${group_dir} ${record_round}"
+echo ${plot_cmd}
+${plot_cmd}
+open "${group_dir}/result.png"
+

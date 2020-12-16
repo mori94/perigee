@@ -1,7 +1,21 @@
 import sys
+from config import MISMATCH
+import numpy as np
+import random 
 
-def print_debug(i, node, v, peer):
-    if round(node.views[v], 5) < 0:
+def get_broadcast_node(node_hash):
+    hash_sum = np.sum(node_hash)
+    r = random.random() * hash_sum
+    for u, hash_value in enumerate(node_hash):
+        if r > hash_value:
+            r -= hash_value
+        else:
+            return u
+    return len(node_hash) - 1
+
+def print_debug(i, node, v, peer, ld):
+    if node.views[v] <  -1 * MISMATCH:
+        print(node.views[v] )
         print('node',i, 'from', node.from_whom, 'recv_time', node.recv_time)
         print('peer', v, 'recv_time', peer.recv_time)
         print('ld[peer][node]', ld[v][i])
@@ -14,8 +28,15 @@ def print_debug(i, node, v, peer):
         print()
         sys.exit(0)
 
-# ld is link delau, bd is broadcasting node
-def broadcast_msg(u, nodes, ld):
+
+def fuzzy_greater(a, b, mismatch):
+    if a - b > mismatch:
+        return True 
+    else:
+        return False 
+
+# ld is link delau, bd is broadcasting node, nh is node_hash
+def broadcast_msg(u, nodes, ld, nh):
     # precondition
     for i, node in nodes.items():
         node.received = False
@@ -43,15 +64,18 @@ def broadcast_msg(u, nodes, ld):
                 broad_nodes.append(v)
             else:
                 t = peer.recv_time + ld[v][u] + node.node_delay
-                if round(node.recv_time, 5) > round(t, 5):
+                if fuzzy_greater(node.recv_time, t, MISMATCH):
                     node.recv_time = t
                     node.from_whom = v
                     is_updated = True
         if is_updated:
             for v in node.get_peers():
                 peer = nodes[v]
-                if (round(peer.recv_time, 5) > 
-                        round(node.recv_time + ld[u][v] + peer.node_delay, 5)):
+                if fuzzy_greater(
+                    peer.recv_time, 
+                    node.recv_time + ld[u][v] + peer.node_delay,
+                    MISMATCH
+                ):
                     broad_nodes.insert(0, v)
 
     # find relative times for each node
@@ -61,7 +85,7 @@ def broadcast_msg(u, nodes, ld):
             node.views[v] = peer.recv_time + node.node_delay + ld[v][i] - node.recv_time
             node.views_hist[v].append(node.views[v])
             # safety check
-            print_debug(i, node, v, peer)
+            print_debug(i, node, v, peer, ld)
 
             # make sure the node actually transmit to me
             # if node.views[v] >= ld[i][v] + ld[v][i] + node.node_delay + peer.node_delay:

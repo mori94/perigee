@@ -10,28 +10,17 @@ import sys
 import math
 import initnetwork
 import readfiles
-test_num       = 1000                   # graph size
-len_of_neigh   = int(sys.argv[3])       # outbound neighbors
-len_of_test    = int(sys.argv[5])       # maximum neighbors may switch each round
-len_of_subround= 100                    # how may subround under local simulation
-#IncomingLimit  = 10                    # maximum incoming neighbors
-RoundNum       = 130                    # how many rounds in simulation
-DelayPercantage= 90                     # how do we score the performance of individual node
-pathunlimit    = 2000                   # default delay between node during shortest path
-unlimit        = 9999                   # how do we value the unresponded nodes
-sys.setrecursionlimit(19999999)
 
 
 # Generate the shortest delay between all node pairs
-def WriteDelay(OutputDelayFile, G, delay):
+def WriteDelay(OutputDelayFile, G, delay, num_node):
     fwl=open(OutputDelayFile,'a')
-    print("delay len", len(delay))
-    for i in range(test_num):
+    for i in range(num_node):
         length, path=nx.single_source_dijkstra(G, i)
-        for j in range(test_num):
+        for j in range(num_node):
             # TODO why start node delays minus destination delay
-            if len(length) < 1000:
-                print("len change", len(length))
+            # if len(length) < 1000:
+                # print("len change", len(length))
             length[j]=round(
                     length[j]
                     + delay[int(i)]/2
@@ -48,7 +37,7 @@ def WriteConnection(OutputDelayFile, G, delay, neighbor):
     fwl.close()
 
 
-def write(OutputDelayFile, G, NodeDelay,delay, neighbor):
-    WriteDelay(OutputDelayFile, G, NodeDelay)
+def write(OutputDelayFile, G, NodeDelay,delay, neighbor, num_node):
+    WriteDelay(OutputDelayFile, G, NodeDelay, num_node)
     #WriteConnection(OutputDelayFile, G, NodeDelay, neighbor)
        
