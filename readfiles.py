@@ -19,7 +19,8 @@ def ReadWeightFile(num_node):
     filew=open(WeightFileName,'r',errors='replace')
     line=filew.readlines()
     for i in range(num_node):
-        a=line[i].split("  ")
+        a=line[i].strip().split("  ")
+        # print(a)
         for j in range(num_node):
             LinkDelay[i][j]=a[j]
     filew.close()

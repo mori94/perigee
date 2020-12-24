@@ -49,13 +49,17 @@ num_out   = out_lim       # outbound neighbor
 # # sys.exit(0)
 start = time.time()
 
-# initnetwork.reduce_link_latency(num_node, int(0.2*num_node), LinkDelay)
+if use_reduce_link:
 
-
+    print('USE reduced link latency')
+    initnetwork.reduce_link_latency(num_node, int(0.2*num_node), LinkDelay)
 
 use_node_hash = sys.argv[2]=='y'
-RoundNum = int(sys.argv[3]) +1
-set1 = [i for i in range(RoundNum)]
+
+set1 = [int(i) for i in sys.argv[3:]]
+print(set1)
+
+RoundNum = max(set1) +1
 
 nodes = {}
 for i in range(num_node):
@@ -72,13 +76,22 @@ for i in range(num_node):
         # num_rand
     )
 
+node_schedules = [i for i in range(num_node)]
+schedule_count = 0
+
 # create_random_neighbor(nodes)
 update_ins_for_all_nodes(nodes)
 G = initnetwork.construct_graph(nodes, LinkDelay)
+prev_time = time.time()
 
 for epoch in range(RoundNum):
     # print("round num", epoch)
     if (epoch in set1):
+        curr_time = time.time()
+        elapsed = curr_time - prev_time
+        prev_time = curr_time
+        print("Recording", epoch, "using time", elapsed)
+
         OutputDelayFile = ("AnalyseData/" + 
             str(network_type)+'_' + 
             str(method)+ 
@@ -93,32 +106,29 @@ for epoch in range(RoundNum):
         continue
     # ucb algorithm
     elif method == 'ucb':
-        # initiat hist_score_tales, maintain the historical performance of all the connected nodes
-        if epoch==0:
-            total_round = len_of_subround*RoundNum
-            hist_score_table = np.zeros([num_node, num_out, total_round])
-            hist_score_length = np.zeros([num_node, num_out])
-        [new_neighbor, hist_score_table, hist_score_length]= algucb.UCBelection(
-                G, 
-                OutNeighbor, 
-                num_out, 
-                num_switch, 
-                network_type, 
-                LinkDelay, 
-                NodeDelay, 
-                IncomingLimit, 
-                NodeHash, 
-                hist_score_table, 
-                hist_score_length, 
-                NeighborSets, 
-                IncomingNeighbor)
+        pass
     # subset algorithm
     elif str(method) == 'subset':
-        if use_node_hash:
-            print("USE node hash")
-            new_neighbor = new_subset.new_subset_complete(nodes, LinkDelay, num_subround, NodeHash)
+        if use_sequential:
+            
+            update_nodes = [node_schedules[schedule_count % num_node]]
+            new_neighbor = new_subset.new_subset_two_hop_sequential(
+                nodes, 
+                LinkDelay, 
+                num_subround, 
+                None, 
+                update_nodes   
+            )
+            schedule_count += 1
         else:
-            new_neighbor = new_subset.new_subset_two_hop(nodes, LinkDelay, num_subround, None)
+            if use_node_hash:
+                print("USE node hash")
+                new_neighbor = new_subset.new_subset_two_hop(nodes, LinkDelay, num_subround, NodeHash)
+            else:
+                new_neighbor = new_subset.new_subset_two_hop(nodes, LinkDelay, num_subround, None)
+
+        
+
         update_conn_for_all_nodes(nodes, new_neighbor)
         G = initnetwork.construct_graph(nodes, LinkDelay)
         OutNeighbor = get_OutNeighbor(nodes, out_lim)

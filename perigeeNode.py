@@ -91,6 +91,7 @@ class Node:
         # every epoch, a msg is broadcasted and hence values equals to number of message
         self.views = {} # key is peer id, value is current relative time 
         self.views_hist = defaultdict(list) # key is peer id, value is a list of time for all sub round
+        self.prev_score = {} #key is combination, value is previous score
 
         self.num_in_request = 0
 

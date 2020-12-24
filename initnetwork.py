@@ -25,6 +25,9 @@ def construct_graph(nodes, ld):
 
     return G
 
+def construct_graph_revise(nodes, ld):
+    pass
+
 def reduce_link_latency(num_node, num_low_latency, ld):
     print("USE reduced latency network")
     all_nodes = [i for i in range(num_node)]
@@ -59,7 +62,7 @@ def GenerateInitialGraph():
 def GenerateInitialDelay(num_node):
     delay=[0 for i in range(num_node)]
     for i in range(num_node):
-        buff=np.random.normal(50, 4.5)
+        buff= np.random.normal(50, 4.5)
         delay[i]=round(buff,6)
     return(delay)
 
