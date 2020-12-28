@@ -1,20 +1,8 @@
-#!/usr/bin/env python
 import networkx as nx
-from math import radians, cos, sin, asin, sqrt
-import numpy as np
-import matplotlib.pyplot as plt
-import random
-import data
-import PathDelay
-import sys
-import math
-import initnetwork
-import readfiles
-
 
 # Generate the shortest delay between all node pairs
 def WriteDelay(OutputDelayFile, G, delay, num_node):
-    fwl=open(OutputDelayFile,'a')
+    fwl=open(OutputDelayFile,'w')
     for i in range(num_node):
         length, path=nx.single_source_dijkstra(G, i)
         for j in range(num_node):
@@ -37,7 +25,7 @@ def WriteConnection(OutputDelayFile, G, delay, neighbor):
     fwl.close()
 
 
-def write(OutputDelayFile, G, NodeDelay,delay, neighbor, num_node):
+def write(OutputDelayFile, G, NodeDelay, neighbor, num_node):
     WriteDelay(OutputDelayFile, G, NodeDelay, num_node)
     #WriteConnection(OutputDelayFile, G, NodeDelay, neighbor)
        

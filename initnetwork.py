@@ -5,7 +5,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 import data
-import PathDelay
 import sys
 import math
 import readfiles
@@ -22,14 +21,12 @@ def construct_graph(nodes, ld):
             delay = ld[i][u] + node.node_delay/2 + nodes[u].node_delay/2
             assert(i != u)
             G.add_edge(i, u, weight=delay)
-
     return G
 
 def construct_graph_revise(nodes, ld):
     pass
 
 def reduce_link_latency(num_node, num_low_latency, ld):
-    print("USE reduced latency network")
     all_nodes = [i for i in range(num_node)]
     random.shuffle(all_nodes)
     all_nodes = list(all_nodes)

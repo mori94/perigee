@@ -1,0 +1,4816 @@
+seed num 1
+[0, 1, 2, 3, 4, 8]
+Recording 0 using time 3.814697265625e-06
+847  cannot add 2hop 118 reach conn bound
+60  cannot add 2hop 350 reach conn bound
+72  cannot add 2hop 612 reach conn bound
+643  cannot add 2hop 643 reach conn bound
+986  cannot add 2hop 555 reach conn bound
+684  cannot add 2hop 35 reach conn bound
+475  cannot add 2hop 656 reach conn bound
+761  cannot add 2hop 761 reach conn bound
+9  cannot add 2hop 583 reach conn bound
+895  cannot add 2hop 524 reach conn bound
+966  cannot add 2hop 110 reach conn bound
+417  cannot add 2hop 423 reach conn bound
+259  cannot add 2hop 843 reach conn bound
+27  cannot add 2hop 27 reach conn bound
+180  cannot add 2hop 738 reach conn bound
+285  cannot add 2hop 514 reach conn bound
+248  cannot add 2hop 982 reach conn bound
+933  cannot add 2hop 908 reach conn bound
+160  cannot add 2hop 22 reach conn bound
+858  cannot add 2hop 144 reach conn bound
+198  cannot add 2hop 982 reach conn bound
+217  cannot add 2hop 217 reach conn bound
+150  cannot add 2hop 233 reach conn bound
+745  cannot add 2hop 139 reach conn bound
+728  cannot add 2hop 259 reach conn bound
+204  cannot add 2hop 406 reach conn bound
+670  cannot add 2hop 485 reach conn bound
+523  cannot add 2hop 402 reach conn bound
+208  cannot add 2hop 42 reach conn bound
+429  cannot add 2hop 120 reach conn bound
+830  cannot add 2hop 625 reach conn bound
+33  cannot add 2hop 358 reach conn bound
+532  cannot add 2hop 532 reach conn bound
+132  cannot add 2hop 207 reach conn bound
+982  cannot add 2hop 643 reach conn bound
+69  cannot add 2hop 823 reach conn bound
+69  cannot add 2hop 686 reach conn bound
+957  cannot add 2hop 409 reach conn bound
+586  cannot add 2hop 466 reach conn bound
+226  cannot add 2hop 35 reach conn bound
+165  cannot add 2hop 620 reach conn bound
+221  cannot add 2hop 990 reach conn bound
+Recording 1 using time 42.539855003356934
+539  cannot add 2hop 438 reach conn bound
+232  cannot add 2hop 875 reach conn bound
+891  cannot add 2hop 906 reach conn bound
+784  cannot add 2hop 113 reach conn bound
+688  cannot add 2hop 765 reach conn bound
+564  cannot add 2hop 507 reach conn bound
+202  cannot add 2hop 202 reach conn bound
+412  cannot add 2hop 590 reach conn bound
+690  cannot add 2hop 207 reach conn bound
+690  cannot add 2hop 992 reach conn bound
+839  cannot add 2hop 53 reach conn bound
+562  cannot add 2hop 387 reach conn bound
+562  cannot add 2hop 217 reach conn bound
+562  cannot add 2hop 562 reach conn bound
+543  cannot add 2hop 289 reach conn bound
+815  cannot add 2hop 467 reach conn bound
+883  cannot add 2hop 145 reach conn bound
+200  cannot add 2hop 477 reach conn bound
+7  cannot add 2hop 488 reach conn bound
+665  cannot add 2hop 574 reach conn bound
+101  cannot add 2hop 535 reach conn bound
+999  cannot add 2hop 934 reach conn bound
+93  cannot add 2hop 469 reach conn bound
+361  cannot add 2hop 742 reach conn bound
+311  cannot add 2hop 945 reach conn bound
+716  cannot add 2hop 979 reach conn bound
+22  cannot add 2hop 342 reach conn bound
+388  cannot add 2hop 866 reach conn bound
+873  cannot add 2hop 765 reach conn bound
+924  cannot add 2hop 361 reach conn bound
+365  cannot add 2hop 590 reach conn bound
+509  cannot add 2hop 320 reach conn bound
+509  cannot add 2hop 904 reach conn bound
+221  cannot add 2hop 445 reach conn bound
+346  cannot add 2hop 489 reach conn bound
+16  cannot add 2hop 426 reach conn bound
+683  cannot add 2hop 391 reach conn bound
+596  cannot add 2hop 390 reach conn bound
+375  cannot add 2hop 864 reach conn bound
+479  cannot add 2hop 982 reach conn bound
+299  cannot add 2hop 402 reach conn bound
+228  cannot add 2hop 120 reach conn bound
+879  cannot add 2hop 836 reach conn bound
+148  cannot add 2hop 539 reach conn bound
+813  cannot add 2hop 458 reach conn bound
+288  cannot add 2hop 395 reach conn bound
+519  cannot add 2hop 737 reach conn bound
+519  cannot add 2hop 868 reach conn bound
+617  cannot add 2hop 505 reach conn bound
+916  cannot add 2hop 294 reach conn bound
+600  cannot add 2hop 644 reach conn bound
+600  cannot add 2hop 485 reach conn bound
+80  cannot add 2hop 982 reach conn bound
+684  cannot add 2hop 823 reach conn bound
+10  cannot add 2hop 888 reach conn bound
+10  cannot add 2hop 982 reach conn bound
+969  cannot add 2hop 510 reach conn bound
+242  cannot add 2hop 245 reach conn bound
+850  cannot add 2hop 133 reach conn bound
+707  cannot add 2hop 564 reach conn bound
+357  cannot add 2hop 311 reach conn bound
+575  cannot add 2hop 596 reach conn bound
+443  cannot add 2hop 835 reach conn bound
+59  cannot add 2hop 207 reach conn bound
+845  cannot add 2hop 888 reach conn bound
+737  cannot add 2hop 894 reach conn bound
+128  cannot add 2hop 783 reach conn bound
+445  cannot add 2hop 445 reach conn bound
+44  cannot add 2hop 374 reach conn bound
+260  cannot add 2hop 719 reach conn bound
+54  cannot add 2hop 997 reach conn bound
+84  cannot add 2hop 948 reach conn bound
+84  cannot add 2hop 284 reach conn bound
+275  cannot add 2hop 653 reach conn bound
+572  cannot add 2hop 428 reach conn bound
+878  cannot add 2hop 107 reach conn bound
+41  cannot add 2hop 998 reach conn bound
+289  cannot add 2hop 651 reach conn bound
+571  cannot add 2hop 8 reach conn bound
+376  cannot add 2hop 294 reach conn bound
+697  cannot add 2hop 109 reach conn bound
+966  cannot add 2hop 110 reach conn bound
+768  cannot add 2hop 241 reach conn bound
+967  cannot add 2hop 8 reach conn bound
+485  cannot add 2hop 550 reach conn bound
+32  cannot add 2hop 643 reach conn bound
+71  cannot add 2hop 830 reach conn bound
+409  cannot add 2hop 134 reach conn bound
+204  cannot add 2hop 428 reach conn bound
+534  cannot add 2hop 24 reach conn bound
+396  cannot add 2hop 458 reach conn bound
+753  cannot add 2hop 705 reach conn bound
+674  cannot add 2hop 765 reach conn bound
+525  cannot add 2hop 865 reach conn bound
+525  cannot add 2hop 318 reach conn bound
+162  cannot add 2hop 991 reach conn bound
+354  cannot add 2hop 821 reach conn bound
+896  cannot add 2hop 970 reach conn bound
+896  cannot add 2hop 320 reach conn bound
+896  cannot add 2hop 566 reach conn bound
+526  cannot add 2hop 220 reach conn bound
+231  cannot add 2hop 821 reach conn bound
+782  cannot add 2hop 850 reach conn bound
+793  cannot add 2hop 342 reach conn bound
+493  cannot add 2hop 493 reach conn bound
+461  cannot add 2hop 510 reach conn bound
+341  cannot add 2hop 129 reach conn bound
+235  cannot add 2hop 183 reach conn bound
+962  cannot add 2hop 949 reach conn bound
+953  cannot add 2hop 936 reach conn bound
+13  cannot add 2hop 389 reach conn bound
+734  cannot add 2hop 647 reach conn bound
+940  cannot add 2hop 887 reach conn bound
+500  cannot add 2hop 311 reach conn bound
+706  cannot add 2hop 888 reach conn bound
+705  cannot add 2hop 477 reach conn bound
+895  cannot add 2hop 221 reach conn bound
+762  cannot add 2hop 765 reach conn bound
+869  cannot add 2hop 549 reach conn bound
+844  cannot add 2hop 651 reach conn bound
+836  cannot add 2hop 615 reach conn bound
+836  cannot add 2hop 836 reach conn bound
+836  cannot add 2hop 438 reach conn bound
+836  cannot add 2hop 765 reach conn bound
+798  cannot add 2hop 485 reach conn bound
+857  cannot add 2hop 311 reach conn bound
+206  cannot add 2hop 514 reach conn bound
+165  cannot add 2hop 587 reach conn bound
+317  cannot add 2hop 952 reach conn bound
+60  cannot add 2hop 94 reach conn bound
+60  cannot add 2hop 970 reach conn bound
+296  cannot add 2hop 554 reach conn bound
+729  cannot add 2hop 418 reach conn bound
+653  cannot add 2hop 842 reach conn bound
+129  cannot add 2hop 129 reach conn bound
+983  cannot add 2hop 837 reach conn bound
+227  cannot add 2hop 499 reach conn bound
+877  cannot add 2hop 390 reach conn bound
+381  cannot add 2hop 619 reach conn bound
+381  cannot add 2hop 252 reach conn bound
+374  cannot add 2hop 95 reach conn bound
+751  cannot add 2hop 581 reach conn bound
+69  cannot add 2hop 701 reach conn bound
+345  cannot add 2hop 83 reach conn bound
+164  cannot add 2hop 114 reach conn bound
+213  cannot add 2hop 32 reach conn bound
+786  cannot add 2hop 465 reach conn bound
+561  cannot add 2hop 69 reach conn bound
+882  cannot add 2hop 477 reach conn bound
+882  cannot add 2hop 777 reach conn bound
+134  cannot add 2hop 690 reach conn bound
+471  cannot add 2hop 765 reach conn bound
+392  cannot add 2hop 970 reach conn bound
+908  cannot add 2hop 968 reach conn bound
+670  cannot add 2hop 643 reach conn bound
+426  cannot add 2hop 24 reach conn bound
+457  cannot add 2hop 535 reach conn bound
+991  cannot add 2hop 991 reach conn bound
+900  cannot add 2hop 121 reach conn bound
+723  cannot add 2hop 149 reach conn bound
+842  cannot add 2hop 842 reach conn bound
+435  cannot add 2hop 765 reach conn bound
+671  cannot add 2hop 940 reach conn bound
+310  cannot add 2hop 982 reach conn bound
+Recording 2 using time 36.09139585494995
+141  cannot add 2hop 427 reach conn bound
+183  cannot add 2hop 948 reach conn bound
+668  cannot add 2hop 311 reach conn bound
+869  cannot add 2hop 544 reach conn bound
+302  cannot add 2hop 434 reach conn bound
+612  cannot add 2hop 569 reach conn bound
+778  cannot add 2hop 643 reach conn bound
+957  cannot add 2hop 539 reach conn bound
+816  cannot add 2hop 568 reach conn bound
+807  cannot add 2hop 592 reach conn bound
+608  cannot add 2hop 948 reach conn bound
+933  cannot add 2hop 550 reach conn bound
+367  cannot add 2hop 86 reach conn bound
+376  cannot add 2hop 582 reach conn bound
+980  cannot add 2hop 822 reach conn bound
+995  cannot add 2hop 842 reach conn bound
+382  cannot add 2hop 630 reach conn bound
+481  cannot add 2hop 839 reach conn bound
+447  cannot add 2hop 415 reach conn bound
+756  cannot add 2hop 686 reach conn bound
+415  cannot add 2hop 873 reach conn bound
+982  cannot add 2hop 842 reach conn bound
+776  cannot add 2hop 776 reach conn bound
+248  cannot add 2hop 841 reach conn bound
+556  cannot add 2hop 440 reach conn bound
+104  cannot add 2hop 519 reach conn bound
+397  cannot add 2hop 625 reach conn bound
+397  cannot add 2hop 538 reach conn bound
+698  cannot add 2hop 189 reach conn bound
+389  cannot add 2hop 521 reach conn bound
+347  cannot add 2hop 921 reach conn bound
+999  cannot add 2hop 443 reach conn bound
+560  cannot add 2hop 686 reach conn bound
+838  cannot add 2hop 446 reach conn bound
+381  cannot add 2hop 474 reach conn bound
+596  cannot add 2hop 390 reach conn bound
+294  cannot add 2hop 842 reach conn bound
+539  cannot add 2hop 438 reach conn bound
+292  cannot add 2hop 263 reach conn bound
+395  cannot add 2hop 395 reach conn bound
+463  cannot add 2hop 414 reach conn bound
+438  cannot add 2hop 763 reach conn bound
+613  cannot add 2hop 800 reach conn bound
+258  cannot add 2hop 803 reach conn bound
+137  cannot add 2hop 575 reach conn bound
+555  cannot add 2hop 505 reach conn bound
+544  cannot add 2hop 339 reach conn bound
+879  cannot add 2hop 75 reach conn bound
+374  cannot add 2hop 95 reach conn bound
+594  cannot add 2hop 594 reach conn bound
+76  cannot add 2hop 666 reach conn bound
+721  cannot add 2hop 600 reach conn bound
+312  cannot add 2hop 361 reach conn bound
+644  cannot add 2hop 836 reach conn bound
+878  cannot add 2hop 972 reach conn bound
+647  cannot add 2hop 839 reach conn bound
+632  cannot add 2hop 688 reach conn bound
+479  cannot add 2hop 51 reach conn bound
+533  cannot add 2hop 493 reach conn bound
+33  cannot add 2hop 720 reach conn bound
+75  cannot add 2hop 375 reach conn bound
+998  cannot add 2hop 342 reach conn bound
+387  cannot add 2hop 278 reach conn bound
+881  cannot add 2hop 800 reach conn bound
+906  cannot add 2hop 836 reach conn bound
+296  cannot add 2hop 977 reach conn bound
+525  cannot add 2hop 51 reach conn bound
+461  cannot add 2hop 895 reach conn bound
+798  cannot add 2hop 71 reach conn bound
+168  cannot add 2hop 33 reach conn bound
+904  cannot add 2hop 615 reach conn bound
+21  cannot add 2hop 380 reach conn bound
+271  cannot add 2hop 502 reach conn bound
+917  cannot add 2hop 283 reach conn bound
+491  cannot add 2hop 207 reach conn bound
+212  cannot add 2hop 761 reach conn bound
+922  cannot add 2hop 8 reach conn bound
+713  cannot add 2hop 342 reach conn bound
+520  cannot add 2hop 828 reach conn bound
+363  cannot add 2hop 555 reach conn bound
+777  cannot add 2hop 247 reach conn bound
+408  cannot add 2hop 821 reach conn bound
+772  cannot add 2hop 446 reach conn bound
+243  cannot add 2hop 435 reach conn bound
+991  cannot add 2hop 550 reach conn bound
+979  cannot add 2hop 774 reach conn bound
+422  cannot add 2hop 547 reach conn bound
+230  cannot add 2hop 666 reach conn bound
+617  cannot add 2hop 603 reach conn bound
+89  cannot add 2hop 520 reach conn bound
+475  cannot add 2hop 314 reach conn bound
+943  cannot add 2hop 95 reach conn bound
+465  cannot add 2hop 188 reach conn bound
+345  cannot add 2hop 184 reach conn bound
+611  cannot add 2hop 446 reach conn bound
+60  cannot add 2hop 970 reach conn bound
+60  cannot add 2hop 71 reach conn bound
+57  cannot add 2hop 282 reach conn bound
+432  cannot add 2hop 414 reach conn bound
+614  cannot add 2hop 324 reach conn bound
+969  cannot add 2hop 248 reach conn bound
+411  cannot add 2hop 902 reach conn bound
+142  cannot add 2hop 382 reach conn bound
+486  cannot add 2hop 127 reach conn bound
+924  cannot add 2hop 860 reach conn bound
+921  cannot add 2hop 320 reach conn bound
+239  cannot add 2hop 679 reach conn bound
+281  cannot add 2hop 664 reach conn bound
+281  cannot add 2hop 711 reach conn bound
+96  cannot add 2hop 323 reach conn bound
+96  cannot add 2hop 584 reach conn bound
+797  cannot add 2hop 53 reach conn bound
+723  cannot add 2hop 149 reach conn bound
+127  cannot add 2hop 80 reach conn bound
+800  cannot add 2hop 327 reach conn bound
+918  cannot add 2hop 697 reach conn bound
+996  cannot add 2hop 885 reach conn bound
+773  cannot add 2hop 888 reach conn bound
+773  cannot add 2hop 115 reach conn bound
+434  cannot add 2hop 582 reach conn bound
+434  cannot add 2hop 208 reach conn bound
+945  cannot add 2hop 474 reach conn bound
+589  cannot add 2hop 722 reach conn bound
+679  cannot add 2hop 398 reach conn bound
+731  cannot add 2hop 390 reach conn bound
+609  cannot add 2hop 493 reach conn bound
+627  cannot add 2hop 627 reach conn bound
+283  cannot add 2hop 545 reach conn bound
+196  cannot add 2hop 342 reach conn bound
+372  cannot add 2hop 247 reach conn bound
+770  cannot add 2hop 440 reach conn bound
+365  cannot add 2hop 398 reach conn bound
+450  cannot add 2hop 311 reach conn bound
+932  cannot add 2hop 821 reach conn bound
+842  cannot add 2hop 802 reach conn bound
+177  cannot add 2hop 401 reach conn bound
+14  cannot add 2hop 466 reach conn bound
+685  cannot add 2hop 178 selected
+7  cannot add 2hop 405 reach conn bound
+974  cannot add 2hop 896 reach conn bound
+532  cannot add 2hop 460 reach conn bound
+950  cannot add 2hop 8 reach conn bound
+472  cannot add 2hop 323 reach conn bound
+872  cannot add 2hop 178 selected
+872  cannot add 2hop 777 reach conn bound
+928  cannot add 2hop 535 reach conn bound
+436  cannot add 2hop 668 reach conn bound
+559  cannot add 2hop 25 reach conn bound
+223  cannot add 2hop 138 reach conn bound
+153  cannot add 2hop 927 reach conn bound
+717  cannot add 2hop 647 reach conn bound
+691  cannot add 2hop 535 reach conn bound
+583  cannot add 2hop 935 reach conn bound
+118  cannot add 2hop 404 reach conn bound
+867  cannot add 2hop 538 reach conn bound
+403  cannot add 2hop 374 reach conn bound
+403  cannot add 2hop 374 reach conn bound
+603  cannot add 2hop 843 reach conn bound
+603  cannot add 2hop 423 reach conn bound
+360  cannot add 2hop 178 selected
+581  cannot add 2hop 390 selected
+278  cannot add 2hop 763 reach conn bound
+102  cannot add 2hop 178 selected
+203  cannot add 2hop 896 reach conn bound
+725  cannot add 2hop 835 reach conn bound
+595  cannot add 2hop 89 reach conn bound
+301  cannot add 2hop 390 selected
+710  cannot add 2hop 535 reach conn bound
+241  cannot add 2hop 462 reach conn bound
+762  cannot add 2hop 390 selected
+762  cannot add 2hop 213 reach conn bound
+473  cannot add 2hop 208 reach conn bound
+473  cannot add 2hop 446 selected
+385  cannot add 2hop 998 reach conn bound
+208  cannot add 2hop 320 reach conn bound
+973  cannot add 2hop 324 reach conn bound
+265  cannot add 2hop 776 reach conn bound
+219  cannot add 2hop 72 reach conn bound
+865  cannot add 2hop 207 selected
+884  cannot add 2hop 446 selected
+911  cannot add 2hop 390 selected
+911  cannot add 2hop 479 reach conn bound
+194  cannot add 2hop 207 selected
+738  cannot add 2hop 178 selected
+820  cannot add 2hop 326 selected
+885  cannot add 2hop 519 reach conn bound
+414  cannot add 2hop 326 selected
+414  cannot add 2hop 819 reach conn bound
+414  cannot add 2hop 666 reach conn bound
+100  cannot add 2hop 446 selected
+425  cannot add 2hop 783 reach conn bound
+380  cannot add 2hop 380 reach conn bound
+144  cannot add 2hop 81 reach conn bound
+225  cannot add 2hop 378 reach conn bound
+12  cannot add 2hop 2 reach conn bound
+997  cannot add 2hop 307 reach conn bound
+997  cannot add 2hop 129 selected
+658  cannot add 2hop 842 reach conn bound
+988  cannot add 2hop 570 reach conn bound
+262  cannot add 2hop 489 reach conn bound
+262  cannot add 2hop 650 reach conn bound
+898  cannot add 2hop 397 reach conn bound
+355  cannot add 2hop 171 reach conn bound
+742  cannot add 2hop 446 selected
+44  cannot add 2hop 765 selected
+371  cannot add 2hop 94 reach conn bound
+761  cannot add 2hop 821 reach conn bound
+761  cannot add 2hop 846 reach conn bound
+40  cannot add 2hop 446 selected
+130  cannot add 2hop 326 selected
+442  cannot add 2hop 207 selected
+452  cannot add 2hop 916 reach conn bound
+648  cannot add 2hop 8 reach conn bound
+635  cannot add 2hop 69 reach conn bound
+635  cannot add 2hop 842 reach conn bound
+606  cannot add 2hop 390 selected
+706  cannot add 2hop 390 selected
+231  cannot add 2hop 374 reach conn bound
+97  cannot add 2hop 895 reach conn bound
+92  cannot add 2hop 129 selected
+707  cannot add 2hop 284 reach conn bound
+205  cannot add 2hop 94 reach conn bound
+205  cannot add 2hop 326 selected
+1  cannot add 2hop 278 reach conn bound
+851  cannot add 2hop 722 reach conn bound
+18  cannot add 2hop 374 selected
+288  cannot add 2hop 390 selected
+891  cannot add 2hop 894 selected
+891  cannot add 2hop 374 selected
+351  cannot add 2hop 891 reach conn bound
+428  cannot add 2hop 534 reach conn bound
+129  cannot add 2hop 887 reach conn bound
+550  cannot add 2hop 374 selected
+926  cannot add 2hop 178 selected
+692  cannot add 2hop 564 reach conn bound
+521  cannot add 2hop 207 selected
+693  cannot add 2hop 765 selected
+518  cannot add 2hop 894 selected
+645  cannot add 2hop 390 selected
+103  cannot add 2hop 630 reach conn bound
+103  cannot add 2hop 894 selected
+103  cannot add 2hop 207 selected
+103  cannot add 2hop 326 selected
+259  cannot add 2hop 314 reach conn bound
+905  cannot add 2hop 328 reach conn bound
+59  cannot add 2hop 534 reach conn bound
+140  cannot add 2hop 950 reach conn bound
+607  cannot add 2hop 129 selected
+765  cannot add 2hop 213 reach conn bound
+812  cannot add 2hop 178 selected
+643  cannot add 2hop 326 selected
+931  cannot add 2hop 390 selected
+16  cannot add 2hop 477 reach conn bound
+392  cannot add 2hop 600 reach conn bound
+221  cannot add 2hop 326 selected
+158  cannot add 2hop 357 reach conn bound
+815  cannot add 2hop 69 selected
+Recording 3 using time 31.22010111808777
+352  cannot add 2hop 877 reach conn bound
+866  cannot add 2hop 231 reach conn bound
+731  cannot add 2hop 575 reach conn bound
+824  cannot add 2hop 45 reach conn bound
+356  cannot add 2hop 326 reach conn bound
+22  cannot add 2hop 307 reach conn bound
+115  cannot add 2hop 655 reach conn bound
+593  cannot add 2hop 115 reach conn bound
+598  cannot add 2hop 109 reach conn bound
+9  cannot add 2hop 877 reach conn bound
+279  cannot add 2hop 839 reach conn bound
+687  cannot add 2hop 278 reach conn bound
+196  cannot add 2hop 95 reach conn bound
+572  cannot add 2hop 427 reach conn bound
+151  cannot add 2hop 750 reach conn bound
+917  cannot add 2hop 722 reach conn bound
+952  cannot add 2hop 563 reach conn bound
+129  cannot add 2hop 777 reach conn bound
+340  cannot add 2hop 42 reach conn bound
+340  cannot add 2hop 877 reach conn bound
+154  cannot add 2hop 563 reach conn bound
+644  cannot add 2hop 836 reach conn bound
+26  cannot add 2hop 711 reach conn bound
+26  cannot add 2hop 803 reach conn bound
+777  cannot add 2hop 777 reach conn bound
+879  cannot add 2hop 287 reach conn bound
+34  cannot add 2hop 115 reach conn bound
+34  cannot add 2hop 241 reach conn bound
+238  cannot add 2hop 505 reach conn bound
+636  cannot add 2hop 278 reach conn bound
+395  cannot add 2hop 596 reach conn bound
+977  cannot add 2hop 274 reach conn bound
+148  cannot add 2hop 248 reach conn bound
+915  cannot add 2hop 510 reach conn bound
+915  cannot add 2hop 127 reach conn bound
+302  cannot add 2hop 29 reach conn bound
+759  cannot add 2hop 564 reach conn bound
+631  cannot add 2hop 575 reach conn bound
+477  cannot add 2hop 825 reach conn bound
+663  cannot add 2hop 568 reach conn bound
+121  cannot add 2hop 702 reach conn bound
+322  cannot add 2hop 129 reach conn bound
+88  cannot add 2hop 894 reach conn bound
+146  cannot add 2hop 803 reach conn bound
+146  cannot add 2hop 747 reach conn bound
+570  cannot add 2hop 825 reach conn bound
+431  cannot add 2hop 998 reach conn bound
+2  cannot add 2hop 982 reach conn bound
+275  cannot add 2hop 643 reach conn bound
+620  cannot add 2hop 326 reach conn bound
+620  cannot add 2hop 446 reach conn bound
+822  cannot add 2hop 934 reach conn bound
+822  cannot add 2hop 697 reach conn bound
+293  cannot add 2hop 934 reach conn bound
+293  cannot add 2hop 443 reach conn bound
+725  cannot add 2hop 8 reach conn bound
+618  cannot add 2hop 309 reach conn bound
+660  cannot add 2hop 326 reach conn bound
+590  cannot add 2hop 543 reach conn bound
+884  cannot add 2hop 989 reach conn bound
+827  cannot add 2hop 670 reach conn bound
+266  cannot add 2hop 129 reach conn bound
+720  cannot add 2hop 95 reach conn bound
+720  cannot add 2hop 249 reach conn bound
+463  cannot add 2hop 615 reach conn bound
+673  cannot add 2hop 516 reach conn bound
+673  cannot add 2hop 95 reach conn bound
+635  cannot add 2hop 842 reach conn bound
+455  cannot add 2hop 875 reach conn bound
+891  cannot add 2hop 80 reach conn bound
+389  cannot add 2hop 842 reach conn bound
+447  cannot add 2hop 311 reach conn bound
+447  cannot add 2hop 415 reach conn bound
+447  cannot add 2hop 129 selected
+124  cannot add 2hop 929 reach conn bound
+379  cannot add 2hop 95 reach conn bound
+379  cannot add 2hop 307 reach conn bound
+25  cannot add 2hop 80 reach conn bound
+128  cannot add 2hop 80 reach conn bound
+815  cannot add 2hop 405 reach conn bound
+807  cannot add 2hop 765 reach conn bound
+665  cannot add 2hop 105 reach conn bound
+696  cannot add 2hop 278 reach conn bound
+835  cannot add 2hop 949 reach conn bound
+385  cannot add 2hop 129 selected
+206  cannot add 2hop 895 reach conn bound
+369  cannot add 2hop 802 reach conn bound
+305  cannot add 2hop 129 selected
+142  cannot add 2hop 129 selected
+843  cannot add 2hop 203 reach conn bound
+843  cannot add 2hop 557 reach conn bound
+324  cannot add 2hop 324 reach conn bound
+324  cannot add 2hop 178 reach conn bound
+448  cannot add 2hop 109 reach conn bound
+274  cannot add 2hop 95 reach conn bound
+295  cannot add 2hop 793 reach conn bound
+446  cannot add 2hop 984 reach conn bound
+781  cannot add 2hop 894 reach conn bound
+348  cannot add 2hop 129 selected
+403  cannot add 2hop 95 reach conn bound
+349  cannot add 2hop 535 reach conn bound
+247  cannot add 2hop 514 reach conn bound
+562  cannot add 2hop 825 reach conn bound
+294  cannot add 2hop 842 reach conn bound
+294  cannot add 2hop 348 reach conn bound
+326  cannot add 2hop 505 reach conn bound
+434  cannot add 2hop 363 reach conn bound
+86  cannot add 2hop 200 reach conn bound
+21  cannot add 2hop 550 reach conn bound
+496  cannot add 2hop 428 reach conn bound
+241  cannot add 2hop 737 reach conn bound
+748  cannot add 2hop 819 reach conn bound
+989  cannot add 2hop 763 reach conn bound
+830  cannot add 2hop 869 reach conn bound
+830  cannot add 2hop 69 reach conn bound
+73  cannot add 2hop 129 selected
+73  cannot add 2hop 374 reach conn bound
+844  cannot add 2hop 484 reach conn bound
+941  cannot add 2hop 263 reach conn bound
+722  cannot add 2hop 715 reach conn bound
+430  cannot add 2hop 2 reach conn bound
+869  cannot add 2hop 499 reach conn bound
+596  cannot add 2hop 596 reach conn bound
+113  cannot add 2hop 129 selected
+752  cannot add 2hop 894 selected
+752  cannot add 2hop 279 reach conn bound
+653  cannot add 2hop 643 reach conn bound
+38  cannot add 2hop 823 reach conn bound
+318  cannot add 2hop 363 reach conn bound
+743  cannot add 2hop 129 selected
+504  cannot add 2hop 129 selected
+426  cannot add 2hop 324 reach conn bound
+803  cannot add 2hop 243 reach conn bound
+803  cannot add 2hop 95 selected
+393  cannot add 2hop 894 selected
+393  cannot add 2hop 29 reach conn bound
+172  cannot add 2hop 278 reach conn bound
+975  cannot add 2hop 690 reach conn bound
+690  cannot add 2hop 533 reach conn bound
+165  cannot add 2hop 688 reach conn bound
+707  cannot add 2hop 89 reach conn bound
+707  cannot add 2hop 278 reach conn bound
+387  cannot add 2hop 278 reach conn bound
+801  cannot add 2hop 600 reach conn bound
+998  cannot add 2hop 543 reach conn bound
+558  cannot add 2hop 129 selected
+612  cannot add 2hop 894 selected
+460  cannot add 2hop 873 reach conn bound
+181  cannot add 2hop 129 selected
+147  cannot add 2hop 693 reach conn bound
+557  cannot add 2hop 95 selected
+557  cannot add 2hop 342 reach conn bound
+782  cannot add 2hop 136 reach conn bound
+254  cannot add 2hop 983 reach conn bound
+345  cannot add 2hop 545 reach conn bound
+410  cannot add 2hop 95 selected
+288  cannot add 2hop 428 reach conn bound
+49  cannot add 2hop 935 reach conn bound
+658  cannot add 2hop 194 reach conn bound
+648  cannot add 2hop 894 selected
+812  cannot add 2hop 69 reach conn bound
+944  cannot add 2hop 278 reach conn bound
+944  cannot add 2hop 95 selected
+736  cannot add 2hop 95 selected
+583  cannot add 2hop 538 reach conn bound
+796  cannot add 2hop 938 reach conn bound
+796  cannot add 2hop 894 selected
+388  cannot add 2hop 842 reach conn bound
+805  cannot add 2hop 95 selected
+919  cannot add 2hop 894 selected
+674  cannot add 2hop 894 selected
+246  cannot add 2hop 95 selected
+90  cannot add 2hop 342 selected
+986  cannot add 2hop 115 reach conn bound
+823  cannot add 2hop 342 selected
+762  cannot add 2hop 342 selected
+846  cannot add 2hop 668 reach conn bound
+846  cannot add 2hop 120 reach conn bound
+373  cannot add 2hop 476 reach conn bound
+882  cannot add 2hop 342 selected
+756  cannot add 2hop 875 reach conn bound
+972  cannot add 2hop 638 reach conn bound
+228  cannot add 2hop 568 reach conn bound
+313  cannot add 2hop 95 selected
+610  cannot add 2hop 952 reach conn bound
+136  cannot add 2hop 984 reach conn bound
+82  cannot add 2hop 825 reach conn bound
+606  cannot add 2hop 178 selected
+372  cannot add 2hop 247 reach conn bound
+137  cannot add 2hop 342 selected
+137  cannot add 2hop 894 selected
+341  cannot add 2hop 178 selected
+213  cannot add 2hop 836 reach conn bound
+74  cannot add 2hop 69 selected
+962  cannot add 2hop 51 reach conn bound
+613  cannot add 2hop 342 selected
+185  cannot add 2hop 894 selected
+438  cannot add 2hop 95 selected
+916  cannot add 2hop 178 selected
+934  cannot add 2hop 200 reach conn bound
+280  cannot add 2hop 129 selected
+420  cannot add 2hop 685 reach conn bound
+420  cannot add 2hop 846 reach conn bound
+702  cannot add 2hop 309 reach conn bound
+53  cannot add 2hop 129 selected
+806  cannot add 2hop 178 selected
+806  cannot add 2hop 342 selected
+881  cannot add 2hop 342 selected
+881  cannot add 2hop 83 reach conn bound
+881  cannot add 2hop 800 reach conn bound
+881  cannot add 2hop 129 selected
+881 2hop not enough, random choose
+964  cannot add 2hop 32 reach conn bound
+332  cannot add 2hop 408 reach conn bound
+32  cannot add 2hop 95 selected
+899  cannot add 2hop 127 selected
+382  cannot add 2hop 278 reach conn bound
+927  cannot add 2hop 95 selected
+281  cannot add 2hop 127 selected
+712  cannot add 2hop 129 selected
+712  cannot add 2hop 534 reach conn bound
+708  cannot add 2hop 178 selected
+936  cannot add 2hop 737 reach conn bound
+87  cannot add 2hop 666 reach conn bound
+946  cannot add 2hop 178 selected
+692  cannot add 2hop 894 selected
+486  cannot add 2hop 178 selected
+682  cannot add 2hop 800 reach conn bound
+682  cannot add 2hop 309 reach conn bound
+524  cannot add 2hop 127 selected
+479  cannot add 2hop 342 selected
+479  cannot add 2hop 83 reach conn bound
+666  cannot add 2hop 178 selected
+640  cannot add 2hop 533 reach conn bound
+472  cannot add 2hop 69 selected
+585  cannot add 2hop 129 selected
+150  cannot add 2hop 464 reach conn bound
+89  cannot add 2hop 737 reach conn bound
+350  cannot add 2hop 178 selected
+945  cannot add 2hop 95 selected
+375  cannot add 2hop 925 reach conn bound
+98  cannot add 2hop 95 selected
+98  cannot add 2hop 129 selected
+98  cannot add 2hop 720 reach conn bound
+652  cannot add 2hop 430 reach conn bound
+854  cannot add 2hop 178 selected
+709  cannot add 2hop 647 reach conn bound
+223  cannot add 2hop 127 selected
+155  cannot add 2hop 326 selected
+60  cannot add 2hop 342 selected
+60  cannot add 2hop 178 selected
+329  cannot add 2hop 891 reach conn bound
+329  cannot add 2hop 129 selected
+359  cannot add 2hop 564 reach conn bound
+359  cannot add 2hop 894 selected
+304  cannot add 2hop 95 selected
+304  cannot add 2hop 409 reach conn bound
+861  cannot add 2hop 706 reach conn bound
+604  cannot add 2hop 342 selected
+72  cannot add 2hop 894 selected
+517  cannot add 2hop 342 selected
+517  cannot add 2hop 69 selected
+555  cannot add 2hop 630 selected
+347  cannot add 2hop 485 reach conn bound
+312  cannot add 2hop 630 selected
+239  cannot add 2hop 129 selected
+23  cannot add 2hop 69 selected
+23  cannot add 2hop 868 reach conn bound
+908  cannot add 2hop 819 reach conn bound
+407  cannot add 2hop 69 selected
+943  cannot add 2hop 105 reach conn bound
+556  cannot add 2hop 952 reach conn bound
+556  cannot add 2hop 109 reach conn bound
+556  cannot add 2hop 556 reach conn bound
+556  cannot add 2hop 213 reach conn bound
+932  cannot add 2hop 575 reach conn bound
+932  cannot add 2hop 539 reach conn bound
+625  cannot add 2hop 95 selected
+954  cannot add 2hop 210 reach conn bound
+476  cannot add 2hop 645 reach conn bound
+609  cannot add 2hop 95 selected
+361  cannot add 2hop 718 reach conn bound
+732  cannot add 2hop 342 selected
+733  cannot add 2hop 69 selected
+29  cannot add 2hop 798 reach conn bound
+29  cannot add 2hop 326 selected
+29  cannot add 2hop 129 selected
+243  cannot add 2hop 87 reach conn bound
+243  cannot add 2hop 688 reach conn bound
+897  cannot add 2hop 342 selected
+483  cannot add 2hop 127 selected
+135  cannot add 2hop 349 reach conn bound
+508  cannot add 2hop 630 selected
+177  cannot add 2hop 630 selected
+564  cannot add 2hop 938 reach conn bound
+85  cannot add 2hop 129 selected
+85  cannot add 2hop 861 reach conn bound
+649  cannot add 2hop 129 selected
+683  cannot add 2hop 128 reach conn bound
+683  cannot add 2hop 563 reach conn bound
+683  cannot add 2hop 127 selected
+775  cannot add 2hop 178 selected
+61  cannot add 2hop 342 selected
+61  cannot add 2hop 894 selected
+126  cannot add 2hop 86 selected
+656  cannot add 2hop 894 selected
+794  cannot add 2hop 374 selected
+965  cannot add 2hop 894 selected
+411  cannot add 2hop 129 selected
+626  cannot add 2hop 207 reach conn bound
+797  cannot add 2hop 575 selected
+511  cannot add 2hop 129 selected
+511  cannot add 2hop 326 selected
+139  cannot add 2hop 178 selected
+746  cannot add 2hop 127 selected
+746  cannot add 2hop 129 selected
+171  cannot add 2hop 326 selected
+839  cannot add 2hop 894 selected
+31  cannot add 2hop 986 reach conn bound
+442  cannot add 2hop 95 selected
+398  cannot add 2hop 51 reach conn bound
+398  cannot add 2hop 382 reach conn bound
+751  cannot add 2hop 615 reach conn bound
+432  cannot add 2hop 132 reach conn bound
+602  cannot add 2hop 127 selected
+199  cannot add 2hop 326 selected
+667  cannot add 2hop 568 selected
+667  cannot add 2hop 69 selected
+675  cannot add 2hop 129 selected
+675  cannot add 2hop 127 selected
+675  cannot add 2hop 462 reach conn bound
+675  cannot add 2hop 711 reach conn bound
+993  cannot add 2hop 86 selected
+993  cannot add 2hop 837 reach conn bound
+314  cannot add 2hop 342 selected
+56  cannot add 2hop 374 selected
+56  cannot add 2hop 129 selected
+832  cannot add 2hop 127 selected
+264  cannot add 2hop 342 selected
+905  cannot add 2hop 129 selected
+105  cannot add 2hop 86 selected
+105  cannot add 2hop 493 reach conn bound
+501  cannot add 2hop 129 selected
+515  cannot add 2hop 945 reach conn bound
+51  cannot add 2hop 568 selected
+51  cannot add 2hop 129 selected
+244  cannot add 2hop 374 selected
+929  cannot add 2hop 178 selected
+978  cannot add 2hop 894 selected
+978  cannot add 2hop 800 reach conn bound
+619  cannot add 2hop 670 reach conn bound
+466  cannot add 2hop 839 reach conn bound
+111  cannot add 2hop 342 selected
+10  cannot add 2hop 287 reach conn bound
+192  cannot add 2hop 568 selected
+622  cannot add 2hop 132 reach conn bound
+454  cannot add 2hop 86 selected
+217  cannot add 2hop 549 reach conn bound
+163  cannot add 2hop 129 selected
+475  cannot add 2hop 697 reach conn bound
+354  cannot add 2hop 510 reach conn bound
+575  cannot add 2hop 69 selected
+276  cannot add 2hop 127 selected
+795  cannot add 2hop 568 selected
+795  cannot add 2hop 883 reach conn bound
+795  cannot add 2hop 129 selected
+44  cannot add 2hop 539 selected
+170  cannot add 2hop 910 reach conn bound
+183  cannot add 2hop 434 reach conn bound
+183  cannot add 2hop 345 reach conn bound
+569  cannot add 2hop 212 reach conn bound
+896  cannot add 2hop 178 selected
+Recording 4 using time 29.85637879371643
+673  cannot add 2hop 837 reach conn bound
+935  cannot add 2hop 102 reach conn bound
+525  cannot add 2hop 207 reach conn bound
+178  cannot add 2hop 29 reach conn bound
+848  cannot add 2hop 982 reach conn bound
+942  cannot add 2hop 912 reach conn bound
+275  cannot add 2hop 361 reach conn bound
+275  cannot add 2hop 188 reach conn bound
+612  cannot add 2hop 891 reach conn bound
+295  cannot add 2hop 539 reach conn bound
+295  cannot add 2hop 403 reach conn bound
+586  cannot add 2hop 647 reach conn bound
+244  cannot add 2hop 109 reach conn bound
+623  cannot add 2hop 487 reach conn bound
+374  cannot add 2hop 35 reach conn bound
+677  cannot add 2hop 464 reach conn bound
+322  cannot add 2hop 630 reach conn bound
+856  cannot add 2hop 544 reach conn bound
+104  cannot add 2hop 493 reach conn bound
+556  cannot add 2hop 278 reach conn bound
+556  cannot add 2hop 213 reach conn bound
+556  cannot add 2hop 556 reach conn bound
+556 2hop not enough, random choose
+338  cannot add 2hop 643 reach conn bound
+423  cannot add 2hop 575 reach conn bound
+909  cannot add 2hop 208 reach conn bound
+342  cannot add 2hop 516 reach conn bound
+280  cannot add 2hop 320 reach conn bound
+877  cannot add 2hop 390 reach conn bound
+877  cannot add 2hop 936 reach conn bound
+943  cannot add 2hop 943 reach conn bound
+622  cannot add 2hop 132 reach conn bound
+153  cannot add 2hop 793 reach conn bound
+153  cannot add 2hop 927 reach conn bound
+153  cannot add 2hop 793 reach conn bound
+144  cannot add 2hop 109 reach conn bound
+246  cannot add 2hop 142 reach conn bound
+833  cannot add 2hop 127 reach conn bound
+560  cannot add 2hop 377 reach conn bound
+364  cannot add 2hop 579 reach conn bound
+272  cannot add 2hop 575 reach conn bound
+368  cannot add 2hop 29 reach conn bound
+198  cannot add 2hop 482 reach conn bound
+58  cannot add 2hop 986 reach conn bound
+58  cannot add 2hop 169 reach conn bound
+185  cannot add 2hop 534 reach conn bound
+716  cannot add 2hop 208 reach conn bound
+716  cannot add 2hop 716 reach conn bound
+123  cannot add 2hop 132 reach conn bound
+183  cannot add 2hop 432 reach conn bound
+147  cannot add 2hop 94 reach conn bound
+317  cannot add 2hop 693 reach conn bound
+802  cannot add 2hop 207 reach conn bound
+969  cannot add 2hop 327 reach conn bound
+818  cannot add 2hop 169 reach conn bound
+810  cannot add 2hop 792 reach conn bound
+810  cannot add 2hop 894 reach conn bound
+300  cannot add 2hop 337 reach conn bound
+691  cannot add 2hop 403 reach conn bound
+911  cannot add 2hop 538 reach conn bound
+911  cannot add 2hop 485 reach conn bound
+495  cannot add 2hop 980 reach conn bound
+879  cannot add 2hop 615 reach conn bound
+258  cannot add 2hop 575 reach conn bound
+309  cannot add 2hop 356 reach conn bound
+309  cannot add 2hop 534 reach conn bound
+973  cannot add 2hop 342 reach conn bound
+966  cannot add 2hop 69 reach conn bound
+99  cannot add 2hop 888 reach conn bound
+999  cannot add 2hop 409 reach conn bound
+228  cannot add 2hop 414 reach conn bound
+228  cannot add 2hop 564 reach conn bound
+763  cannot add 2hop 486 reach conn bound
+291  cannot add 2hop 51 reach conn bound
+914  cannot add 2hop 983 reach conn bound
+479  cannot add 2hop 800 reach conn bound
+857  cannot add 2hop 846 reach conn bound
+384  cannot add 2hop 711 reach conn bound
+384  cannot add 2hop 596 reach conn bound
+384  cannot add 2hop 808 reach conn bound
+925  cannot add 2hop 976 reach conn bound
+341  cannot add 2hop 819 reach conn bound
+787  cannot add 2hop 178 selected
+885  cannot add 2hop 803 reach conn bound
+552  cannot add 2hop 984 reach conn bound
+72  cannot add 2hop 29 reach conn bound
+454  cannot add 2hop 408 reach conn bound
+454  cannot add 2hop 800 reach conn bound
+205  cannot add 2hop 127 reach conn bound
+205  cannot add 2hop 200 reach conn bound
+222  cannot add 2hop 249 reach conn bound
+807  cannot add 2hop 750 reach conn bound
+844  cannot add 2hop 278 reach conn bound
+297  cannot add 2hop 720 reach conn bound
+546  cannot add 2hop 391 reach conn bound
+435  cannot add 2hop 706 reach conn bound
+487  cannot add 2hop 356 reach conn bound
+487  cannot add 2hop 82 reach conn bound
+271  cannot add 2hop 808 reach conn bound
+271  cannot add 2hop 53 reach conn bound
+501  cannot add 2hop 241 reach conn bound
+150  cannot add 2hop 516 reach conn bound
+335  cannot add 2hop 524 reach conn bound
+89  cannot add 2hop 328 reach conn bound
+36  cannot add 2hop 278 selected
+36  cannot add 2hop 189 reach conn bound
+388  cannot add 2hop 202 reach conn bound
+549  cannot add 2hop 69 reach conn bound
+549  cannot add 2hop 802 reach conn bound
+620  cannot add 2hop 133 reach conn bound
+729  cannot add 2hop 71 reach conn bound
+650  cannot add 2hop 575 reach conn bound
+650  cannot add 2hop 927 reach conn bound
+496  cannot add 2hop 278 selected
+410  cannot add 2hop 362 reach conn bound
+15  cannot add 2hop 980 reach conn bound
+15  cannot add 2hop 615 reach conn bound
+736  cannot add 2hop 327 reach conn bound
+303  cannot add 2hop 280 reach conn bound
+249  cannot add 2hop 478 reach conn bound
+381  cannot add 2hop 8 reach conn bound
+381  cannot add 2hop 720 reach conn bound
+732  cannot add 2hop 205 reach conn bound
+761  cannot add 2hop 761 reach conn bound
+822  cannot add 2hop 278 selected
+446  cannot add 2hop 278 selected
+85  cannot add 2hop 846 reach conn bound
+85  cannot add 2hop 837 reach conn bound
+465  cannot add 2hop 95 reach conn bound
+684  cannot add 2hop 129 reach conn bound
+414  cannot add 2hop 554 reach conn bound
+174  cannot add 2hop 711 reach conn bound
+959  cannot add 2hop 690 reach conn bound
+768  cannot add 2hop 568 selected
+768  cannot add 2hop 129 reach conn bound
+768  cannot add 2hop 563 reach conn bound
+580  cannot add 2hop 279 reach conn bound
+826  cannot add 2hop 499 reach conn bound
+907  cannot add 2hop 278 selected
+416  cannot add 2hop 278 selected
+751  cannot add 2hop 615 reach conn bound
+516  cannot add 2hop 116 reach conn bound
+262  cannot add 2hop 575 reach conn bound
+263  cannot add 2hop 432 reach conn bound
+263  cannot add 2hop 944 reach conn bound
+571  cannot add 2hop 54 reach conn bound
+553  cannot add 2hop 568 selected
+536  cannot add 2hop 568 selected
+676  cannot add 2hop 200 reach conn bound
+676  cannot add 2hop 127 selected
+676  cannot add 2hop 342 selected
+585  cannot add 2hop 888 reach conn bound
+585  cannot add 2hop 568 selected
+585  cannot add 2hop 568 selected
+251  cannot add 2hop 535 reach conn bound
+157  cannot add 2hop 630 selected
+422  cannot add 2hop 553 reach conn bound
+467  cannot add 2hop 127 selected
+574  cannot add 2hop 178 selected
+704  cannot add 2hop 169 reach conn bound
+945  cannot add 2hop 178 selected
+869  cannot add 2hop 127 selected
+869  cannot add 2hop 342 selected
+444  cannot add 2hop 568 selected
+444  cannot add 2hop 278 selected
+396  cannot add 2hop 568 selected
+532  cannot add 2hop 210 reach conn bound
+382  cannot add 2hop 620 reach conn bound
+382  cannot add 2hop 630 selected
+226  cannot add 2hop 568 selected
+738  cannot add 2hop 568 selected
+915  cannot add 2hop 630 selected
+18  cannot add 2hop 391 reach conn bound
+92  cannot add 2hop 115 reach conn bound
+221  cannot add 2hop 781 reach conn bound
+345  cannot add 2hop 137 reach conn bound
+784  cannot add 2hop 178 selected
+333  cannot add 2hop 894 selected
+726  cannot add 2hop 127 selected
+726  cannot add 2hop 888 reach conn bound
+91  cannot add 2hop 169 reach conn bound
+457  cannot add 2hop 342 selected
+602  cannot add 2hop 342 selected
+203  cannot add 2hop 278 selected
+203  cannot add 2hop 737 reach conn bound
+40  cannot add 2hop 550 reach conn bound
+33  cannot add 2hop 630 selected
+989  cannot add 2hop 568 selected
+728  cannot add 2hop 447 reach conn bound
+728  cannot add 2hop 342 selected
+986  cannot add 2hop 127 selected
+517  cannot add 2hop 342 selected
+517  cannot add 2hop 808 reach conn bound
+619  cannot add 2hop 278 selected
+619  cannot add 2hop 803 reach conn bound
+744  cannot add 2hop 228 reach conn bound
+460  cannot add 2hop 328 reach conn bound
+983  cannot add 2hop 342 selected
+983  cannot add 2hop 95 reach conn bound
+347  cannot add 2hop 485 reach conn bound
+624  cannot add 2hop 278 selected
+894  cannot add 2hop 127 selected
+894  cannot add 2hop 984 reach conn bound
+209  cannot add 2hop 568 selected
+767  cannot add 2hop 515 reach conn bound
+687  cannot add 2hop 477 reach conn bound
+687  cannot add 2hop 278 selected
+803  cannot add 2hop 178 selected
+803  cannot add 2hop 278 selected
+803  cannot add 2hop 929 reach conn bound
+507  cannot add 2hop 96 reach conn bound
+294  cannot add 2hop 178 selected
+294  cannot add 2hop 342 selected
+53  cannot add 2hop 127 selected
+598  cannot add 2hop 571 reach conn bound
+4  cannot add 2hop 127 selected
+4  cannot add 2hop 45 reach conn bound
+323  cannot add 2hop 178 selected
+910  cannot add 2hop 287 reach conn bound
+842  cannot add 2hop 178 selected
+154  cannot add 2hop 568 selected
+135  cannot add 2hop 474 reach conn bound
+135  cannot add 2hop 127 selected
+949  cannot add 2hop 841 reach conn bound
+861  cannot add 2hop 278 selected
+861  cannot add 2hop 630 selected
+861  cannot add 2hop 342 selected
+696  cannot add 2hop 568 selected
+67  cannot add 2hop 278 selected
+67  cannot add 2hop 929 reach conn bound
+94  cannot add 2hop 342 selected
+94  cannot add 2hop 821 reach conn bound
+993  cannot add 2hop 178 selected
+350  cannot add 2hop 86 reach conn bound
+735  cannot add 2hop 278 selected
+735  cannot add 2hop 554 reach conn bound
+735  cannot add 2hop 937 reach conn bound
+206  cannot add 2hop 720 reach conn bound
+337  cannot add 2hop 342 selected
+337  cannot add 2hop 630 selected
+337  cannot add 2hop 200 reach conn bound
+337  cannot add 2hop 821 reach conn bound
+630  cannot add 2hop 630 selected
+630  cannot add 2hop 825 reach conn bound
+645  cannot add 2hop 793 reach conn bound
+645  cannot add 2hop 127 selected
+543  cannot add 2hop 137 reach conn bound
+933  cannot add 2hop 715 reach conn bound
+828  cannot add 2hop 414 reach conn bound
+828  cannot add 2hop 127 selected
+375  cannot add 2hop 342 selected
+375  cannot add 2hop 326 selected
+266  cannot add 2hop 989 reach conn bound
+519  cannot add 2hop 327 reach conn bound
+760  cannot add 2hop 320 reach conn bound
+770  cannot add 2hop 630 selected
+502  cannot add 2hop 326 selected
+434  cannot add 2hop 363 reach conn bound
+434  cannot add 2hop 414 reach conn bound
+60  cannot add 2hop 428 reach conn bound
+801  cannot add 2hop 278 selected
+24  cannot add 2hop 127 selected
+107  cannot add 2hop 127 selected
+107  cannot add 2hop 178 selected
+102  cannot add 2hop 342 selected
+102  cannot add 2hop 326 selected
+102  cannot add 2hop 785 reach conn bound
+102  cannot add 2hop 127 selected
+102  cannot add 2hop 178 selected
+723  cannot add 2hop 819 reach conn bound
+723  cannot add 2hop 169 reach conn bound
+231  cannot add 2hop 630 selected
+932  cannot add 2hop 575 reach conn bound
+61  cannot add 2hop 210 reach conn bound
+61  cannot add 2hop 42 reach conn bound
+61  cannot add 2hop 342 selected
+315  cannot add 2hop 630 selected
+315  cannot add 2hop 326 selected
+858  cannot add 2hop 499 reach conn bound
+795  cannot add 2hop 568 selected
+795  cannot add 2hop 888 reach conn bound
+795  cannot add 2hop 883 reach conn bound
+795  cannot add 2hop 568 selected
+795 2hop not enough, random choose
+470  cannot add 2hop 178 selected
+658  cannot add 2hop 568 selected
+675  cannot add 2hop 127 selected
+611  cannot add 2hop 894 selected
+355  cannot add 2hop 391 selected
+355  cannot add 2hop 178 selected
+64  cannot add 2hop 690 reach conn bound
+752  cannot add 2hop 279 reach conn bound
+752  cannot add 2hop 515 reach conn bound
+714  cannot add 2hop 630 selected
+461  cannot add 2hop 671 reach conn bound
+426  cannot add 2hop 477 reach conn bound
+426  cannot add 2hop 577 reach conn bound
+426  cannot add 2hop 568 selected
+1  cannot add 2hop 327 reach conn bound
+607  cannot add 2hop 342 selected
+43  cannot add 2hop 365 reach conn bound
+43  cannot add 2hop 127 selected
+498  cannot add 2hop 127 selected
+498  cannot add 2hop 278 selected
+743  cannot add 2hop 883 reach conn bound
+743  cannot add 2hop 568 selected
+570  cannot add 2hop 228 selected
+847  cannot add 2hop 202 reach conn bound
+562  cannot add 2hop 278 selected
+129  cannot add 2hop 278 selected
+129  cannot add 2hop 539 selected
+655  cannot add 2hop 456 reach conn bound
+655  cannot add 2hop 127 selected
+692  cannot add 2hop 539 selected
+567  cannot add 2hop 127 selected
+285  cannot add 2hop 504 reach conn bound
+128  cannot add 2hop 568 selected
+132  cannot add 2hop 563 reach conn bound
+420  cannot add 2hop 189 reach conn bound
+420  cannot add 2hop 127 selected
+477  cannot add 2hop 278 selected
+653  cannot add 2hop 720 reach conn bound
+724  cannot add 2hop 366 reach conn bound
+898  cannot add 2hop 539 selected
+929  cannot add 2hop 178 selected
+635  cannot add 2hop 539 selected
+635  cannot add 2hop 342 selected
+390  cannot add 2hop 894 selected
+390  cannot add 2hop 29 reach conn bound
+390  cannot add 2hop 29 reach conn bound
+177  cannot add 2hop 391 selected
+356  cannot add 2hop 278 selected
+356  cannot add 2hop 568 selected
+988  cannot add 2hop 24 reach conn bound
+248  cannot add 2hop 529 reach conn bound
+591  cannot add 2hop 326 selected
+328  cannot add 2hop 287 selected
+891  cannot add 2hop 984 reach conn bound
+126  cannot add 2hop 326 selected
+492  cannot add 2hop 178 selected
+798  cannot add 2hop 568 selected
+961  cannot add 2hop 718 reach conn bound
+961  cannot add 2hop 945 reach conn bound
+679  cannot add 2hop 129 selected
+679  cannot add 2hop 535 reach conn bound
+443  cannot add 2hop 342 selected
+443  cannot add 2hop 539 selected
+758  cannot add 2hop 630 selected
+758  cannot add 2hop 737 reach conn bound
+919  cannot add 2hop 894 selected
+287  cannot add 2hop 287 selected
+711  cannot add 2hop 178 selected
+316  cannot add 2hop 127 selected
+211  cannot add 2hop 539 selected
+211  cannot add 2hop 515 reach conn bound
+211  cannot add 2hop 568 selected
+392  cannot add 2hop 278 selected
+392  cannot add 2hop 568 selected
+745  cannot add 2hop 894 selected
+745  cannot add 2hop 432 reach conn bound
+56  cannot add 2hop 585 reach conn bound
+56  cannot add 2hop 129 selected
+740  cannot add 2hop 737 reach conn bound
+148  cannot add 2hop 857 reach conn bound
+680  cannot add 2hop 837 selected
+680  cannot add 2hop 287 selected
+680  cannot add 2hop 894 selected
+680  cannot add 2hop 837 selected
+20  cannot add 2hop 126 reach conn bound
+584  cannot add 2hop 836 reach conn bound
+584  cannot add 2hop 129 selected
+179  cannot add 2hop 129 selected
+515  cannot add 2hop 391 selected
+363  cannot add 2hop 409 reach conn bound
+363  cannot add 2hop 391 selected
+500  cannot add 2hop 287 selected
+500  cannot add 2hop 837 selected
+41  cannot add 2hop 118 reach conn bound
+843  cannot add 2hop 568 selected
+255  cannot add 2hop 837 selected
+359  cannot add 2hop 362 reach conn bound
+359  cannot add 2hop 342 selected
+359  cannot add 2hop 894 selected
+359  cannot add 2hop 287 selected
+47  cannot add 2hop 127 selected
+47  cannot add 2hop 432 reach conn bound
+362  cannot add 2hop 837 selected
+538  cannot add 2hop 342 selected
+475  cannot add 2hop 287 selected
+967  cannot add 2hop 342 selected
+967  cannot add 2hop 539 selected
+967  cannot add 2hop 821 reach conn bound
+967 2hop not enough, random choose
+428  cannot add 2hop 539 selected
+428  cannot add 2hop 819 reach conn bound
+400  cannot add 2hop 3 reach conn bound
+151  cannot add 2hop 278 selected
+305  cannot add 2hop 658 reach conn bound
+372  cannot add 2hop 837 selected
+956  cannot add 2hop 287 selected
+862  cannot add 2hop 539 selected
+862  cannot add 2hop 409 reach conn bound
+489  cannot add 2hop 342 selected
+631  cannot add 2hop 620 reach conn bound
+631  cannot add 2hop 630 selected
+753  cannot add 2hop 311 reach conn bound
+753  cannot add 2hop 133 selected
+417  cannot add 2hop 894 selected
+514  cannot add 2hop 278 selected
+194  cannot add 2hop 228 selected
+194  cannot add 2hop 630 selected
+13  cannot add 2hop 568 selected
+651  cannot add 2hop 883 reach conn bound
+651  cannot add 2hop 568 selected
+427  cannot add 2hop 391 selected
+204  cannot add 2hop 821 reach conn bound
+436  cannot add 2hop 837 selected
+336  cannot add 2hop 389 reach conn bound
+918  cannot add 2hop 539 selected
+918  cannot add 2hop 585 reach conn bound
+944  cannot add 2hop 278 selected
+610  cannot add 2hop 278 selected
+610  cannot add 2hop 610 reach conn bound
+377  cannot add 2hop 278 selected
+930  cannot add 2hop 278 selected
+930  cannot add 2hop 568 selected
+527  cannot add 2hop 127 selected
+348  cannot add 2hop 680 reach conn bound
+348  cannot add 2hop 894 selected
+887  cannot add 2hop 342 selected
+887  cannot add 2hop 539 selected
+389  cannot add 2hop 912 reach conn bound
+952  cannot add 2hop 568 selected
+817  cannot add 2hop 133 selected
+471  cannot add 2hop 482 reach conn bound
+245  cannot add 2hop 51 reach conn bound
+979  cannot add 2hop 391 selected
+232  cannot add 2hop 630 selected
+5  cannot add 2hop 391 selected
+5  cannot add 2hop 568 selected
+27  cannot add 2hop 278 selected
+468  cannot add 2hop 446 reach conn bound
+468  cannot add 2hop 326 selected
+386  cannot add 2hop 133 selected
+737  cannot add 2hop 391 selected
+901  cannot add 2hop 178 selected
+816  cannot add 2hop 563 reach conn bound
+286  cannot add 2hop 879 reach conn bound
+813  cannot add 2hop 53 selected
+557  cannot add 2hop 342 selected
+161  cannot add 2hop 129 selected
+161  cannot add 2hop 793 reach conn bound
+905  cannot add 2hop 888 selected
+905  cannot add 2hop 883 reach conn bound
+905  cannot add 2hop 568 selected
+905 2hop not enough, random choose
+108  cannot add 2hop 888 selected
+581  cannot add 2hop 568 selected
+964  cannot add 2hop 720 reach conn bound
+964  cannot add 2hop 127 selected
+800  cannot add 2hop 568 selected
+800  cannot add 2hop 894 selected
+165  cannot add 2hop 539 selected
+464  cannot add 2hop 485 reach conn bound
+464  cannot add 2hop 550 reach conn bound
+173  cannot add 2hop 178 selected
+721  cannot add 2hop 129 selected
+569  cannot add 2hop 568 selected
+569  cannot add 2hop 894 selected
+569  cannot add 2hop 342 selected
+506  cannot add 2hop 279 reach conn bound
+854  cannot add 2hop 843 reach conn bound
+257  cannot add 2hop 819 selected
+398  cannot add 2hop 382 reach conn bound
+398  cannot add 2hop 535 reach conn bound
+25  cannot add 2hop 287 selected
+105  cannot add 2hop 287 selected
+913  cannot add 2hop 837 selected
+881  cannot add 2hop 287 selected
+504  cannot add 2hop 178 selected
+668  cannot add 2hop 51 reach conn bound
+668  cannot add 2hop 568 selected
+668  cannot add 2hop 129 selected
+78  cannot add 2hop 96 reach conn bound
+78  cannot add 2hop 819 selected
+703  cannot add 2hop 819 selected
+808  cannot add 2hop 287 selected
+274  cannot add 2hop 837 selected
+274  cannot add 2hop 228 selected
+274  cannot add 2hop 568 selected
+52  cannot add 2hop 837 selected
+755  cannot add 2hop 620 selected
+755  cannot add 2hop 391 selected
+755  cannot add 2hop 391 selected
+836  cannot add 2hop 888 selected
+756  cannot add 2hop 819 selected
+756  cannot add 2hop 115 reach conn bound
+840  cannot add 2hop 228 selected
+840  cannot add 2hop 127 selected
+951  cannot add 2hop 51 reach conn bound
+951  cannot add 2hop 326 selected
+809  cannot add 2hop 127 selected
+485  cannot add 2hop 570 reach conn bound
+518  cannot add 2hop 620 selected
+334  cannot add 2hop 630 selected
+649  cannot add 2hop 178 selected
+324  cannot add 2hop 342 selected
+324  cannot add 2hop 362 reach conn bound
+80  cannot add 2hop 53 selected
+734  cannot add 2hop 149 reach conn bound
+412  cannot add 2hop 80 reach conn bound
+412  cannot add 2hop 620 selected
+412  cannot add 2hop 630 selected
+486  cannot add 2hop 178 selected
+358  cannot add 2hop 326 selected
+284  cannot add 2hop 846 reach conn bound
+284  cannot add 2hop 568 selected
+186  cannot add 2hop 630 selected
+35  cannot add 2hop 440 reach conn bound
+572  cannot add 2hop 442 reach conn bound
+785  cannot add 2hop 803 reach conn bound
+899  cannot add 2hop 123 reach conn bound
+291  cannot add 2hop 587 reach conn bound
+7  cannot add 2hop 391 reach conn bound
+11  cannot add 2hop 489 reach conn bound
+550  cannot add 2hop 550 reach conn bound
+95  cannot add 2hop 568 reach conn bound
+347  cannot add 2hop 887 reach conn bound
+410  cannot add 2hop 989 reach conn bound
+937  cannot add 2hop 539 reach conn bound
+649  cannot add 2hop 534 reach conn bound
+360  cannot add 2hop 137 reach conn bound
+865  cannot add 2hop 29 reach conn bound
+521  cannot add 2hop 419 reach conn bound
+141  cannot add 2hop 194 reach conn bound
+31  cannot add 2hop 986 reach conn bound
+345  cannot add 2hop 720 reach conn bound
+405  cannot add 2hop 414 reach conn bound
+181  cannot add 2hop 564 reach conn bound
+170  cannot add 2hop 796 reach conn bound
+251  cannot add 2hop 980 reach conn bound
+877  cannot add 2hop 188 reach conn bound
+851  cannot add 2hop 485 reach conn bound
+894  cannot add 2hop 615 reach conn bound
+894  cannot add 2hop 116 reach conn bound
+409  cannot add 2hop 283 reach conn bound
+991  cannot add 2hop 976 reach conn bound
+888  cannot add 2hop 989 reach conn bound
+924  cannot add 2hop 236 reach conn bound
+886  cannot add 2hop 604 reach conn bound
+810  cannot add 2hop 894 reach conn bound
+493  cannot add 2hop 929 reach conn bound
+493  cannot add 2hop 326 reach conn bound
+29  cannot add 2hop 249 reach conn bound
+900  cannot add 2hop 342 reach conn bound
+237  cannot add 2hop 667 reach conn bound
+237  cannot add 2hop 842 reach conn bound
+124  cannot add 2hop 35 reach conn bound
+711  cannot add 2hop 257 reach conn bound
+744  cannot add 2hop 429 reach conn bound
+840  cannot add 2hop 24 reach conn bound
+254  cannot add 2hop 31 reach conn bound
+228  cannot add 2hop 178 reach conn bound
+415  cannot add 2hop 983 reach conn bound
+873  cannot add 2hop 737 reach conn bound
+205  cannot add 2hop 499 reach conn bound
+222  cannot add 2hop 249 reach conn bound
+125  cannot add 2hop 563 reach conn bound
+612  cannot add 2hop 983 reach conn bound
+166  cannot add 2hop 808 reach conn bound
+146  cannot add 2hop 837 reach conn bound
+515  cannot add 2hop 735 reach conn bound
+927  cannot add 2hop 568 reach conn bound
+689  cannot add 2hop 86 reach conn bound
+19  cannot add 2hop 879 reach conn bound
+274  cannot add 2hop 233 reach conn bound
+556  cannot add 2hop 278 reach conn bound
+556  cannot add 2hop 556 reach conn bound
+656  cannot add 2hop 833 reach conn bound
+884  cannot add 2hop 24 reach conn bound
+425  cannot add 2hop 366 reach conn bound
+570  cannot add 2hop 382 reach conn bound
+757  cannot add 2hop 109 reach conn bound
+757  cannot add 2hop 869 reach conn bound
+780  cannot add 2hop 538 reach conn bound
+128  cannot add 2hop 499 reach conn bound
+928  cannot add 2hop 680 reach conn bound
+838  cannot add 2hop 615 reach conn bound
+790  cannot add 2hop 989 reach conn bound
+790  cannot add 2hop 348 reach conn bound
+273  cannot add 2hop 755 reach conn bound
+438  cannot add 2hop 342 reach conn bound
+535  cannot add 2hop 620 reach conn bound
+312  cannot add 2hop 482 reach conn bound
+312  cannot add 2hop 58 reach conn bound
+312  cannot add 2hop 704 reach conn bound
+563  cannot add 2hop 382 reach conn bound
+14  cannot add 2hop 105 reach conn bound
+847  cannot add 2hop 432 reach conn bound
+321  cannot add 2hop 133 reach conn bound
+442  cannot add 2hop 710 reach conn bound
+958  cannot add 2hop 564 reach conn bound
+123  cannot add 2hop 57 reach conn bound
+123  cannot add 2hop 110 reach conn bound
+538  cannot add 2hop 464 reach conn bound
+837  cannot add 2hop 837 reach conn bound
+837  cannot add 2hop 274 reach conn bound
+687  cannot add 2hop 620 reach conn bound
+885  cannot add 2hop 803 reach conn bound
+987  cannot add 2hop 639 reach conn bound
+987  cannot add 2hop 169 reach conn bound
+590  cannot add 2hop 925 reach conn bound
+479  cannot add 2hop 556 reach conn bound
+582  cannot add 2hop 620 reach conn bound
+56  cannot add 2hop 539 selected
+257  cannot add 2hop 720 reach conn bound
+257  cannot add 2hop 615 reach conn bound
+266  cannot add 2hop 539 selected
+864  cannot add 2hop 539 selected
+389  cannot add 2hop 391 selected
+72  cannot add 2hop 29 reach conn bound
+72  cannot add 2hop 943 reach conn bound
+191  cannot add 2hop 278 selected
+332  cannot add 2hop 667 reach conn bound
+482  cannot add 2hop 337 reach conn bound
+489  cannot add 2hop 362 reach conn bound
+489  cannot add 2hop 278 selected
+970  cannot add 2hop 169 reach conn bound
+943  cannot add 2hop 278 selected
+943  cannot add 2hop 53 selected
+100  cannot add 2hop 664 reach conn bound
+100  cannot add 2hop 563 reach conn bound
+872  cannot add 2hop 342 selected
+872  cannot add 2hop 326 reach conn bound
+122  cannot add 2hop 53 selected
+585  cannot add 2hop 568 reach conn bound
+628  cannot add 2hop 432 reach conn bound
+869  cannot add 2hop 802 reach conn bound
+995  cannot add 2hop 53 selected
+926  cannot add 2hop 529 reach conn bound
+57  cannot add 2hop 564 selected
+426  cannot add 2hop 477 reach conn bound
+426  cannot add 2hop 620 reach conn bound
+426  cannot add 2hop 640 reach conn bound
+426 2hop not enough, random choose
+759  cannot add 2hop 278 selected
+575  cannot add 2hop 874 reach conn bound
+114  cannot add 2hop 575 reach conn bound
+53  cannot add 2hop 362 reach conn bound
+54  cannot add 2hop 205 reach conn bound
+54  cannot add 2hop 391 selected
+246  cannot add 2hop 856 reach conn bound
+939  cannot add 2hop 539 selected
+939  cannot add 2hop 391 selected
+601  cannot add 2hop 742 reach conn bound
+484  cannot add 2hop 278 selected
+633  cannot add 2hop 409 reach conn bound
+209  cannot add 2hop 391 selected
+77  cannot add 2hop 53 selected
+62  cannot add 2hop 378 reach conn bound
+226  cannot add 2hop 846 reach conn bound
+308  cannot add 2hop 620 selected
+308  cannot add 2hop 556 reach conn bound
+596  cannot add 2hop 53 selected
+743  cannot add 2hop 513 reach conn bound
+25  cannot add 2hop 564 selected
+346  cannot add 2hop 912 reach conn bound
+384  cannot add 2hop 568 reach conn bound
+488  cannot add 2hop 620 selected
+488  cannot add 2hop 409 reach conn bound
+186  cannot add 2hop 630 selected
+698  cannot add 2hop 534 reach conn bound
+473  cannot add 2hop 53 selected
+960  cannot add 2hop 278 selected
+541  cannot add 2hop 391 selected
+730  cannot add 2hop 203 reach conn bound
+666  cannot add 2hop 976 reach conn bound
+174  cannot add 2hop 278 selected
+268  cannot add 2hop 564 selected
+717  cannot add 2hop 86 selected
+925  cannot add 2hop 105 reach conn bound
+925  cannot add 2hop 564 selected
+925  cannot add 2hop 539 selected
+925  cannot add 2hop 841 reach conn bound
+627  cannot add 2hop 620 selected
+441  cannot add 2hop 241 reach conn bound
+298  cannot add 2hop 485 reach conn bound
+298  cannot add 2hop 539 selected
+298  cannot add 2hop 539 selected
+196  cannot add 2hop 765 reach conn bound
+178  cannot add 2hop 564 selected
+178  cannot add 2hop 894 reach conn bound
+829  cannot add 2hop 127 selected
+156  cannot add 2hop 821 reach conn bound
+179  cannot add 2hop 342 selected
+179  cannot add 2hop 564 selected
+325  cannot add 2hop 127 selected
+325  cannot add 2hop 115 reach conn bound
+147  cannot add 2hop 127 selected
+477  cannot add 2hop 620 selected
+477  cannot add 2hop 477 reach conn bound
+477  cannot add 2hop 640 reach conn bound
+477 2hop not enough, random choose
+542  cannot add 2hop 720 reach conn bound
+815  cannot add 2hop 630 selected
+592  cannot add 2hop 604 reach conn bound
+592  cannot add 2hop 539 selected
+529  cannot add 2hop 568 selected
+529  cannot add 2hop 538 reach conn bound
+529  cannot add 2hop 391 selected
+700  cannot add 2hop 894 reach conn bound
+297  cannot add 2hop 29 selected
+472  cannot add 2hop 391 selected
+276  cannot add 2hop 391 selected
+419  cannot add 2hop 568 selected
+419  cannot add 2hop 29 selected
+284  cannot add 2hop 535 reach conn bound
+539  cannot add 2hop 615 reach conn bound
+539  cannot add 2hop 620 selected
+431  cannot add 2hop 188 selected
+713  cannot add 2hop 29 selected
+713  cannot add 2hop 278 selected
+713  cannot add 2hop 29 selected
+713  cannot add 2hop 894 reach conn bound
+217  cannot add 2hop 29 selected
+71  cannot add 2hop 568 selected
+301  cannot add 2hop 342 selected
+301  cannot add 2hop 550 reach conn bound
+301  cannot add 2hop 29 selected
+301  cannot add 2hop 620 selected
+301  cannot add 2hop 71 reach conn bound
+301  cannot add 2hop 29 selected
+301  cannot add 2hop 630 selected
+934  cannot add 2hop 278 selected
+934  cannot add 2hop 86 selected
+934  cannot add 2hop 590 reach conn bound
+532  cannot add 2hop 83 reach conn bound
+263  cannot add 2hop 564 selected
+263  cannot add 2hop 342 selected
+263  cannot add 2hop 326 reach conn bound
+263 2hop not enough, random choose
+786  cannot add 2hop 342 selected
+786  cannot add 2hop 188 selected
+408  cannot add 2hop 391 selected
+623  cannot add 2hop 278 selected
+340  cannot add 2hop 620 selected
+340  cannot add 2hop 640 reach conn bound
+340  cannot add 2hop 477 reach conn bound
+340 2hop not enough, random choose
+127  cannot add 2hop 53 selected
+233  cannot add 2hop 29 selected
+288  cannot add 2hop 539 selected
+741  cannot add 2hop 620 selected
+741  cannot add 2hop 127 selected
+396  cannot add 2hop 278 selected
+625  cannot add 2hop 837 reach conn bound
+455  cannot add 2hop 513 reach conn bound
+455  cannot add 2hop 127 selected
+236  cannot add 2hop 86 selected
+236  cannot add 2hop 342 selected
+964  cannot add 2hop 127 selected
+793  cannot add 2hop 620 selected
+793  cannot add 2hop 630 selected
+390  cannot add 2hop 604 reach conn bound
+390  cannot add 2hop 894 selected
+464  cannot add 2hop 29 selected
+464  cannot add 2hop 342 selected
+464  cannot add 2hop 550 reach conn bound
+464  cannot add 2hop 29 selected
+669  cannot add 2hop 222 reach conn bound
+932  cannot add 2hop 116 reach conn bound
+932  cannot add 2hop 894 selected
+86  cannot add 2hop 53 selected
+583  cannot add 2hop 556 reach conn bound
+240  cannot add 2hop 278 selected
+861  cannot add 2hop 620 selected
+861  cannot add 2hop 174 reach conn bound
+861  cannot add 2hop 342 selected
+359  cannot add 2hop 539 selected
+836  cannot add 2hop 391 selected
+683  cannot add 2hop 894 selected
+165  cannot add 2hop 29 selected
+499  cannot add 2hop 53 selected
+17  cannot add 2hop 539 selected
+17  cannot add 2hop 29 selected
+17  cannot add 2hop 620 selected
+467  cannot add 2hop 259 reach conn bound
+944  cannot add 2hop 29 selected
+944  cannot add 2hop 894 selected
+944  cannot add 2hop 564 selected
+783  cannot add 2hop 706 reach conn bound
+547  cannot add 2hop 563 reach conn bound
+547  cannot add 2hop 415 reach conn bound
+588  cannot add 2hop 874 reach conn bound
+588  cannot add 2hop 894 selected
+818  cannot add 2hop 620 selected
+818  cannot add 2hop 127 selected
+581  cannot add 2hop 894 selected
+581  cannot add 2hop 29 selected
+75  cannot add 2hop 86 selected
+75  cannot add 2hop 53 selected
+132  cannot add 2hop 819 reach conn bound
+503  cannot add 2hop 620 selected
+643  cannot add 2hop 819 reach conn bound
+282  cannot add 2hop 814 reach conn bound
+720  cannot add 2hop 568 selected
+307  cannot add 2hop 630 selected
+769  cannot add 2hop 326 reach conn bound
+794  cannot add 2hop 86 selected
+794  cannot add 2hop 428 selected
+403  cannot add 2hop 564 selected
+403  cannot add 2hop 630 selected
+933  cannot add 2hop 188 selected
+933  cannot add 2hop 284 reach conn bound
+701  cannot add 2hop 568 selected
+701  cannot add 2hop 943 reach conn bound
+701  cannot add 2hop 29 selected
+701  cannot add 2hop 894 selected
+701  cannot add 2hop 535 reach conn bound
+701 2hop not enough, random choose
+421  cannot add 2hop 133 selected
+444  cannot add 2hop 620 selected
+444  cannot add 2hop 188 selected
+296  cannot add 2hop 620 selected
+930  cannot add 2hop 278 selected
+930  cannot add 2hop 105 selected
+989  cannot add 2hop 342 selected
+890  cannot add 2hop 635 reach conn bound
+129  cannot add 2hop 391 selected
+129  cannot add 2hop 538 reach conn bound
+129  cannot add 2hop 483 reach conn bound
+564  cannot add 2hop 327 reach conn bound
+564  cannot add 2hop 105 selected
+367  cannot add 2hop 86 selected
+367  cannot add 2hop 228 selected
+367  cannot add 2hop 5 reach conn bound
+801  cannot add 2hop 391 selected
+801  cannot add 2hop 57 reach conn bound
+285  cannot add 2hop 127 selected
+968  cannot add 2hop 968 reach conn bound
+968  cannot add 2hop 894 selected
+985  cannot add 2hop 538 reach conn bound
+985  cannot add 2hop 133 selected
+204  cannot add 2hop 690 reach conn bound
+204  cannot add 2hop 821 reach conn bound
+204  cannot add 2hop 278 selected
+634  cannot add 2hop 86 selected
+333  cannot add 2hop 110 reach conn bound
+333  cannot add 2hop 342 selected
+430  cannot add 2hop 228 selected
+704  cannot add 2hop 278 selected
+587  cannot add 2hop 894 selected
+587  cannot add 2hop 894 selected
+610  cannot add 2hop 29 selected
+610  cannot add 2hop 894 selected
+385  cannot add 2hop 984 reach conn bound
+294  cannot add 2hop 391 selected
+294  cannot add 2hop 105 selected
+309  cannot add 2hop 105 selected
+309  cannot add 2hop 382 selected
+673  cannot add 2hop 894 selected
+673  cannot add 2hop 564 selected
+673  cannot add 2hop 105 selected
+673  cannot add 2hop 382 selected
+673 2hop not enough, random choose
+680  cannot add 2hop 342 selected
+680  cannot add 2hop 29 selected
+680  cannot add 2hop 382 selected
+432  cannot add 2hop 127 selected
+290  cannot add 2hop 105 selected
+290  cannot add 2hop 620 selected
+392  cannot add 2hop 105 selected
+149  cannot add 2hop 382 selected
+149  cannot add 2hop 105 selected
+149  cannot add 2hop 564 selected
+149 2hop not enough, random choose
+638  cannot add 2hop 564 selected
+638  cannot add 2hop 382 selected
+638  cannot add 2hop 105 selected
+638 2hop not enough, random choose
+600  cannot add 2hop 564 selected
+755  cannot add 2hop 564 selected
+755  cannot add 2hop 86 selected
+755  cannot add 2hop 620 selected
+710  cannot add 2hop 535 reach conn bound
+224  cannot add 2hop 188 selected
+224  cannot add 2hop 342 selected
+224  cannot add 2hop 564 selected
+357  cannot add 2hop 630 selected
+357  cannot add 2hop 620 selected
+82  cannot add 2hop 620 selected
+948  cannot add 2hop 564 selected
+784  cannot add 2hop 428 selected
+784  cannot add 2hop 283 reach conn bound
+768  cannot add 2hop 133 selected
+22  cannot add 2hop 278 selected
+158  cannot add 2hop 391 selected
+158  cannot add 2hop 690 reach conn bound
+797  cannot add 2hop 846 reach conn bound
+187  cannot add 2hop 630 selected
+187  cannot add 2hop 982 reach conn bound
+909  cannot add 2hop 86 selected
+909  cannot add 2hop 278 selected
+74  cannot add 2hop 894 selected
+540  cannot add 2hop 29 selected
+540  cannot add 2hop 894 selected
+420  cannot add 2hop 568 selected
+679  cannot add 2hop 568 selected
+679  cannot add 2hop 630 selected
+348  cannot add 2hop 894 selected
+13  cannot add 2hop 568 selected
+13  cannot add 2hop 688 reach conn bound
+382  cannot add 2hop 129 reach conn bound
+382  cannot add 2hop 630 selected
+382  cannot add 2hop 620 selected
+382  cannot add 2hop 278 selected
+152  cannot add 2hop 382 selected
+152  cannot add 2hop 564 selected
+152  cannot add 2hop 105 selected
+152 2hop not enough, random choose
+211  cannot add 2hop 105 selected
+211  cannot add 2hop 278 selected
+854  cannot add 2hop 278 selected
+434  cannot add 2hop 630 selected
+982  cannot add 2hop 115 reach conn bound
+562  cannot add 2hop 29 selected
+55  cannot add 2hop 228 selected
+55  cannot add 2hop 391 selected
+501  cannot add 2hop 152 reach conn bound
+501  cannot add 2hop 342 selected
+8  cannot add 2hop 86 selected
+8  cannot add 2hop 690 selected
+767  cannot add 2hop 690 selected
+474  cannot add 2hop 382 selected
+474  cannot add 2hop 105 selected
+474  cannot add 2hop 169 reach conn bound
+412  cannot add 2hop 348 reach conn bound
+571  cannot add 2hop 688 reach conn bound
+376  cannot add 2hop 105 selected
+113  cannot add 2hop 105 selected
+113  cannot add 2hop 382 selected
+113  cannot add 2hop 564 selected
+113  cannot add 2hop 620 selected
+113 2hop not enough, random choose
+371  cannot add 2hop 808 reach conn bound
+956  cannot add 2hop 278 selected
+235  cannot add 2hop 428 selected
+235  cannot add 2hop 29 selected
+626  cannot add 2hop 516 reach conn bound
+626  cannot add 2hop 342 selected
+28  cannot add 2hop 382 selected
+28  cannot add 2hop 105 selected
+28  cannot add 2hop 564 selected
+28 2hop not enough, random choose
+90  cannot add 2hop 4 reach conn bound
+533  cannot add 2hop 894 selected
+707  cannot add 2hop 188 selected
+707  cannot add 2hop 342 selected
+707  cannot add 2hop 188 selected
+880  cannot add 2hop 894 selected
+470  cannot add 2hop 539 selected
+481  cannot add 2hop 188 selected
+481  cannot add 2hop 127 selected
+557  cannot add 2hop 249 reach conn bound
+557  cannot add 2hop 374 reach conn bound
+557  cannot add 2hop 446 reach conn bound
+557 2hop not enough, random choose
+454  cannot add 2hop 178 selected
+67  cannot add 2hop 105 selected
+67  cannot add 2hop 278 selected
+67  cannot add 2hop 342 selected
+67  cannot add 2hop 95 reach conn bound
+603  cannot add 2hop 105 selected
+603  cannot add 2hop 564 selected
+603  cannot add 2hop 382 selected
+603 2hop not enough, random choose
+351  cannot add 2hop 499 reach conn bound
+130  cannot add 2hop 983 selected
+130  cannot add 2hop 464 reach conn bound
+130  cannot add 2hop 620 selected
+130  cannot add 2hop 630 selected
+361  cannot add 2hop 53 selected
+361  cannot add 2hop 564 selected
+361  cannot add 2hop 342 selected
+361  cannot add 2hop 428 selected
+407  cannot add 2hop 539 selected
+407  cannot add 2hop 539 selected
+402  cannot add 2hop 278 selected
+866  cannot add 2hop 133 selected
+427  cannot add 2hop 391 selected
+18  cannot add 2hop 391 selected
+714  cannot add 2hop 188 selected
+97  cannot add 2hop 538 selected
+97  cannot add 2hop 620 selected
+461  cannot add 2hop 178 selected
+754  cannot add 2hop 620 selected
+754  cannot add 2hop 127 selected
+787  cannot add 2hop 228 selected
+787  cannot add 2hop 690 selected
+787  cannot add 2hop 564 selected
+653  cannot add 2hop 568 selected
+688  cannot add 2hop 228 selected
+688  cannot add 2hop 539 selected
+688  cannot add 2hop 278 selected
+678  cannot add 2hop 539 selected
+857  cannot add 2hop 174 reach conn bound
+857  cannot add 2hop 538 selected
+857  cannot add 2hop 53 selected
+857  cannot add 2hop 846 reach conn bound
+674  cannot add 2hop 983 selected
+674  cannot add 2hop 620 selected
+674  cannot add 2hop 983 selected
+674  cannot add 2hop 342 selected
+139  cannot add 2hop 539 selected
+267  cannot add 2hop 86 selected
+267  cannot add 2hop 133 selected
+267  cannot add 2hop 690 selected
+47  cannot add 2hop 133 selected
+47  cannot add 2hop 690 selected
+47  cannot add 2hop 86 selected
+682  cannot add 2hop 894 selected
+73  cannot add 2hop 278 selected
+597  cannot add 2hop 539 selected
+247  cannot add 2hop 493 reach conn bound
+247  cannot add 2hop 983 selected
+548  cannot add 2hop 568 selected
+197  cannot add 2hop 568 selected
+327  cannot add 2hop 29 selected
+327  cannot add 2hop 342 selected
+549  cannot add 2hop 983 selected
+549  cannot add 2hop 568 selected
+9  cannot add 2hop 71 reach conn bound
+9  cannot add 2hop 710 reach conn bound
+20  cannot add 2hop 178 selected
+78  cannot add 2hop 86 selected
+143  cannot add 2hop 538 selected
+232  cannot add 2hop 178 selected
+134  cannot add 2hop 483 reach conn bound
+134  cannot add 2hop 879 reach conn bound
+134  cannot add 2hop 391 selected
+918  cannot add 2hop 539 selected
+417  cannot add 2hop 115 reach conn bound
+772  cannot add 2hop 127 selected
+998  cannot add 2hop 539 selected
+998  cannot add 2hop 668 reach conn bound
+998  cannot add 2hop 550 reach conn bound
+998  cannot add 2hop 382 selected
+871  cannot add 2hop 391 selected
+871  cannot add 2hop 127 selected
+766  cannot add 2hop 989 reach conn bound
+856  cannot add 2hop 278 selected
+202  cannot add 2hop 228 selected
+659  cannot add 2hop 630 selected
+490  cannot add 2hop 428 selected
+923  cannot add 2hop 228 selected
+739  cannot add 2hop 564 selected
+705  cannot add 2hop 564 selected
+705  cannot add 2hop 983 selected
+137  cannot add 2hop 53 selected
+137  cannot add 2hop 894 selected
+137  cannot add 2hop 846 reach conn bound
+137  cannot add 2hop 564 selected
+137  cannot add 2hop 894 selected
+137  cannot add 2hop 539 selected
+844  cannot add 2hop 105 selected
+731  cannot add 2hop 539 selected
+447  cannot add 2hop 86 selected
+447  cannot add 2hop 620 selected
+447  cannot add 2hop 127 selected
+447  cannot add 2hop 278 selected
+447  cannot add 2hop 473 reach conn bound
+188  cannot add 2hop 568 selected
+188  cannot add 2hop 105 selected
+188  cannot add 2hop 382 selected
+188  cannot add 2hop 342 selected
+44  cannot add 2hop 487 reach conn bound
+984  cannot add 2hop 342 selected
+984  cannot add 2hop 564 selected
+984  cannot add 2hop 178 selected
+671  cannot add 2hop 86 selected
+671  cannot add 2hop 690 selected
+483  cannot add 2hop 435 reach conn bound
+354  cannot add 2hop 342 selected
+945  cannot add 2hop 620 selected
+214  cannot add 2hop 391 selected
+507  cannot add 2hop 539 selected
+507  cannot add 2hop 615 selected
+507  cannot add 2hop 326 selected
+507 2hop not enough, random choose
+806  cannot add 2hop 127 selected
+779  cannot add 2hop 720 reach conn bound
+986  cannot add 2hop 94 reach conn bound
+986  cannot add 2hop 690 selected
+12  cannot add 2hop 169 reach conn bound
+12  cannot add 2hop 690 selected
+859  cannot add 2hop 391 selected
+859  cannot add 2hop 414 selected
+859  cannot add 2hop 132 reach conn bound
+859 2hop not enough, random choose
+138  cannot add 2hop 391 selected
+906  cannot add 2hop 513 reach conn bound
+250  cannot add 2hop 228 selected
+219  cannot add 2hop 620 selected
+219  cannot add 2hop 53 selected
+219  cannot add 2hop 538 selected
+303  cannot add 2hop 205 reach conn bound
+303  cannot add 2hop 280 reach conn bound
+685  cannot add 2hop 538 selected
+685  cannot add 2hop 894 selected
+491  cannot add 2hop 620 selected
+491  cannot add 2hop 538 selected
+491  cannot add 2hop 630 selected
+117  cannot add 2hop 564 selected
+48  cannot add 2hop 326 selected
+48  cannot add 2hop 615 selected
+48  cannot add 2hop 539 selected
+48 2hop not enough, random choose
+406  cannot add 2hop 326 selected
+468  cannot add 2hop 630 selected
+468  cannot add 2hop 326 selected
+468  cannot add 2hop 615 selected
+468  cannot add 2hop 539 selected
+468  cannot add 2hop 188 selected
+468 2hop not enough, random choose
+648  cannot add 2hop 587 reach conn bound
+87  cannot add 2hop 105 selected
+87  cannot add 2hop 382 selected
+87  cannot add 2hop 564 selected
+87 2hop not enough, random choose
+803  cannot add 2hop 362 selected
+358  cannot add 2hop 326 selected
+358  cannot add 2hop 615 selected
+358  cannot add 2hop 539 selected
+358 2hop not enough, random choose
+16  cannot add 2hop 620 selected
+16  cannot add 2hop 983 selected
+494  cannot add 2hop 630 selected
+494  cannot add 2hop 428 selected
+485  cannot add 2hop 278 selected
+485  cannot add 2hop 630 selected
+485  cannot add 2hop 539 selected
+485  cannot add 2hop 485 reach conn bound
+485  cannot add 2hop 615 selected
+554  cannot add 2hop 228 selected
+554  cannot add 2hop 127 selected
+554  cannot add 2hop 362 selected
+554  cannot add 2hop 428 selected
+554  cannot add 2hop 630 selected
+554  cannot add 2hop 414 selected
+961  cannot add 2hop 362 selected
+896  cannot add 2hop 428 selected
+694  cannot add 2hop 311 reach conn bound
+694  cannot add 2hop 742 reach conn bound
+694  cannot add 2hop 630 selected
+476  cannot add 2hop 534 reach conn bound
+476  cannot add 2hop 620 selected
+102  cannot add 2hop 342 selected
+102  cannot add 2hop 326 selected
+102  cannot add 2hop 382 selected
+102  cannot add 2hop 105 selected
+102  cannot add 2hop 564 selected
+34  cannot add 2hop 888 reach conn bound
+802  cannot add 2hop 984 reach conn bound
+802  cannot add 2hop 53 selected
+802  cannot add 2hop 414 selected
+324  cannot add 2hop 382 selected
+324  cannot add 2hop 53 selected
+324  cannot add 2hop 326 selected
+151  cannot add 2hop 133 selected
+21  cannot add 2hop 690 selected
+862  cannot add 2hop 539 selected
+862  cannot add 2hop 382 selected
+440  cannot add 2hop 564 selected
+440  cannot add 2hop 382 selected
+440  cannot add 2hop 105 selected
+440 2hop not enough, random choose
+763  cannot add 2hop 428 selected
+497  cannot add 2hop 570 reach conn bound
+497  cannot add 2hop 564 selected
+497  cannot add 2hop 105 selected
+497  cannot add 2hop 382 selected
+497 2hop not enough, random choose
+738  cannot add 2hop 568 selected
+868  cannot add 2hop 620 selected
+326  cannot add 2hop 188 selected
+52  cannot add 2hop 382 selected
+52  cannot add 2hop 564 selected
+52  cannot add 2hop 105 selected
+52 2hop not enough, random choose
+551  cannot add 2hop 278 selected
+93  cannot add 2hop 894 selected
+93  cannot add 2hop 564 selected
+93  cannot add 2hop 29 selected
+93  cannot add 2hop 326 selected
+80  cannot add 2hop 720 selected
+80  cannot add 2hop 690 selected
+443  cannot add 2hop 894 selected
+443  cannot add 2hop 539 selected
+443  cannot add 2hop 821 reach conn bound
+283  cannot add 2hop 620 selected
+159  cannot add 2hop 888 selected
+935  cannot add 2hop 133 selected
+486  cannot add 2hop 133 selected
+317  cannot add 2hop 127 selected
+798  cannot add 2hop 188 selected
+855  cannot add 2hop 630 selected
+586  cannot add 2hop 983 selected
+811  cannot add 2hop 630 selected
+811  cannot add 2hop 568 selected
+567  cannot add 2hop 127 selected
+265  cannot add 2hop 391 selected
+265  cannot add 2hop 620 selected
+487  cannot add 2hop 630 selected
+450  cannot add 2hop 894 selected
+450  cannot add 2hop 29 selected
+450  cannot add 2hop 680 selected
+115  cannot add 2hop 342 selected
+36  cannot add 2hop 178 selected
+545  cannot add 2hop 105 selected
+545  cannot add 2hop 564 selected
+545  cannot add 2hop 382 selected
+545  cannot add 2hop 894 selected
+545 2hop not enough, random choose
+162  cannot add 2hop 539 selected
+162  cannot add 2hop 615 selected
+162  cannot add 2hop 326 selected
+162 2hop not enough, random choose
+456  cannot add 2hop 105 selected
+921  cannot add 2hop 127 selected
+921  cannot add 2hop 620 selected
+921  cannot add 2hop 278 selected
+921  cannot add 2hop 538 selected
+921  cannot add 2hop 205 selected
+921  cannot add 2hop 538 selected
+342  cannot add 2hop 837 reach conn bound
+702  cannot add 2hop 564 selected
+702  cannot add 2hop 620 selected
+878  cannot add 2hop 983 selected
+878  cannot add 2hop 690 selected
+516  cannot add 2hop 720 selected
+639  cannot add 2hop 53 selected
+168  cannot add 2hop 630 selected
+528  cannot add 2hop 564 selected
+752  cannot add 2hop 888 selected
+752  cannot add 2hop 342 selected
+752  cannot add 2hop 53 selected
+286  cannot add 2hop 278 selected
+286  cannot add 2hop 391 selected
+286  cannot add 2hop 105 selected
+523  cannot add 2hop 620 selected
+523  cannot add 2hop 29 selected
+171  cannot add 2hop 615 selected
+171  cannot add 2hop 326 selected
+171  cannot add 2hop 539 selected
+32  cannot add 2hop 326 selected
+32  cannot add 2hop 428 selected
+574  cannot add 2hop 615 selected
+172  cannot add 2hop 715 reach conn bound
+646  cannot add 2hop 337 reach conn bound
+582  cannot add 2hop 129 reach conn bound
+912  cannot add 2hop 105 reach conn bound
+617  cannot add 2hop 847 reach conn bound
+76  cannot add 2hop 615 reach conn bound
+184  cannot add 2hop 53 reach conn bound
+445  cannot add 2hop 989 reach conn bound
+484  cannot add 2hop 792 reach conn bound
+564  cannot add 2hop 674 reach conn bound
+922  cannot add 2hop 493 reach conn bound
+301  cannot add 2hop 550 reach conn bound
+948  cannot add 2hop 982 reach conn bound
+948  cannot add 2hop 535 reach conn bound
+396  cannot add 2hop 326 reach conn bound
+979  cannot add 2hop 989 reach conn bound
+334  cannot add 2hop 129 reach conn bound
+372  cannot add 2hop 720 reach conn bound
+299  cannot add 2hop 299 reach conn bound
+129  cannot add 2hop 982 reach conn bound
+83  cannot add 2hop 477 reach conn bound
+174  cannot add 2hop 970 reach conn bound
+326  cannot add 2hop 326 reach conn bound
+904  cannot add 2hop 403 reach conn bound
+112  cannot add 2hop 819 reach conn bound
+637  cannot add 2hop 432 reach conn bound
+233  cannot add 2hop 419 reach conn bound
+405  cannot add 2hop 414 reach conn bound
+405  cannot add 2hop 647 reach conn bound
+474  cannot add 2hop 566 reach conn bound
+649  cannot add 2hop 646 reach conn bound
+140  cannot add 2hop 534 reach conn bound
+140  cannot add 2hop 535 selected
+980  cannot add 2hop 505 reach conn bound
+980  cannot add 2hop 742 reach conn bound
+206  cannot add 2hop 4 reach conn bound
+206  cannot add 2hop 666 reach conn bound
+48  cannot add 2hop 535 selected
+426  cannot add 2hop 630 reach conn bound
+117  cannot add 2hop 535 selected
+390  cannot add 2hop 604 reach conn bound
+390  cannot add 2hop 116 reach conn bound
+997  cannot add 2hop 105 reach conn bound
+947  cannot add 2hop 374 reach conn bound
+177  cannot add 2hop 630 reach conn bound
+240  cannot add 2hop 680 reach conn bound
+655  cannot add 2hop 115 reach conn bound
+990  cannot add 2hop 477 reach conn bound
+680  cannot add 2hop 188 reach conn bound
+680  cannot add 2hop 535 selected
+680  cannot add 2hop 803 reach conn bound
+680 2hop not enough, random choose
+585  cannot add 2hop 568 reach conn bound
+403  cannot add 2hop 105 reach conn bound
+478  cannot add 2hop 535 selected
+478  cannot add 2hop 827 reach conn bound
+544  cannot add 2hop 674 reach conn bound
+316  cannot add 2hop 549 reach conn bound
+670  cannot add 2hop 94 reach conn bound
+670  cannot add 2hop 690 reach conn bound
+821  cannot add 2hop 649 reach conn bound
+15  cannot add 2hop 615 reach conn bound
+66  cannot add 2hop 490 reach conn bound
+506  cannot add 2hop 535 selected
+726  cannot add 2hop 83 reach conn bound
+200  cannot add 2hop 894 reach conn bound
+554  cannot add 2hop 205 reach conn bound
+554  cannot add 2hop 83 reach conn bound
+448  cannot add 2hop 31 reach conn bound
+448  cannot add 2hop 127 reach conn bound
+913  cannot add 2hop 535 selected
+435  cannot add 2hop 115 reach conn bound
+890  cannot add 2hop 680 reach conn bound
+935  cannot add 2hop 293 reach conn bound
+935  cannot add 2hop 464 reach conn bound
+819  cannot add 2hop 428 selected
+553  cannot add 2hop 326 reach conn bound
+553  cannot add 2hop 53 reach conn bound
+130  cannot add 2hop 129 reach conn bound
+926  cannot add 2hop 24 reach conn bound
+879  cannot add 2hop 888 reach conn bound
+287  cannot add 2hop 419 reach conn bound
+287  cannot add 2hop 115 reach conn bound
+2  cannot add 2hop 615 reach conn bound
+209  cannot add 2hop 704 reach conn bound
+915  cannot add 2hop 4 reach conn bound
+297  cannot add 2hop 535 selected
+684  cannot add 2hop 568 selected
+384  cannot add 2hop 568 selected
+989  cannot add 2hop 419 reach conn bound
+989  cannot add 2hop 178 reach conn bound
+645  cannot add 2hop 535 selected
+645  cannot add 2hop 568 selected
+770  cannot add 2hop 861 reach conn bound
+853  cannot add 2hop 94 reach conn bound
+671  cannot add 2hop 428 selected
+671  cannot add 2hop 821 reach conn bound
+242  cannot add 2hop 428 selected
+497  cannot add 2hop 535 selected
+148  cannot add 2hop 561 reach conn bound
+642  cannot add 2hop 127 reach conn bound
+642  cannot add 2hop 428 selected
+320  cannot add 2hop 442 reach conn bound
+183  cannot add 2hop 535 selected
+769  cannot add 2hop 568 selected
+769  cannot add 2hop 535 selected
+600  cannot add 2hop 203 reach conn bound
+288  cannot add 2hop 670 reach conn bound
+210  cannot add 2hop 480 reach conn bound
+97  cannot add 2hop 409 reach conn bound
+927  cannot add 2hop 568 selected
+927  cannot add 2hop 211 reach conn bound
+927  cannot add 2hop 29 selected
+132  cannot add 2hop 105 reach conn bound
+888  cannot add 2hop 535 selected
+888  cannot add 2hop 587 reach conn bound
+152  cannot add 2hop 935 reach conn bound
+863  cannot add 2hop 361 reach conn bound
+374  cannot add 2hop 35 reach conn bound
+759  cannot add 2hop 414 reach conn bound
+580  cannot add 2hop 894 reach conn bound
+493  cannot add 2hop 535 selected
+323  cannot add 2hop 428 selected
+323  cannot add 2hop 690 reach conn bound
+323  cannot add 2hop 568 selected
+796  cannot add 2hop 604 reach conn bound
+712  cannot add 2hop 989 reach conn bound
+887  cannot add 2hop 742 reach conn bound
+381  cannot add 2hop 337 reach conn bound
+487  cannot add 2hop 428 selected
+699  cannot add 2hop 755 reach conn bound
+62  cannot add 2hop 568 selected
+262  cannot add 2hop 568 selected
+262  cannot add 2hop 513 reach conn bound
+428  cannot add 2hop 819 reach conn bound
+428  cannot add 2hop 133 reach conn bound
+611  cannot add 2hop 615 reach conn bound
+886  cannot add 2hop 116 reach conn bound
+886  cannot add 2hop 894 selected
+154  cannot add 2hop 604 selected
+870  cannot add 2hop 984 reach conn bound
+331  cannot add 2hop 670 reach conn bound
+774  cannot add 2hop 821 reach conn bound
+774  cannot add 2hop 774 reach conn bound
+774  cannot add 2hop 610 reach conn bound
+774 2hop not enough, random choose
+168  cannot add 2hop 129 reach conn bound
+610  cannot add 2hop 203 reach conn bound
+255  cannot add 2hop 31 reach conn bound
+75  cannot add 2hop 984 reach conn bound
+988  cannot add 2hop 337 reach conn bound
+869  cannot add 2hop 71 reach conn bound
+261  cannot add 2hop 894 selected
+126  cannot add 2hop 587 reach conn bound
+126  cannot add 2hop 535 selected
+341  cannot add 2hop 935 reach conn bound
+315  cannot add 2hop 446 reach conn bound
+750  cannot add 2hop 65 reach conn bound
+750  cannot add 2hop 428 selected
+750  cannot add 2hop 568 selected
+368  cannot add 2hop 894 selected
+368  cannot add 2hop 680 reach conn bound
+368  cannot add 2hop 539 selected
+368 2hop not enough, random choose
+313  cannot add 2hop 428 selected
+795  cannot add 2hop 568 selected
+795  cannot add 2hop 419 reach conn bound
+984  cannot add 2hop 539 selected
+555  cannot add 2hop 976 reach conn bound
+767  cannot add 2hop 29 selected
+767  cannot add 2hop 596 reach conn bound
+416  cannot add 2hop 568 selected
+416  cannot add 2hop 218 reach conn bound
+488  cannot add 2hop 127 reach conn bound
+453  cannot add 2hop 568 selected
+802  cannot add 2hop 846 reach conn bound
+39  cannot add 2hop 690 selected
+39  cannot add 2hop 742 reach conn bound
+213  cannot add 2hop 604 selected
+213  cannot add 2hop 883 reach conn bound
+365  cannot add 2hop 568 selected
+659  cannot add 2hop 188 reach conn bound
+291  cannot add 2hop 568 selected
+291  cannot add 2hop 539 selected
+291  cannot add 2hop 568 selected
+179  cannot add 2hop 535 selected
+179  cannot add 2hop 105 reach conn bound
+179  cannot add 2hop 533 reach conn bound
+137  cannot add 2hop 539 selected
+929  cannot add 2hop 687 reach conn bound
+929  cannot add 2hop 690 selected
+638  cannot add 2hop 604 selected
+638  cannot add 2hop 535 selected
+232  cannot add 2hop 428 selected
+104  cannot add 2hop 568 selected
+104  cannot add 2hop 995 reach conn bound
+925  cannot add 2hop 535 selected
+424  cannot add 2hop 293 reach conn bound
+810  cannot add 2hop 568 selected
+976  cannot add 2hop 841 reach conn bound
+237  cannot add 2hop 218 reach conn bound
+246  cannot add 2hop 29 selected
+109  cannot add 2hop 535 selected
+901  cannot add 2hop 94 reach conn bound
+958  cannot add 2hop 342 reach conn bound
+958  cannot add 2hop 105 reach conn bound
+958  cannot add 2hop 894 selected
+958  cannot add 2hop 535 selected
+55  cannot add 2hop 169 reach conn bound
+105  cannot add 2hop 117 reach conn bound
+101  cannot add 2hop 894 selected
+101  cannot add 2hop 115 reach conn bound
+485  cannot add 2hop 539 selected
+905  cannot add 2hop 535 selected
+905  cannot add 2hop 568 selected
+545  cannot add 2hop 535 selected
+545  cannot add 2hop 925 reach conn bound
+545  cannot add 2hop 342 reach conn bound
+545  cannot add 2hop 105 reach conn bound
+545 2hop not enough, random choose
+258  cannot add 2hop 568 selected
+734  cannot add 2hop 373 reach conn bound
+966  cannot add 2hop 568 selected
+549  cannot add 2hop 568 selected
+223  cannot add 2hop 894 selected
+223  cannot add 2hop 539 selected
+221  cannot add 2hop 391 reach conn bound
+730  cannot add 2hop 894 selected
+241  cannot add 2hop 894 selected
+35  cannot add 2hop 894 selected
+247  cannot add 2hop 951 reach conn bound
+247  cannot add 2hop 489 reach conn bound
+433  cannot add 2hop 690 selected
+801  cannot add 2hop 742 selected
+801  cannot add 2hop 539 selected
+304  cannot add 2hop 604 selected
+791  cannot add 2hop 808 reach conn bound
+724  cannot add 2hop 841 reach conn bound
+593  cannot add 2hop 535 selected
+593  cannot add 2hop 587 reach conn bound
+93  cannot add 2hop 690 selected
+440  cannot add 2hop 326 selected
+440  cannot add 2hop 535 selected
+440  cannot add 2hop 568 selected
+440 2hop not enough, random choose
+122  cannot add 2hop 802 reach conn bound
+122  cannot add 2hop 802 reach conn bound
+499  cannot add 2hop 720 reach conn bound
+499  cannot add 2hop 690 selected
+191  cannot add 2hop 127 reach conn bound
+191  cannot add 2hop 687 reach conn bound
+812  cannot add 2hop 29 selected
+623  cannot add 2hop 690 selected
+310  cannot add 2hop 742 selected
+335  cannot add 2hop 539 selected
+648  cannot add 2hop 428 selected
+881  cannot add 2hop 29 selected
+881  cannot add 2hop 894 selected
+881  cannot add 2hop 680 selected
+752  cannot add 2hop 568 selected
+695  cannot add 2hop 802 reach conn bound
+937  cannot add 2hop 539 selected
+560  cannot add 2hop 894 selected
+560  cannot add 2hop 680 selected
+560  cannot add 2hop 539 selected
+560  cannot add 2hop 802 reach conn bound
+560 2hop not enough, random choose
+588  cannot add 2hop 690 selected
+588  cannot add 2hop 568 selected
+685  cannot add 2hop 539 selected
+685  cannot add 2hop 287 reach conn bound
+294  cannot add 2hop 690 selected
+317  cannot add 2hop 218 reach conn bound
+776  cannot add 2hop 29 selected
+776  cannot add 2hop 939 reach conn bound
+973  cannot add 2hop 680 selected
+973  cannot add 2hop 550 reach conn bound
+973  cannot add 2hop 690 selected
+427  cannot add 2hop 200 reach conn bound
+427  cannot add 2hop 539 selected
+575  cannot add 2hop 630 selected
+575  cannot add 2hop 808 reach conn bound
+102  cannot add 2hop 925 selected
+180  cannot add 2hop 680 selected
+732  cannot add 2hop 690 selected
+72  cannot add 2hop 342 selected
+72  cannot add 2hop 925 selected
+72  cannot add 2hop 326 selected
+866  cannot add 2hop 793 reach conn bound
+208  cannot add 2hop 29 selected
+208  cannot add 2hop 935 reach conn bound
+208  cannot add 2hop 925 selected
+653  cannot add 2hop 483 reach conn bound
+653  cannot add 2hop 535 selected
+653  cannot add 2hop 342 selected
+950  cannot add 2hop 568 selected
+950  cannot add 2hop 754 reach conn bound
+336  cannot add 2hop 819 selected
+336  cannot add 2hop 819 selected
+60  cannot add 2hop 894 selected
+60  cannot add 2hop 802 reach conn bound
+532  cannot add 2hop 403 reach conn bound
+532  cannot add 2hop 342 selected
+417  cannot add 2hop 798 reach conn bound
+417  cannot add 2hop 925 selected
+417  cannot add 2hop 742 selected
+417  cannot add 2hop 326 selected
+417  cannot add 2hop 680 selected
+417 2hop not enough, random choose
+911  cannot add 2hop 630 selected
+665  cannot add 2hop 105 reach conn bound
+190  cannot add 2hop 414 reach conn bound
+275  cannot add 2hop 127 reach conn bound
+993  cannot add 2hop 819 selected
+119  cannot add 2hop 630 selected
+707  cannot add 2hop 342 selected
+707  cannot add 2hop 535 selected
+722  cannot add 2hop 604 selected
+214  cannot add 2hop 819 selected
+214  cannot add 2hop 539 selected
+175  cannot add 2hop 883 reach conn bound
+345  cannot add 2hop 680 selected
+345  cannot add 2hop 894 selected
+345  cannot add 2hop 539 selected
+345 2hop not enough, random choose
+938  cannot add 2hop 442 reach conn bound
+597  cannot add 2hop 539 selected
+46  cannot add 2hop 925 selected
+46  cannot add 2hop 342 selected
+46  cannot add 2hop 925 selected
+46  cannot add 2hop 105 selected
+46 2hop not enough, random choose
+797  cannot add 2hop 690 selected
+118  cannot add 2hop 133 selected
+230  cannot add 2hop 29 selected
+230  cannot add 2hop 342 selected
+230  cannot add 2hop 925 selected
+629  cannot add 2hop 342 selected
+456  cannot add 2hop 311 selected
+456  cannot add 2hop 742 selected
+456  cannot add 2hop 687 reach conn bound
+456  cannot add 2hop 435 reach conn bound
+456 2hop not enough, random choose
+423  cannot add 2hop 943 reach conn bound
+4  cannot add 2hop 133 selected
+4  cannot add 2hop 630 selected
+807  cannot add 2hop 690 selected
+807  cannot add 2hop 935 selected
+697  cannot add 2hop 311 selected
+697  cannot add 2hop 935 selected
+388  cannot add 2hop 861 reach conn bound
+698  cannot add 2hop 105 selected
+919  cannot add 2hop 868 reach conn bound
+16  cannot add 2hop 894 selected
+16  cannot add 2hop 888 reach conn bound
+609  cannot add 2hop 819 selected
+515  cannot add 2hop 988 reach conn bound
+577  cannot add 2hop 133 selected
+577  cannot add 2hop 490 reach conn bound
+577  cannot add 2hop 883 reach conn bound
+44  cannot add 2hop 711 reach conn bound
+43  cannot add 2hop 819 selected
+43  cannot add 2hop 191 reach conn bound
+43  cannot add 2hop 133 selected
+939  cannot add 2hop 690 selected
+939  cannot add 2hop 819 selected
+939  cannot add 2hop 419 selected
+847  cannot add 2hop 803 reach conn bound
+847  cannot add 2hop 803 reach conn bound
+834  cannot add 2hop 326 selected
+235  cannot add 2hop 133 selected
+235  cannot add 2hop 342 selected
+235  cannot add 2hop 419 selected
+678  cannot add 2hop 803 reach conn bound
+540  cannot add 2hop 326 selected
+540  cannot add 2hop 680 selected
+540  cannot add 2hop 575 selected
+996  cannot add 2hop 630 selected
+6  cannot add 2hop 575 selected
+296  cannot add 2hop 690 selected
+949  cannot add 2hop 680 selected
+949  cannot add 2hop 568 selected
+127  cannot add 2hop 568 selected
+127  cannot add 2hop 604 selected
+147  cannot add 2hop 133 selected
+147  cannot add 2hop 428 selected
+51  cannot add 2hop 568 selected
+51  cannot add 2hop 129 selected
+51  cannot add 2hop 278 reach conn bound
+312  cannot add 2hop 704 reach conn bound
+312  cannot add 2hop 249 reach conn bound
+312  cannot add 2hop 133 selected
+257  cannot add 2hop 575 selected
+816  cannot add 2hop 630 selected
+598  cannot add 2hop 882 reach conn bound
+598  cannot add 2hop 435 reach conn bound
+786  cannot add 2hop 342 selected
+414  cannot add 2hop 630 selected
+414  cannot add 2hop 680 selected
+573  cannot add 2hop 513 reach conn bound
+573  cannot add 2hop 568 selected
+573  cannot add 2hop 419 selected
+573 2hop not enough, random choose
+244  cannot add 2hop 133 selected
+157  cannot add 2hop 539 selected
+157  cannot add 2hop 894 selected
+157  cannot add 2hop 680 selected
+157 2hop not enough, random choose
+878  cannot add 2hop 587 reach conn bound
+69  cannot add 2hop 742 selected
+69  cannot add 2hop 894 selected
+69  cannot add 2hop 539 selected
+454  cannot add 2hop 774 reach conn bound
+454  cannot add 2hop 29 selected
+454  cannot add 2hop 939 reach conn bound
+454  cannot add 2hop 819 selected
+454 2hop not enough, random choose
+355  cannot add 2hop 524 reach conn bound
+465  cannot add 2hop 129 selected
+465  cannot add 2hop 568 selected
+100  cannot add 2hop 798 reach conn bound
+800  cannot add 2hop 568 selected
+567  cannot add 2hop 935 selected
+567  cannot add 2hop 129 selected
+567  cannot add 2hop 535 selected
+512  cannot add 2hop 798 reach conn bound
+512  cannot add 2hop 419 selected
+995  cannot add 2hop 105 selected
+995  cannot add 2hop 342 selected
+995  cannot add 2hop 925 selected
+995 2hop not enough, random choose
+956  cannot add 2hop 925 selected
+420  cannot add 2hop 894 selected
+420  cannot add 2hop 535 selected
+420  cannot add 2hop 568 selected
+420  cannot add 2hop 419 selected
+420  cannot add 2hop 976 reach conn bound
+420  cannot add 2hop 680 selected
+420  cannot add 2hop 630 selected
+90  cannot add 2hop 742 selected
+872  cannot add 2hop 342 selected
+872  cannot add 2hop 742 selected
+872  cannot add 2hop 105 selected
+708  cannot add 2hop 53 selected
+708  cannot add 2hop 342 selected
+362  cannot add 2hop 575 selected
+844  cannot add 2hop 29 selected
+415  cannot add 2hop 575 selected
+625  cannot add 2hop 935 selected
+658  cannot add 2hop 819 selected
+852  cannot add 2hop 133 selected
+38  cannot add 2hop 428 selected
+337  cannot add 2hop 575 selected
+92  cannot add 2hop 129 selected
+92  cannot add 2hop 105 selected
+92  cannot add 2hop 34 reach conn bound
+943  cannot add 2hop 29 selected
+536  cannot add 2hop 133 selected
+271  cannot add 2hop 690 selected
+893  cannot add 2hop 483 reach conn bound
+690  cannot add 2hop 690 selected
+778  cannot add 2hop 568 selected
+394  cannot add 2hop 630 selected
+394  cannot add 2hop 539 selected
+970  cannot add 2hop 133 selected
+970  cannot add 2hop 742 selected
+970  cannot add 2hop 819 selected
+970  cannot add 2hop 604 selected
+970 2hop not enough, random choose
+992  cannot add 2hop 841 reach conn bound
+992  cannot add 2hop 535 selected
+992  cannot add 2hop 419 selected
+263  cannot add 2hop 53 selected
+63  cannot add 2hop 630 selected
+298  cannot add 2hop 485 reach conn bound
+298  cannot add 2hop 539 selected
+785  cannot add 2hop 105 selected
+994  cannot add 2hop 819 selected
+994  cannot add 2hop 428 selected
+106  cannot add 2hop 630 selected
+106  cannot add 2hop 133 selected
+385  cannot add 2hop 690 selected
+953  cannot add 2hop 342 selected
+953  cannot add 2hop 35 selected
+953  cannot add 2hop 935 selected
+953  cannot add 2hop 925 selected
+953  cannot add 2hop 29 selected
+674  cannot add 2hop 674 reach conn bound
+674  cannot add 2hop 438 reach conn bound
+826  cannot add 2hop 428 selected
+199  cannot add 2hop 925 selected
+917  cannot add 2hop 105 selected
+228  cannot add 2hop 35 selected
+662  cannot add 2hop 53 selected
+662  cannot add 2hop 894 selected
+914  cannot add 2hop 133 selected
+65  cannot add 2hop 819 selected
+10  cannot add 2hop 680 selected
+135  cannot add 2hop 604 selected
+483  cannot add 2hop 925 selected
+533  cannot add 2hop 311 selected
+533  cannot add 2hop 742 selected
+533  cannot add 2hop 604 selected
+375  cannot add 2hop 742 selected
+824  cannot add 2hop 133 selected
+824  cannot add 2hop 127 selected
+824  cannot add 2hop 311 selected
+406  cannot add 2hop 535 selected
+974  cannot add 2hop 909 reach conn bound
+974  cannot add 2hop 819 selected
+974  cannot add 2hop 935 selected
+974  cannot add 2hop 610 reach conn bound
+765  cannot add 2hop 419 selected
+765  cannot add 2hop 568 selected
+765  cannot add 2hop 29 selected
+928  cannot add 2hop 29 selected
+928  cannot add 2hop 630 selected
+460  cannot add 2hop 575 selected
+985  cannot add 2hop 133 selected
+277  cannot add 2hop 706 reach conn bound
+277  cannot add 2hop 925 selected
+120  cannot add 2hop 435 reach conn bound
+120  cannot add 2hop 391 reach conn bound
+120  cannot add 2hop 539 selected
+762  cannot add 2hop 419 selected
+762  cannot add 2hop 690 selected
+762  cannot add 2hop 935 selected
+391  cannot add 2hop 133 selected
+673  cannot add 2hop 575 selected
+673  cannot add 2hop 535 selected
+673  cannot add 2hop 105 selected
+673  cannot add 2hop 680 selected
+673  cannot add 2hop 94 selected
+673  cannot add 2hop 894 selected
+215  cannot add 2hop 311 selected
+215  cannot add 2hop 720 selected
+222  cannot add 2hop 29 selected
+222  cannot add 2hop 894 selected
+222  cannot add 2hop 94 selected
+222  cannot add 2hop 326 selected
+222  cannot add 2hop 105 selected
+779  cannot add 2hop 925 selected
+779  cannot add 2hop 720 selected
+73  cannot add 2hop 995 reach conn bound
+981  cannot add 2hop 680 selected
+981  cannot add 2hop 133 selected
+162  cannot add 2hop 94 selected
+162  cannot add 2hop 432 reach conn bound
+47  cannot add 2hop 342 selected
+47  cannot add 2hop 177 reach conn bound
+479  cannot add 2hop 556 reach conn bound
+479  cannot add 2hop 105 selected
+207  cannot add 2hop 428 selected
+207  cannot add 2hop 615 selected
+207  cannot add 2hop 819 selected
+940  cannot add 2hop 894 selected
+940  cannot add 2hop 539 selected
+940  cannot add 2hop 680 selected
+940  cannot add 2hop 29 selected
+940  cannot add 2hop 311 selected
+940  cannot add 2hop 127 selected
+940 2hop not enough, random choose
+281  cannot add 2hop 604 selected
+305  cannot add 2hop 104 reach conn bound
+305  cannot add 2hop 535 selected
+442  cannot add 2hop 129 selected
+442  cannot add 2hop 35 selected
+694  cannot add 2hop 133 selected
+694  cannot add 2hop 630 selected
+694  cannot add 2hop 534 selected
+843  cannot add 2hop 105 selected
+542  cannot add 2hop 575 selected
+542  cannot add 2hop 935 selected
+627  cannot add 2hop 534 selected
+245  cannot add 2hop 615 selected
+245  cannot add 2hop 94 selected
+969  cannot add 2hop 53 selected
+596  cannot add 2hop 53 selected
+596  cannot add 2hop 35 selected
+641  cannot add 2hop 720 selected
+641  cannot add 2hop 667 reach conn bound
+641  cannot add 2hop 133 selected
+347  cannot add 2hop 382 selected
+252  cannot add 2hop 133 selected
+252  cannot add 2hop 127 selected
+252  cannot add 2hop 894 selected
+252  cannot add 2hop 419 selected
+33  cannot add 2hop 94 selected
+33  cannot add 2hop 611 reach conn bound
+469  cannot add 2hop 127 selected
+469  cannot add 2hop 534 selected
+469  cannot add 2hop 604 selected
+469  cannot add 2hop 342 selected
+26  cannot add 2hop 925 selected
+26  cannot add 2hop 29 selected
+26  cannot add 2hop 754 reach conn bound
+26  cannot add 2hop 935 selected
+169  cannot add 2hop 483 reach conn bound
+169  cannot add 2hop 894 selected
+176  cannot add 2hop 29 selected
+176  cannot add 2hop 342 selected
+41  cannot add 2hop 419 selected
+755  cannot add 2hop 556 reach conn bound
+790  cannot add 2hop 680 selected
+790  cannot add 2hop 539 selected
+790  cannot add 2hop 894 selected
+790  cannot add 2hop 342 selected
+790 2hop not enough, random choose
+197  cannot add 2hop 604 selected
+524  cannot add 2hop 630 selected
+537  cannot add 2hop 690 selected
+918  cannot add 2hop 29 selected
+113  cannot add 2hop 674 selected
+113  cannot add 2hop 29 selected
+113  cannot add 2hop 534 selected
+113  cannot add 2hop 575 selected
+462  cannot add 2hop 53 selected
+462  cannot add 2hop 2 reach conn bound
+14  cannot add 2hop 534 selected
+280  cannot add 2hop 535 selected
+280  cannot add 2hop 94 selected
+1  cannot add 2hop 615 selected
+608  cannot add 2hop 311 selected
+608  cannot add 2hop 690 selected
+608  cannot add 2hop 428 selected
+743  cannot add 2hop 568 selected
+743  cannot add 2hop 311 selected
+743  cannot add 2hop 720 selected
+318  cannot add 2hop 2 reach conn bound
+318  cannot add 2hop 604 selected
+318  cannot add 2hop 53 selected
+318  cannot add 2hop 925 selected
+392  cannot add 2hop 94 selected
+513  cannot add 2hop 326 selected
+150  cannot add 2hop 464 reach conn bound
+447  cannot add 2hop 127 selected
+85  cannot add 2hop 690 selected
+85  cannot add 2hop 680 selected
+85  cannot add 2hop 29 selected
+309  cannot add 2hop 342 selected
+290  cannot add 2hop 575 selected
+17  cannot add 2hop 680 selected
+17  cannot add 2hop 29 selected
+700  cannot add 2hop 630 selected
+125  cannot add 2hop 102 reach conn bound
+125  cannot add 2hop 129 selected
+125  cannot add 2hop 925 selected
+170  cannot add 2hop 311 selected
+170  cannot add 2hop 534 selected
+170  cannot add 2hop 604 selected
+170  cannot add 2hop 742 selected
+686  cannot add 2hop 534 selected
+686  cannot add 2hop 382 selected
+686  cannot add 2hop 535 selected
+686  cannot add 2hop 976 selected
+686 2hop not enough, random choose
+452  cannot add 2hop 105 selected
+402  cannot add 2hop 976 selected
+402  cannot add 2hop 604 selected
+278  cannot add 2hop 894 selected
+278  cannot add 2hop 29 selected
+566  cannot add 2hop 127 selected
+566  cannot add 2hop 566 reach conn bound
+717  cannot add 2hop 117 reach conn bound
+717  cannot add 2hop 690 selected
+717  cannot add 2hop 53 selected
+717  cannot add 2hop 35 selected
+717  cannot add 2hop 117 reach conn bound
+346  cannot add 2hop 419 selected
+346  cannot add 2hop 5 reach conn bound
+862  cannot add 2hop 382 selected
+862  cannot add 2hop 575 selected
+862  cannot add 2hop 674 selected
+862  cannot add 2hop 342 selected
+319  cannot add 2hop 925 selected
+145  cannot add 2hop 382 selected
+756  cannot add 2hop 513 reach conn bound
+756  cannot add 2hop 419 selected
+756  cannot add 2hop 568 selected
+756  cannot add 2hop 419 selected
+756 2hop not enough, random choose
+350  cannot add 2hop 249 reach conn bound
+350  cannot add 2hop 674 selected
+350  cannot add 2hop 129 selected
+422  cannot add 2hop 674 selected
+422  cannot add 2hop 535 selected
+422  cannot add 2hop 704 reach conn bound
+380  cannot add 2hop 278 selected
+380  cannot add 2hop 539 selected
+380  cannot add 2hop 925 selected
+380  cannot add 2hop 630 selected
+380  cannot add 2hop 29 selected
+742  cannot add 2hop 754 reach conn bound
+742  cannot add 2hop 925 selected
+742  cannot add 2hop 935 selected
+742  cannot add 2hop 29 selected
+742  cannot add 2hop 925 selected
+594  cannot add 2hop 976 selected
+594  cannot add 2hop 720 selected
+116  cannot add 2hop 133 selected
+626  cannot add 2hop 284 reach conn bound
+133  cannot add 2hop 690 selected
+133  cannot add 2hop 674 selected
+409  cannot add 2hop 539 selected
+409  cannot add 2hop 630 selected
+163  cannot add 2hop 42 reach conn bound
+110  cannot add 2hop 311 selected
+556  cannot add 2hop 680 selected
+556  cannot add 2hop 29 selected
+556  cannot add 2hop 894 selected
+556  cannot add 2hop 674 selected
+964  cannot add 2hop 568 selected
+27  cannot add 2hop 803 reach conn bound
+837  cannot add 2hop 837 reach conn bound
+95  cannot add 2hop 419 selected
+80  cannot add 2hop 419 selected
+80  cannot add 2hop 115 reach conn bound
+651  cannot add 2hop 925 selected
+651  cannot add 2hop 278 selected
+622  cannot add 2hop 935 selected
+806  cannot add 2hop 539 selected
+806  cannot add 2hop 690 selected
+773  cannot add 2hop 127 selected
+400  cannot add 2hop 342 selected
+728  cannot add 2hop 133 selected
+845  cannot add 2hop 690 selected
+81  cannot add 2hop 42 reach conn bound
+81  cannot add 2hop 129 selected
+526  cannot add 2hop 575 selected
+998  cannot add 2hop 575 selected
+998  cannot add 2hop 680 selected
+998  cannot add 2hop 587 reach conn bound
+998  cannot add 2hop 550 reach conn bound
+998  cannot add 2hop 382 selected
+998  cannot add 2hop 29 selected
+885  cannot add 2hop 575 selected
+885  cannot add 2hop 490 reach conn bound
+393  cannot add 2hop 894 selected
+393  cannot add 2hop 326 selected
+393  cannot add 2hop 94 selected
+393  cannot add 2hop 680 selected
+393  cannot add 2hop 615 selected
+393  cannot add 2hop 326 selected
+166  cannot add 2hop 720 selected
+166  cannot add 2hop 925 selected
+854  cannot add 2hop 894 selected
+854  cannot add 2hop 670 reach conn bound
+429  cannot add 2hop 935 selected
+429  cannot add 2hop 311 selected
+429  cannot add 2hop 720 selected
+333  cannot add 2hop 674 selected
+832  cannot add 2hop 127 selected
+832  cannot add 2hop 133 selected
+832  cannot add 2hop 819 selected
+832  cannot add 2hop 342 selected
+808  cannot add 2hop 680 selected
+748  cannot add 2hop 435 selected
+652  cannot add 2hop 200 reach conn bound
+652  cannot add 2hop 575 selected
+49  cannot add 2hop 414 selected
+20  cannot add 2hop 419 selected
+20  cannot add 2hop 35 selected
+20  cannot add 2hop 539 selected
+20  cannot add 2hop 575 selected
+859  cannot add 2hop 435 selected
+419  cannot add 2hop 568 selected
+884  cannot add 2hop 819 selected
+884  cannot add 2hop 419 selected
+758  cannot add 2hop 976 selected
+551  cannot add 2hop 720 selected
+455  cannot add 2hop 105 selected
+455  cannot add 2hop 35 selected
+141  cannot add 2hop 435 selected
+141  cannot add 2hop 620 reach conn bound
+356  cannot add 2hop 604 selected
+356  cannot add 2hop 116 reach conn bound
+356  cannot add 2hop 630 selected
+356  cannot add 2hop 29 selected
+356  cannot add 2hop 976 selected
+523  cannot add 2hop 127 selected
+523  cannot add 2hop 575 selected
+523  cannot add 2hop 29 selected
+920  cannot add 2hop 935 selected
+920  cannot add 2hop 819 selected
+546  cannot add 2hop 29 selected
+835  cannot add 2hop 680 selected
+480  cannot add 2hop 278 selected
+480  cannot add 2hop 105 selected
+45  cannot add 2hop 105 selected
+579  cannot add 2hop 690 selected
+579  cannot add 2hop 690 selected
+202  cannot add 2hop 539 selected
+220  cannot add 2hop 925 selected
+220  cannot add 2hop 29 selected
+300  cannot add 2hop 534 selected
+300  cannot add 2hop 539 selected
+53  cannot add 2hop 690 selected
+436  cannot add 2hop 742 selected
+436  cannot add 2hop 534 selected
+436  cannot add 2hop 127 selected
+505  cannot add 2hop 356 reach conn bound
+421  cannot add 2hop 754 reach conn bound
+421  cannot add 2hop 29 selected
+421  cannot add 2hop 428 selected
+421  cannot add 2hop 133 selected
+421  cannot add 2hop 819 selected
+494  cannot add 2hop 615 selected
+991  cannot add 2hop 550 reach conn bound
+991  cannot add 2hop 435 selected
+991  cannot add 2hop 29 selected
+37  cannot add 2hop 561 reach conn bound
+68  cannot add 2hop 419 selected
+718  cannot add 2hop 86 reach conn bound
+477  cannot add 2hop 105 selected
+572  cannot add 2hop 435 selected
+657  cannot add 2hop 742 selected
+657  cannot add 2hop 935 selected
+657  cannot add 2hop 127 selected
+657  cannot add 2hop 311 selected
+657  cannot add 2hop 742 selected
+616  cannot add 2hop 615 selected
+425  cannot add 2hop 539 selected
+856  cannot add 2hop 513 selected
+688  cannot add 2hop 720 selected
+688  cannot add 2hop 539 selected
+688  cannot add 2hop 742 selected
+696  cannot add 2hop 630 selected
+696  cannot add 2hop 568 selected
+696  cannot add 2hop 535 selected
+696  cannot add 2hop 278 selected
+766  cannot add 2hop 129 selected
+766  cannot add 2hop 419 selected
+766  cannot add 2hop 568 selected
+942  cannot add 2hop 129 selected
+942  cannot add 2hop 94 selected
+877  cannot add 2hop 129 selected
+877  cannot add 2hop 403 reach conn bound
+877  cannot add 2hop 29 selected
+25  cannot add 2hop 35 selected
+25  cannot add 2hop 666 reach conn bound
+25  cannot add 2hop 419 selected
+932  cannot add 2hop 674 selected
+932  cannot add 2hop 720 selected
+932  cannot add 2hop 35 selected
+606  cannot add 2hop 534 selected
+606  cannot add 2hop 742 selected
+606  cannot add 2hop 668 reach conn bound
+606  cannot add 2hop 925 selected
+606  cannot add 2hop 382 selected
+606  cannot add 2hop 575 selected
+606 2hop not enough, random choose
+813  cannot add 2hop 311 selected
+813  cannot add 2hop 278 selected
+813  cannot add 2hop 687 reach conn bound
+115  cannot add 2hop 378 reach conn bound
+983  cannot add 2hop 883 reach conn bound
+983  cannot add 2hop 29 selected
+366  cannot add 2hop 742 selected
+366  cannot add 2hop 414 selected
+366  cannot add 2hop 311 selected
+439  cannot add 2hop 976 selected
+439  cannot add 2hop 637 reach conn bound
+618  cannot add 2hop 476 reach conn bound
+823  cannot add 2hop 435 selected
+823  cannot add 2hop 129 selected
+823  cannot add 2hop 568 selected
+982  cannot add 2hop 976 selected
+982  cannot add 2hop 798 selected
+387  cannot add 2hop 680 selected
+387  cannot add 2hop 29 selected
+595  cannot add 2hop 29 selected
+595  cannot add 2hop 925 selected
+595  cannot add 2hop 539 selected
+573  cannot add 2hop 513 reach conn bound
+456  cannot add 2hop 200 reach conn bound
+456  cannot add 2hop 435 reach conn bound
+456  cannot add 2hop 811 reach conn bound
+180  cannot add 2hop 284 reach conn bound
+180  cannot add 2hop 869 reach conn bound
+392  cannot add 2hop 944 reach conn bound
+204  cannot add 2hop 821 reach conn bound
+204  cannot add 2hop 774 reach conn bound
+569  cannot add 2hop 798 reach conn bound
+117  cannot add 2hop 587 reach conn bound
+686  cannot add 2hop 57 reach conn bound
+686  cannot add 2hop 587 reach conn bound
+686  cannot add 2hop 742 reach conn bound
+618  cannot add 2hop 283 reach conn bound
+618  cannot add 2hop 643 reach conn bound
+867  cannot add 2hop 556 reach conn bound
+79  cannot add 2hop 666 reach conn bound
+566  cannot add 2hop 566 reach conn bound
+960  cannot add 2hop 995 reach conn bound
+960  cannot add 2hop 399 reach conn bound
+419  cannot add 2hop 104 reach conn bound
+16  cannot add 2hop 66 reach conn bound
+478  cannot add 2hop 483 reach conn bound
+491  cannot add 2hop 720 reach conn bound
+556  cannot add 2hop 538 reach conn bound
+60  cannot add 2hop 133 reach conn bound
+391  cannot add 2hop 720 reach conn bound
+558  cannot add 2hop 278 reach conn bound
+918  cannot add 2hop 767 reach conn bound
+185  cannot add 2hop 31 reach conn bound
+868  cannot add 2hop 882 reach conn bound
+432  cannot add 2hop 976 reach conn bound
+767  cannot add 2hop 690 reach conn bound
+196  cannot add 2hop 35 reach conn bound
+136  cannot add 2hop 287 reach conn bound
+410  cannot add 2hop 692 reach conn bound
+902  cannot add 2hop 711 reach conn bound
+138  cannot add 2hop 963 reach conn bound
+641  cannot add 2hop 538 reach conn bound
+129  cannot add 2hop 477 reach conn bound
+886  cannot add 2hop 604 reach conn bound
+886  cannot add 2hop 204 reach conn bound
+886  cannot add 2hop 846 reach conn bound
+326  cannot add 2hop 326 reach conn bound
+252  cannot add 2hop 432 reach conn bound
+646  cannot add 2hop 385 reach conn bound
+782  cannot add 2hop 630 reach conn bound
+172  cannot add 2hop 35 reach conn bound
+750  cannot add 2hop 129 reach conn bound
+806  cannot add 2hop 690 reach conn bound
+282  cannot add 2hop 480 reach conn bound
+203  cannot add 2hop 362 reach conn bound
+387  cannot add 2hop 550 reach conn bound
+218  cannot add 2hop 538 reach conn bound
+218  cannot add 2hop 774 reach conn bound
+946  cannot add 2hop 90 reach conn bound
+209  cannot add 2hop 704 reach conn bound
+209  cannot add 2hop 462 reach conn bound
+587  cannot add 2hop 446 selected
+811  cannot add 2hop 513 reach conn bound
+811  cannot add 2hop 630 reach conn bound
+505  cannot add 2hop 483 reach conn bound
+562  cannot add 2hop 720 reach conn bound
+359  cannot add 2hop 283 reach conn bound
+608  cannot add 2hop 462 reach conn bound
+494  cannot add 2hop 494 reach conn bound
+596  cannot add 2hop 446 selected
+596  cannot add 2hop 837 reach conn bound
+589  cannot add 2hop 607 reach conn bound
+589  cannot add 2hop 483 reach conn bound
+398  cannot add 2hop 204 reach conn bound
+383  cannot add 2hop 550 reach conn bound
+654  cannot add 2hop 446 selected
+654  cannot add 2hop 774 reach conn bound
+707  cannot add 2hop 666 reach conn bound
+874  cannot add 2hop 274 reach conn bound
+48  cannot add 2hop 259 reach conn bound
+695  cannot add 2hop 104 reach conn bound
+783  cannot add 2hop 191 reach conn bound
+689  cannot add 2hop 774 reach conn bound
+659  cannot add 2hop 241 reach conn bound
+98  cannot add 2hop 342 reach conn bound
+779  cannot add 2hop 274 reach conn bound
+322  cannot add 2hop 604 reach conn bound
+322  cannot add 2hop 996 reach conn bound
+698  cannot add 2hop 842 reach conn bound
+880  cannot add 2hop 57 reach conn bound
+880  cannot add 2hop 362 selected
+880  cannot add 2hop 880 reach conn bound
+475  cannot add 2hop 566 reach conn bound
+475  cannot add 2hop 205 reach conn bound
+183  cannot add 2hop 94 reach conn bound
+638  cannot add 2hop 362 selected
+440  cannot add 2hop 837 reach conn bound
+674  cannot add 2hop 545 reach conn bound
+674  cannot add 2hop 674 reach conn bound
+993  cannot add 2hop 362 selected
+528  cannot add 2hop 666 reach conn bound
+351  cannot add 2hop 821 reach conn bound
+139  cannot add 2hop 191 reach conn bound
+393  cannot add 2hop 837 reach conn bound
+254  cannot add 2hop 446 selected
+316  cannot add 2hop 591 reach conn bound
+210  cannot add 2hop 846 selected
+882  cannot add 2hop 464 reach conn bound
+997  cannot add 2hop 105 reach conn bound
+997  cannot add 2hop 535 reach conn bound
+997  cannot add 2hop 35 reach conn bound
+997 2hop not enough, random choose
+442  cannot add 2hop 535 reach conn bound
+126  cannot add 2hop 837 reach conn bound
+887  cannot add 2hop 534 reach conn bound
+887  cannot add 2hop 362 selected
+726  cannot add 2hop 228 reach conn bound
+941  cannot add 2hop 846 selected
+132  cannot add 2hop 104 reach conn bound
+835  cannot add 2hop 104 reach conn bound
+637  cannot add 2hop 550 reach conn bound
+160  cannot add 2hop 464 reach conn bound
+778  cannot add 2hop 274 reach conn bound
+236  cannot add 2hop 821 reach conn bound
+991  cannot add 2hop 319 reach conn bound
+394  cannot add 2hop 446 selected
+488  cannot add 2hop 620 reach conn bound
+488  cannot add 2hop 133 reach conn bound
+543  cannot add 2hop 446 selected
+786  cannot add 2hop 666 reach conn bound
+794  cannot add 2hop 446 selected
+458  cannot add 2hop 362 selected
+523  cannot add 2hop 538 reach conn bound
+523  cannot add 2hop 483 reach conn bound
+523  cannot add 2hop 538 reach conn bound
+385  cannot add 2hop 362 selected
+965  cannot add 2hop 228 reach conn bound
+965  cannot add 2hop 846 selected
+965  cannot add 2hop 399 reach conn bound
+965 2hop not enough, random choose
+319  cannot add 2hop 846 selected
+954  cannot add 2hop 711 reach conn bound
+954  cannot add 2hop 615 reach conn bound
+146  cannot add 2hop 446 selected
+146  cannot add 2hop 774 reach conn bound
+347  cannot add 2hop 485 reach conn bound
+967  cannot add 2hop 362 selected
+967  cannot add 2hop 201 reach conn bound
+682  cannot add 2hop 362 selected
+682  cannot add 2hop 690 reach conn bound
+62  cannot add 2hop 253 reach conn bound
+62  cannot add 2hop 493 reach conn bound
+62  cannot add 2hop 680 reach conn bound
+966  cannot add 2hop 129 reach conn bound
+436  cannot add 2hop 846 selected
+435  cannot add 2hop 563 reach conn bound
+777  cannot add 2hop 362 selected
+157  cannot add 2hop 846 selected
+89  cannot add 2hop 202 reach conn bound
+89  cannot add 2hop 278 reach conn bound
+420  cannot add 2hop 774 reach conn bound
+540  cannot add 2hop 362 selected
+647  cannot add 2hop 311 reach conn bound
+594  cannot add 2hop 843 reach conn bound
+360  cannot add 2hop 846 selected
+382  cannot add 2hop 401 reach conn bound
+382  cannot add 2hop 630 selected
+94  cannot add 2hop 821 selected
+642  cannot add 2hop 191 reach conn bound
+376  cannot add 2hop 821 selected
+431  cannot add 2hop 846 selected
+547  cannot add 2hop 690 selected
+499  cannot add 2hop 533 reach conn bound
+499  cannot add 2hop 630 selected
+734  cannot add 2hop 90 reach conn bound
+734  cannot add 2hop 819 selected
+734  cannot add 2hop 373 reach conn bound
+119  cannot add 2hop 720 selected
+119  cannot add 2hop 941 reach conn bound
+893  cannot add 2hop 362 selected
+893  cannot add 2hop 483 reach conn bound
+893  cannot add 2hop 607 reach conn bound
+817  cannot add 2hop 690 selected
+817  cannot add 2hop 53 reach conn bound
+817  cannot add 2hop 774 reach conn bound
+717  cannot add 2hop 35 reach conn bound
+717  cannot add 2hop 690 selected
+717  cannot add 2hop 687 reach conn bound
+717 2hop not enough, random choose
+694  cannot add 2hop 362 selected
+793  cannot add 2hop 432 reach conn bound
+100  cannot add 2hop 563 reach conn bound
+100  cannot add 2hop 446 selected
+446  cannot add 2hop 720 selected
+825  cannot add 2hop 720 selected
+212  cannot add 2hop 587 reach conn bound
+407  cannot add 2hop 86 reach conn bound
+407  cannot add 2hop 446 selected
+914  cannot add 2hop 630 selected
+986  cannot add 2hop 446 selected
+875  cannot add 2hop 846 selected
+102  cannot add 2hop 846 selected
+256  cannot add 2hop 821 selected
+261  cannot add 2hop 821 selected
+261  cannot add 2hop 680 reach conn bound
+710  cannot add 2hop 720 selected
+396  cannot add 2hop 819 selected
+259  cannot add 2hop 480 reach conn bound
+259  cannot add 2hop 821 selected
+55  cannot add 2hop 610 reach conn bound
+438  cannot add 2hop 342 reach conn bound
+915  cannot add 2hop 373 reach conn bound
+915  cannot add 2hop 545 reach conn bound
+884  cannot add 2hop 446 selected
+757  cannot add 2hop 284 reach conn bound
+810  cannot add 2hop 446 selected
+810  cannot add 2hop 720 selected
+604  cannot add 2hop 846 selected
+41  cannot add 2hop 94 selected
+334  cannot add 2hop 846 selected
+334  cannot add 2hop 326 reach conn bound
+334  cannot add 2hop 690 selected
+518  cannot add 2hop 846 selected
+567  cannot add 2hop 670 selected
+621  cannot add 2hop 630 selected
+430  cannot add 2hop 446 selected
+430  cannot add 2hop 178 reach conn bound
+935  cannot add 2hop 133 reach conn bound
+935  cannot add 2hop 538 reach conn bound
+414  cannot add 2hop 446 selected
+343  cannot add 2hop 690 selected
+343  cannot add 2hop 774 reach conn bound
+539  cannot add 2hop 720 selected
+539  cannot add 2hop 148 reach conn bound
+748  cannot add 2hop 944 selected
+748  cannot add 2hop 94 selected
+684  cannot add 2hop 846 selected
+925  cannot add 2hop 587 selected
+668  cannot add 2hop 846 selected
+866  cannot add 2hop 793 reach conn bound
+186  cannot add 2hop 362 selected
+186  cannot add 2hop 630 selected
+186  cannot add 2hop 414 selected
+64  cannot add 2hop 446 selected
+846  cannot add 2hop 690 selected
+846  cannot add 2hop 362 selected
+846  cannot add 2hop 362 selected
+288  cannot add 2hop 720 selected
+894  cannot add 2hop 798 reach conn bound
+151  cannot add 2hop 670 selected
+161  cannot add 2hop 821 selected
+174  cannot add 2hop 378 reach conn bound
+103  cannot add 2hop 944 selected
+839  cannot add 2hop 587 selected
+287  cannot add 2hop 414 selected
+685  cannot add 2hop 846 selected
+955  cannot add 2hop 690 selected
+408  cannot add 2hop 462 reach conn bound
+486  cannot add 2hop 944 selected
+930  cannot add 2hop 846 selected
+70  cannot add 2hop 362 selected
+70  cannot add 2hop 690 selected
+70  cannot add 2hop 25 reach conn bound
+70 2hop not enough, random choose
+191  cannot add 2hop 409 reach conn bound
+54  cannot add 2hop 846 selected
+795  cannot add 2hop 34 reach conn bound
+795  cannot add 2hop 284 reach conn bound
+598  cannot add 2hop 414 selected
+143  cannot add 2hop 720 selected
+228  cannot add 2hop 464 reach conn bound
+228  cannot add 2hop 821 selected
+657  cannot add 2hop 811 reach conn bound
+657  cannot add 2hop 94 selected
+729  cannot add 2hop 446 selected
+532  cannot add 2hop 403 reach conn bound
+532  cannot add 2hop 774 reach conn bound
+590  cannot add 2hop 846 selected
+590  cannot add 2hop 720 selected
+258  cannot add 2hop 720 selected
+962  cannot add 2hop 326 selected
+962  cannot add 2hop 944 selected
+962  cannot add 2hop 846 selected
+962  cannot add 2hop 720 selected
+962  cannot add 2hop 362 selected
+962  cannot add 2hop 25 reach conn bound
+962  cannot add 2hop 690 selected
+962 2hop not enough, random choose
+198  cannot add 2hop 837 reach conn bound
+198  cannot add 2hop 35 reach conn bound
+214  cannot add 2hop 690 selected
+444  cannot add 2hop 894 reach conn bound
+502  cannot add 2hop 976 reach conn bound
+502  cannot add 2hop 630 selected
+502  cannot add 2hop 587 selected
+502  cannot add 2hop 414 selected
+502  cannot add 2hop 742 selected
+502 2hop not enough, random choose
+269  cannot add 2hop 127 selected
+269  cannot add 2hop 819 selected
+551  cannot add 2hop 846 selected
+551  cannot add 2hop 326 selected
+551  cannot add 2hop 362 selected
+29  cannot add 2hop 680 reach conn bound
+445  cannot add 2hop 66 reach conn bound
+447  cannot add 2hop 670 selected
+447  cannot add 2hop 811 reach conn bound
+865  cannot add 2hop 446 selected
+690  cannot add 2hop 38 reach conn bound
+690  cannot add 2hop 690 selected
+690  cannot add 2hop 610 reach conn bound
+690  cannot add 2hop 596 reach conn bound
+690  cannot add 2hop 720 selected
+690  cannot add 2hop 846 selected
+690  cannot add 2hop 999 reach conn bound
+690 2hop not enough, random choose
+666  cannot add 2hop 575 reach conn bound
+666  cannot add 2hop 319 reach conn bound
+666  cannot add 2hop 837 reach conn bound
+171  cannot add 2hop 326 selected
+171  cannot add 2hop 963 selected
+171  cannot add 2hop 944 selected
+560  cannot add 2hop 200 reach conn bound
+560  cannot add 2hop 690 selected
+294  cannot add 2hop 690 selected
+413  cannot add 2hop 568 reach conn bound
+413  cannot add 2hop 846 selected
+529  cannot add 2hop 720 selected
+700  cannot add 2hop 446 selected
+133  cannot add 2hop 445 reach conn bound
+563  cannot add 2hop 891 reach conn bound
+233  cannot add 2hop 178 reach conn bound
+233  cannot add 2hop 362 selected
+23  cannot add 2hop 670 selected
+473  cannot add 2hop 630 selected
+670  cannot add 2hop 944 selected
+670  cannot add 2hop 821 selected
+670  cannot add 2hop 690 selected
+670  cannot add 2hop 38 reach conn bound
+610  cannot add 2hop 362 selected
+610  cannot add 2hop 819 selected
+896  cannot add 2hop 819 selected
+896  cannot add 2hop 127 selected
+896  cannot add 2hop 191 reach conn bound
+896 2hop not enough, random choose
+479  cannot add 2hop 538 reach conn bound
+942  cannot add 2hop 670 selected
+327  cannot add 2hop 846 selected
+327  cannot add 2hop 587 selected
+137  cannot add 2hop 690 selected
+137  cannot add 2hop 228 reach conn bound
+137  cannot add 2hop 362 selected
+298  cannot add 2hop 409 reach conn bound
+229  cannot add 2hop 846 selected
+733  cannot add 2hop 742 selected
+733  cannot add 2hop 587 selected
+733  cannot add 2hop 414 selected
+733 2hop not enough, random choose
+538  cannot add 2hop 821 selected
+538  cannot add 2hop 690 selected
+570  cannot add 2hop 821 selected
+303  cannot add 2hop 742 selected
+775  cannot add 2hop 742 selected
+804  cannot add 2hop 846 selected
+546  cannot add 2hop 596 reach conn bound
+546  cannot add 2hop 690 selected
+546  cannot add 2hop 944 selected
+384  cannot add 2hop 846 selected
+842  cannot add 2hop 326 selected
+842  cannot add 2hop 94 selected
+205  cannot add 2hop 821 selected
+433  cannot add 2hop 944 selected
+433  cannot add 2hop 326 selected
+585  cannot add 2hop 630 selected
+40  cannot add 2hop 550 reach conn bound
+350  cannot add 2hop 446 selected
+350  cannot add 2hop 94 selected
+885  cannot add 2hop 670 selected
+524  cannot add 2hop 630 selected
+612  cannot add 2hop 587 selected
+368  cannot add 2hop 604 reach conn bound
+245  cannot add 2hop 94 selected
+609  cannot add 2hop 446 selected
+609  cannot add 2hop 127 selected
+827  cannot add 2hop 774 reach conn bound
+515  cannot add 2hop 821 selected
+399  cannot add 2hop 821 selected
+111  cannot add 2hop 630 selected
+374  cannot add 2hop 630 selected
+374  cannot add 2hop 620 selected
+371  cannot add 2hop 808 reach conn bound
+371  cannot add 2hop 378 reach conn bound
+371  cannot add 2hop 556 selected
+705  cannot add 2hop 35 reach conn bound
+705  cannot add 2hop 687 reach conn bound
+574  cannot add 2hop 362 selected
+574  cannot add 2hop 690 selected
+574  cannot add 2hop 362 selected
+759  cannot add 2hop 362 selected
+356  cannot add 2hop 53 selected
+268  cannot add 2hop 846 selected
+268  cannot add 2hop 326 selected
+345  cannot add 2hop 967 reach conn bound
+671  cannot add 2hop 821 selected
+671  cannot add 2hop 821 selected
+671  cannot add 2hop 774 reach conn bound
+971  cannot add 2hop 362 selected
+616  cannot add 2hop 587 selected
+211  cannot add 2hop 963 selected
+211  cannot add 2hop 720 selected
+211  cannot add 2hop 446 selected
+470  cannot add 2hop 963 selected
+470  cannot add 2hop 720 selected
+470  cannot add 2hop 846 selected
+470  cannot add 2hop 446 selected
+470  cannot add 2hop 944 selected
+353  cannot add 2hop 846 selected
+832  cannot add 2hop 127 selected
+11  cannot add 2hop 53 selected
+88  cannot add 2hop 935 reach conn bound
+987  cannot add 2hop 538 selected
+987  cannot add 2hop 819 selected
+597  cannot add 2hop 556 selected
+597  cannot add 2hop 116 reach conn bound
+959  cannot add 2hop 414 selected
+959  cannot add 2hop 587 selected
+959  cannot add 2hop 742 selected
+959 2hop not enough, random choose
+762  cannot add 2hop 326 selected
+996  cannot add 2hop 630 selected
+956  cannot add 2hop 846 selected
+956  cannot add 2hop 667 reach conn bound
+956  cannot add 2hop 690 selected
+277  cannot add 2hop 761 reach conn bound
+920  cannot add 2hop 556 selected
+121  cannot add 2hop 378 selected
+121  cannot add 2hop 505 reach conn bound
+121  cannot add 2hop 589 reach conn bound
+121  cannot add 2hop 936 reach conn bound
+121  cannot add 2hop 94 selected
+121  cannot add 2hop 326 selected
+121  cannot add 2hop 944 selected
+121 2hop not enough, random choose
+207  cannot add 2hop 362 selected
+207  cannot add 2hop 798 reach conn bound
+207  cannot add 2hop 819 selected
+207  cannot add 2hop 963 selected
+749  cannot add 2hop 620 selected
+749  cannot add 2hop 538 selected
+184  cannot add 2hop 980 reach conn bound
+184  cannot add 2hop 362 selected
+184  cannot add 2hop 798 reach conn bound
+892  cannot add 2hop 362 selected
+892  cannot add 2hop 690 selected
+892  cannot add 2hop 25 reach conn bound
+892  cannot add 2hop 446 selected
+892  cannot add 2hop 963 selected
+892  cannot add 2hop 326 selected
+892  cannot add 2hop 94 selected
+892 2hop not enough, random choose
+669  cannot add 2hop 630 selected
+669  cannot add 2hop 894 reach conn bound
+86  cannot add 2hop 821 selected
+86  cannot add 2hop 539 reach conn bound
+86  cannot add 2hop 963 selected
+86  cannot add 2hop 649 reach conn bound
+86 2hop not enough, random choose
+21  cannot add 2hop 362 selected
+492  cannot add 2hop 249 reach conn bound
+802  cannot add 2hop 630 selected
+651  cannot add 2hop 995 reach conn bound
+651  cannot add 2hop 284 reach conn bound
+754  cannot add 2hop 803 reach conn bound
+263  cannot add 2hop 326 selected
+263  cannot add 2hop 198 reach conn bound
+263  cannot add 2hop 846 selected
+263  cannot add 2hop 94 selected
+263 2hop not enough, random choose
+662  cannot add 2hop 53 selected
+144  cannot add 2hop 556 selected
+623  cannot add 2hop 963 selected
+623  cannot add 2hop 846 selected
+623  cannot add 2hop 944 selected
+994  cannot add 2hop 703 reach conn bound
+994  cannot add 2hop 414 selected
+994  cannot add 2hop 214 reach conn bound
+302  cannot add 2hop 571 reach conn bound
+862  cannot add 2hop 630 selected
+427  cannot add 2hop 963 selected
+427  cannot add 2hop 821 selected
+381  cannot add 2hop 792 reach conn bound
+888  cannot add 2hop 362 selected
+134  cannot add 2hop 670 selected
+134  cannot add 2hop 819 selected
+26  cannot add 2hop 556 selected
+26  cannot add 2hop 94 selected
+26  cannot add 2hop 326 selected
+692  cannot add 2hop 666 reach conn bound
+692  cannot add 2hop 666 reach conn bound
+692  cannot add 2hop 362 selected
+715  cannot add 2hop 944 selected
+411  cannot add 2hop 414 selected
+122  cannot add 2hop 821 selected
+122  cannot add 2hop 963 selected
+248  cannot add 2hop 821 selected
+507  cannot add 2hop 556 selected
+507  cannot add 2hop 944 selected
+507  cannot add 2hop 326 selected
+507  cannot add 2hop 378 selected
+568  cannot add 2hop 129 selected
+568  cannot add 2hop 620 selected
+656  cannot add 2hop 25 selected
+656  cannot add 2hop 690 selected
+656  cannot add 2hop 362 selected
+656  cannot add 2hop 963 selected
+656  cannot add 2hop 326 selected
+656 2hop not enough, random choose
+466  cannot add 2hop 446 selected
+466  cannot add 2hop 944 selected
+466  cannot add 2hop 720 selected
+466  cannot add 2hop 963 selected
+466  cannot add 2hop 846 selected
+355  cannot add 2hop 821 selected
+550  cannot add 2hop 283 reach conn bound
+550  cannot add 2hop 720 selected
+977  cannot add 2hop 620 selected
+998  cannot add 2hop 255 reach conn bound
+998  cannot add 2hop 53 selected
+803  cannot add 2hop 720 selected
+803  cannot add 2hop 819 selected
+803  cannot add 2hop 888 reach conn bound
+128  cannot add 2hop 535 selected
+128  cannot add 2hop 200 selected
+128  cannot add 2hop 963 selected
+580  cannot add 2hop 944 selected
+580  cannot add 2hop 446 selected
+580  cannot add 2hop 963 selected
+580  cannot add 2hop 846 selected
+580  cannot add 2hop 720 selected
+580  cannot add 2hop 720 selected
+314  cannot add 2hop 925 selected
+314  cannot add 2hop 25 selected
+314  cannot add 2hop 362 selected
+314  cannot add 2hop 326 selected
+314  cannot add 2hop 944 selected
+923  cannot add 2hop 846 selected
+923  cannot add 2hop 894 reach conn bound
+870  cannot add 2hop 821 selected
+870  cannot add 2hop 53 selected
+870  cannot add 2hop 25 selected
+870  cannot add 2hop 861 reach conn bound
+870 2hop not enough, random choose
+601  cannot add 2hop 129 selected
+601  cannot add 2hop 284 reach conn bound
+601  cannot add 2hop 620 selected
+945  cannot add 2hop 25 selected
+945  cannot add 2hop 690 selected
+945  cannot add 2hop 362 selected
+945 2hop not enough, random choose
+939  cannot add 2hop 414 selected
+939  cannot add 2hop 742 selected
+939  cannot add 2hop 587 selected
+939 2hop not enough, random choose
+452  cannot add 2hop 556 selected
+648  cannot add 2hop 620 selected
+648  cannot add 2hop 446 selected
+704  cannot add 2hop 821 selected
+829  cannot add 2hop 819 selected
+348  cannot add 2hop 798 reach conn bound
+348  cannot add 2hop 587 selected
+348  cannot add 2hop 742 selected
+348  cannot add 2hop 414 selected
+348 2hop not enough, random choose
+879  cannot add 2hop 94 selected
+752  cannot add 2hop 630 selected
+281  cannot add 2hop 129 selected
+335  cannot add 2hop 587 selected
+335  cannot add 2hop 821 selected
+232  cannot add 2hop 587 selected
+232  cannot add 2hop 742 selected
+232  cannot add 2hop 414 selected
+232 2hop not enough, random choose
+37  cannot add 2hop 556 selected
+37  cannot add 2hop 821 selected
+278  cannot add 2hop 129 selected
+0  cannot add 2hop 326 selected
+0  cannot add 2hop 944 selected
+0  cannot add 2hop 846 selected
+498  cannot add 2hop 720 selected
+498  cannot add 2hop 538 selected
+87  cannot add 2hop 87 reach conn bound
+145  cannot add 2hop 963 selected
+439  cannot add 2hop 620 selected
+439  cannot add 2hop 249 reach conn bound
+439  cannot add 2hop 630 selected
+527  cannot add 2hop 944 selected
+527  cannot add 2hop 846 selected
+527  cannot add 2hop 446 selected
+527  cannot add 2hop 963 selected
+527  cannot add 2hop 326 selected
+527  cannot add 2hop 963 selected
+632  cannot add 2hop 535 selected
+632  cannot add 2hop 821 selected
+586  cannot add 2hop 846 selected
+99  cannot add 2hop 587 selected
+99  cannot add 2hop 284 reach conn bound
+773  cannot add 2hop 362 selected
+773  cannot add 2hop 670 selected
+773  cannot add 2hop 53 selected
+773  cannot add 2hop 944 selected
+773 2hop not enough, random choose
+577  cannot add 2hop 464 selected
+39  cannot add 2hop 630 selected
+107  cannot add 2hop 538 selected
+517  cannot add 2hop 129 selected
+517  cannot add 2hop 963 selected
+425  cannot add 2hop 446 selected
+425  cannot add 2hop 556 selected
+443  cannot add 2hop 821 selected
+443  cannot add 2hop 963 selected
+979  cannot add 2hop 127 selected
+497  cannot add 2hop 129 selected
+497  cannot add 2hop 595 reach conn bound
+260  cannot add 2hop 129 selected
+260  cannot add 2hop 326 selected
+260  cannot add 2hop 680 reach conn bound
+769  cannot add 2hop 963 selected
+769  cannot add 2hop 720 selected
+549  cannot add 2hop 114 reach conn bound
+624  cannot add 2hop 200 selected
+745  cannot add 2hop 464 selected
+728  cannot add 2hop 963 selected
+728  cannot add 2hop 821 selected
+728  cannot add 2hop 630 selected
+871  cannot add 2hop 127 selected
+871  cannot add 2hop 115 reach conn bound
+681  cannot add 2hop 200 selected
+272  cannot add 2hop 197 reach conn bound
+53  cannot add 2hop 464 selected
+108  cannot add 2hop 129 selected
+108  cannot add 2hop 568 reach conn bound
+108  cannot add 2hop 846 selected
+108 2hop not enough, random choose
+708  cannot add 2hop 690 selected
+378  cannot add 2hop 630 selected
+378  cannot add 2hop 742 selected
+403  cannot add 2hop 630 selected
+403  cannot add 2hop 129 selected
+836  cannot add 2hop 326 selected
+675  cannot add 2hop 362 selected
+675  cannot add 2hop 378 selected
+44  cannot add 2hop 419 reach conn bound
+44  cannot add 2hop 25 selected
+44  cannot add 2hop 861 reach conn bound
+162  cannot add 2hop 556 selected
+162  cannot add 2hop 326 selected
+152  cannot add 2hop 803 reach conn bound
+152  cannot add 2hop 556 selected
+152  cannot add 2hop 94 selected
+753  cannot add 2hop 25 selected
+813  cannot add 2hop 925 selected
+506  cannot add 2hop 464 selected
+141  cannot add 2hop 963 selected
+141  cannot add 2hop 821 selected
+722  cannot add 2hop 414 selected
+722  cannot add 2hop 742 selected
+722  cannot add 2hop 587 selected
+105  cannot add 2hop 127 selected
+395  cannot add 2hop 846 selected
+270  cannot add 2hop 538 selected
+838  cannot add 2hop 556 selected
+838  cannot add 2hop 944 selected
+415  cannot add 2hop 556 selected
+415  cannot add 2hop 983 reach conn bound
+415  cannot add 2hop 94 selected
+331  cannot add 2hop 538 selected
+331  cannot add 2hop 615 reach conn bound
+106  cannot add 2hop 133 reach conn bound
+106  cannot add 2hop 587 selected
+106  cannot add 2hop 218 reach conn bound
+950  cannot add 2hop 556 selected
+944  cannot add 2hop 446 selected
+944  cannot add 2hop 944 selected
+944  cannot add 2hop 720 selected
+944  cannot add 2hop 963 selected
+77  cannot add 2hop 105 selected
+290  cannot add 2hop 25 selected
+290  cannot add 2hop 53 selected
+31  cannot add 2hop 630 selected
+31  cannot add 2hop 362 selected
+31  cannot add 2hop 538 selected
+31  cannot add 2hop 133 reach conn bound
+31  cannot add 2hop 888 selected
+31  cannot add 2hop 821 selected
+31  cannot add 2hop 610 reach conn bound
+31 2hop not enough, random choose
+250  cannot add 2hop 690 selected
+250  cannot add 2hop 535 selected
+975  cannot add 2hop 200 selected
+75  cannot add 2hop 25 selected
+75  cannot add 2hop 861 reach conn bound
+75  cannot add 2hop 53 selected
+679  cannot add 2hop 129 selected
+572  cannot add 2hop 38 reach conn bound
+249  cannot add 2hop 888 selected
+249  cannot add 2hop 538 selected
+14  cannot add 2hop 382 selected
+14  cannot add 2hop 742 selected
+14  cannot add 2hop 414 selected
+69  cannot add 2hop 888 selected
+69  cannot add 2hop 888 selected
+701  cannot add 2hop 888 selected
+701  cannot add 2hop 129 selected
+701  cannot add 2hop 846 selected
+853  cannot add 2hop 127 selected
+853  cannot add 2hop 894 selected
+253  cannot add 2hop 539 reach conn bound
+253  cannot add 2hop 963 selected
+253  cannot add 2hop 821 selected
+253 2hop not enough, random choose
+312  cannot add 2hop 821 selected
+312  cannot add 2hop 200 selected
+312  cannot add 2hop 587 selected
+957  cannot add 2hop 846 selected
+541  cannot add 2hop 446 selected
+541  cannot add 2hop 133 selected
+516  cannot add 2hop 720 selected
+516  cannot add 2hop 556 selected
+516  cannot add 2hop 446 selected
+131  cannot add 2hop 925 selected
+30  cannot add 2hop 200 selected
+982  cannot add 2hop 326 selected
+982  cannot add 2hop 326 selected
+241  cannot add 2hop 446 selected
+241  cannot add 2hop 53 selected
+10  cannot add 2hop 378 selected
+10  cannot add 2hop 742 selected
+10  cannot add 2hop 587 selected
+15  cannot add 2hop 104 reach conn bound
+15  cannot add 2hop 819 selected
+27  cannot add 2hop 446 selected
+27  cannot add 2hop 670 selected
+130  cannot add 2hop 630 selected
+525  cannot add 2hop 464 selected
+525  cannot add 2hop 382 selected
+43  cannot add 2hop 587 selected
+104  cannot add 2hop 409 reach conn bound
+104  cannot add 2hop 133 selected
+858  cannot add 2hop 819 selected
+809  cannot add 2hop 935 reach conn bound
+809  cannot add 2hop 944 selected
+809  cannot add 2hop 944 selected
+809  cannot add 2hop 963 selected
+809  cannot add 2hop 670 selected
+140  cannot add 2hop 414 selected
+140  cannot add 2hop 446 selected
+140  cannot add 2hop 612 reach conn bound
+239  cannot add 2hop 630 selected
+837  cannot add 2hop 556 selected
+837  cannot add 2hop 690 selected
+837  cannot add 2hop 362 selected
+837  cannot add 2hop 596 reach conn bound
+837  cannot add 2hop 53 selected
+837  cannot add 2hop 837 selected
+837  cannot add 2hop 204 reach conn bound
+837  cannot add 2hop 25 selected
+837  cannot add 2hop 113 reach conn bound
+837 2hop not enough, random choose
+732  cannot add 2hop 129 selected
+732  cannot add 2hop 894 selected
+732  cannot add 2hop 414 selected
+732  cannot add 2hop 837 selected
+732  cannot add 2hop 690 selected
+628  cannot add 2hop 944 selected
+474  cannot add 2hop 566 reach conn bound
+474  cannot add 2hop 464 selected
+474  cannot add 2hop 115 reach conn bound
+22  cannot add 2hop 105 selected
+22  cannot add 2hop 129 selected
+51  cannot add 2hop 544 reach conn bound
+51  cannot add 2hop 129 selected
+51  cannot add 2hop 846 selected
+175  cannot add 2hop 825 reach conn bound
+175  cannot add 2hop 995 reach conn bound
+175  cannot add 2hop 284 reach conn bound
+175  cannot add 2hop 620 selected
+883  cannot add 2hop 535 selected
+828  cannot add 2hop 944 selected
+125  cannot add 2hop 538 selected
+125  cannot add 2hop 846 selected
+501  cannot add 2hop 378 selected
+3  cannot add 2hop 587 selected
+3  cannot add 2hop 742 selected
+3  cannot add 2hop 414 selected
+3  cannot add 2hop 249 selected
+3 2hop not enough, random choose
+992  cannot add 2hop 894 selected
+992  cannot add 2hop 742 selected
+216  cannot add 2hop 538 selected
+664  cannot add 2hop 670 selected
+664  cannot add 2hop 409 reach conn bound
+34  cannot add 2hop 846 selected
+34  cannot add 2hop 837 selected
+34  cannot add 2hop 535 selected
+34  cannot add 2hop 105 selected
+801  cannot add 2hop 129 selected
+801  cannot add 2hop 630 selected
+801  cannot add 2hop 105 selected
+801  cannot add 2hop 249 selected
+318  cannot add 2hop 464 selected
+318  cannot add 2hop 414 selected
+318  cannot add 2hop 274 reach conn bound
+318  cannot add 2hop 630 selected
+267  cannot add 2hop 25 selected
+267  cannot add 2hop 362 selected
+267  cannot add 2hop 94 selected
+267  cannot add 2hop 25 selected
+758  cannot add 2hop 825 reach conn bound
+758  cannot add 2hop 464 selected
+49  cannot add 2hop 610 selected
+49  cannot add 2hop 690 selected
+49  cannot add 2hop 774 reach conn bound
+49  cannot add 2hop 888 selected
+49  cannot add 2hop 610 selected
+49  cannot add 2hop 821 selected
+49 2hop not enough, random choose
+96  cannot add 2hop 382 selected
+96  cannot add 2hop 620 selected
+96  cannot add 2hop 535 selected
+182  cannot add 2hop 587 selected
+951  cannot add 2hop 200 selected
+58  cannot add 2hop 610 selected
+58  cannot add 2hop 821 selected
+58  cannot add 2hop 888 selected
+58 2hop not enough, random choose
+313  cannot add 2hop 720 selected
+313  cannot add 2hop 742 selected
+535  cannot add 2hop 249 selected
+535  cannot add 2hop 837 selected
+535  cannot add 2hop 25 selected
+535  cannot add 2hop 925 selected
+535  cannot add 2hop 556 selected
+849  cannot add 2hop 477 reach conn bound
+673  cannot add 2hop 846 selected
+673  cannot add 2hop 35 selected
+673  cannot add 2hop 105 selected
+933  cannot add 2hop 284 selected
+933  cannot add 2hop 620 selected
+933  cannot add 2hop 963 selected
+933  cannot add 2hop 821 selected
+933  cannot add 2hop 127 selected
+315  cannot add 2hop 888 selected
+315  cannot add 2hop 720 selected
+315  cannot add 2hop 104 reach conn bound
+315  cannot add 2hop 446 selected
+953  cannot add 2hop 538 selected
+953  cannot add 2hop 362 selected
+953  cannot add 2hop 133 selected
+953  cannot add 2hop 358 reach conn bound
+721  cannot add 2hop 550 reach conn bound
+721  cannot add 2hop 414 selected
+6  cannot add 2hop 888 selected
+6  cannot add 2hop 882 reach conn bound
+6  cannot add 2hop 53 selected
+6  cannot add 2hop 538 selected
+799  cannot add 2hop 382 selected
+799  cannot add 2hop 587 selected
+799  cannot add 2hop 742 selected
+677  cannot add 2hop 464 selected
+677  cannot add 2hop 837 selected
+677  cannot add 2hop 630 selected
+713  cannot add 2hop 446 selected
+713  cannot add 2hop 670 selected
+713  cannot add 2hop 104 selected
+713  cannot add 2hop 35 selected
+713  cannot add 2hop 535 selected
+713  cannot add 2hop 105 selected
+713  cannot add 2hop 129 selected
+905  cannot add 2hop 513 reach conn bound
+931  cannot add 2hop 538 selected
+931  cannot add 2hop 720 selected
+931  cannot add 2hop 54 reach conn bound
+931  cannot add 2hop 538 selected
+931  cannot add 2hop 882 reach conn bound
+931  cannot add 2hop 414 selected
+931  cannot add 2hop 670 selected
+453  cannot add 2hop 114 reach conn bound
+453  cannot add 2hop 127 selected
+640  cannot add 2hop 378 selected
+640  cannot add 2hop 133 selected
+640  cannot add 2hop 711 reach conn bound
+640  cannot add 2hop 53 selected
+640  cannot add 2hop 670 selected
+221  cannot add 2hop 837 selected
+221  cannot add 2hop 798 selected
+221  cannot add 2hop 846 selected
+683  cannot add 2hop 798 selected
+369  cannot add 2hop 842 reach conn bound
+369  cannot add 2hop 742 selected
+369  cannot add 2hop 104 selected
+2  cannot add 2hop 362 selected
+2  cannot add 2hop 620 selected
+2  cannot add 2hop 284 selected
+603  cannot add 2hop 720 selected
+850  cannot add 2hop 326 selected
+830  cannot add 2hop 798 selected
+830  cannot add 2hop 894 selected
+699  cannot add 2hop 127 selected
+699  cannot add 2hop 200 selected
+699  cannot add 2hop 963 selected
+699  cannot add 2hop 115 selected
+699  cannot add 2hop 821 selected
+699  cannot add 2hop 538 selected
+699  cannot add 2hop 249 selected
+889  cannot add 2hop 798 selected
+889  cannot add 2hop 255 selected
+889  cannot add 2hop 720 selected
+938  cannot add 2hop 587 selected
+938  cannot add 2hop 255 selected
+938  cannot add 2hop 563 selected
+938  cannot add 2hop 414 selected
+740  cannot add 2hop 255 selected
+740  cannot add 2hop 535 selected
+740  cannot add 2hop 205 reach conn bound
+740  cannot add 2hop 666 selected
+740  cannot add 2hop 535 selected
+380  cannot add 2hop 925 selected
+380  cannot add 2hop 941 reach conn bound
+380  cannot add 2hop 378 selected
+878  cannot add 2hop 587 selected
+878  cannot add 2hop 821 selected
+8  cannot add 2hop 556 selected
+8  cannot add 2hop 326 selected
+8  cannot add 2hop 963 selected
+8  cannot add 2hop 556 selected
+814  cannot add 2hop 610 selected
+814  cannot add 2hop 888 selected
+814  cannot add 2hop 821 selected
+814  cannot add 2hop 556 selected
+814  cannot add 2hop 821 selected
+814 2hop not enough, random choose
+363  cannot add 2hop 798 selected
+863  cannot add 2hop 690 selected
+863  cannot add 2hop 596 selected
+863  cannot add 2hop 362 selected
+788  cannot add 2hop 53 selected
+744  cannot add 2hop 133 selected
+714  cannot add 2hop 249 selected
+714  cannot add 2hop 104 selected
+85  cannot add 2hop 255 selected
+85  cannot add 2hop 925 selected
+437  cannot add 2hop 299 reach conn bound
+437  cannot add 2hop 105 selected
+437  cannot add 2hop 630 selected
+362  cannot add 2hop 925 selected
+362  cannot add 2hop 249 selected
+362  cannot add 2hop 446 selected
+362  cannot add 2hop 94 selected
+741  cannot add 2hop 133 selected
+741  cannot add 2hop 620 selected
+860  cannot add 2hop 105 selected
+860  cannot add 2hop 35 selected
+860  cannot add 2hop 630 selected
+860  cannot add 2hop 811 reach conn bound
+860  cannot add 2hop 944 selected
+805  cannot add 2hop 25 selected
+805  cannot add 2hop 382 selected
+224  cannot add 2hop 105 selected
+224  cannot add 2hop 249 selected
+672  cannot add 2hop 255 selected
+672  cannot add 2hop 284 selected
+672  cannot add 2hop 362 selected
+511  cannot add 2hop 115 selected
+511  cannot add 2hop 888 selected
+511  cannot add 2hop 819 selected
+511  cannot add 2hop 596 selected
+819  cannot add 2hop 94 selected
+819  cannot add 2hop 556 selected
+819  cannot add 2hop 587 selected
+819  cannot add 2hop 563 selected
+819  cannot add 2hop 894 selected
+819  cannot add 2hop 742 selected
+848  cannot add 2hop 556 selected
+167  cannot add 2hop 690 selected
+167  cannot add 2hop 963 selected
+167  cannot add 2hop 596 selected
+167  cannot add 2hop 821 selected
+484  cannot add 2hop 630 selected
+484  cannot add 2hop 362 selected
+484  cannot add 2hop 464 selected
+484  cannot add 2hop 382 selected
+484  cannot add 2hop 666 selected
+57  cannot add 2hop 670 selected
+325  cannot add 2hop 200 selected
+Recording 8 using time 33.88345813751221
+981  cannot add 2hop 363 reach conn bound
+411  cannot add 2hop 754 reach conn bound
+22  cannot add 2hop 846 reach conn bound
+22  cannot add 2hop 255 reach conn bound
+794  cannot add 2hop 539 reach conn bound
+505  cannot add 2hop 378 reach conn bound
+977  cannot add 2hop 544 reach conn bound
+788  cannot add 2hop 604 reach conn bound
+769  cannot add 2hop 113 reach conn bound
+237  cannot add 2hop 556 reach conn bound
+475  cannot add 2hop 538 reach conn bound
+666  cannot add 2hop 837 reach conn bound
+635  cannot add 2hop 358 reach conn bound
+78  cannot add 2hop 742 reach conn bound
+78  cannot add 2hop 936 reach conn bound
+321  cannot add 2hop 821 reach conn bound
+349  cannot add 2hop 151 reach conn bound
+349  cannot add 2hop 868 reach conn bound
+654  cannot add 2hop 86 reach conn bound
+799  cannot add 2hop 888 reach conn bound
+106  cannot add 2hop 133 reach conn bound
+239  cannot add 2hop 610 reach conn bound
+759  cannot add 2hop 57 reach conn bound
+73  cannot add 2hop 378 reach conn bound
+545  cannot add 2hop 535 reach conn bound
+545  cannot add 2hop 255 reach conn bound
+545  cannot add 2hop 255 reach conn bound
+56  cannot add 2hop 382 reach conn bound
+235  cannot add 2hop 133 reach conn bound
+89  cannot add 2hop 742 reach conn bound
+89  cannot add 2hop 868 reach conn bound
+128  cannot add 2hop 976 reach conn bound
+17  cannot add 2hop 17 reach conn bound
+380  cannot add 2hop 595 reach conn bound
+925  cannot add 2hop 255 reach conn bound
+876  cannot add 2hop 610 reach conn bound
+126  cannot add 2hop 255 reach conn bound
+395  cannot add 2hop 615 reach conn bound
+395  cannot add 2hop 278 reach conn bound
+910  cannot add 2hop 798 reach conn bound
+53  cannot add 2hop 666 reach conn bound
+725  cannot add 2hop 610 reach conn bound
+929  cannot add 2hop 811 reach conn bound
+507  cannot add 2hop 259 reach conn bound
+749  cannot add 2hop 320 reach conn bound
+918  cannot add 2hop 319 reach conn bound
+843  cannot add 2hop 550 reach conn bound
+534  cannot add 2hop 556 reach conn bound
+806  cannot add 2hop 774 reach conn bound
+121  cannot add 2hop 378 reach conn bound
+708  cannot add 2hop 666 reach conn bound
+708  cannot add 2hop 342 reach conn bound
+818  cannot add 2hop 824 reach conn bound
+443  cannot add 2hop 539 reach conn bound
+479  cannot add 2hop 362 reach conn bound
+745  cannot add 2hop 358 reach conn bound
+220  cannot add 2hop 935 reach conn bound
+942  cannot add 2hop 178 reach conn bound
+315  cannot add 2hop 127 selected
+30  cannot add 2hop 414 selected
+540  cannot add 2hop 785 reach conn bound
+612  cannot add 2hop 587 reach conn bound
+335  cannot add 2hop 127 selected
+335  cannot add 2hop 200 reach conn bound
+605  cannot add 2hop 774 reach conn bound
+679  cannot add 2hop 116 reach conn bound
+855  cannot add 2hop 485 reach conn bound
+42  cannot add 2hop 587 selected
+836  cannot add 2hop 401 reach conn bound
+198  cannot add 2hop 414 selected
+328  cannot add 2hop 587 selected
+647  cannot add 2hop 670 reach conn bound
+426  cannot add 2hop 891 reach conn bound
+993  cannot add 2hop 538 reach conn bound
+72  cannot add 2hop 720 reach conn bound
+645  cannot add 2hop 587 selected
+8  cannot add 2hop 127 selected
+98  cannot add 2hop 535 reach conn bound
+422  cannot add 2hop 342 reach conn bound
+62  cannot add 2hop 211 reach conn bound
+153  cannot add 2hop 127 selected
+857  cannot add 2hop 127 selected
+857  cannot add 2hop 378 reach conn bound
+388  cannot add 2hop 666 reach conn bound
+369  cannot add 2hop 595 reach conn bound
+566  cannot add 2hop 834 reach conn bound
+566  cannot add 2hop 566 reach conn bound
+230  cannot add 2hop 526 reach conn bound
+757  cannot add 2hop 568 reach conn bound
+747  cannot add 2hop 519 reach conn bound
+366  cannot add 2hop 742 reach conn bound
+527  cannot add 2hop 326 reach conn bound
+375  cannot add 2hop 311 reach conn bound
+756  cannot add 2hop 821 reach conn bound
+191  cannot add 2hop 811 reach conn bound
+379  cannot add 2hop 798 reach conn bound
+642  cannot add 2hop 71 reach conn bound
+606  cannot add 2hop 803 reach conn bound
+606  cannot add 2hop 127 selected
+496  cannot add 2hop 587 selected
+362  cannot add 2hop 464 reach conn bound
+310  cannot add 2hop 414 selected
+310  cannot add 2hop 587 selected
+208  cannot add 2hop 362 reach conn bound
+456  cannot add 2hop 556 selected
+338  cannot add 2hop 630 reach conn bound
+207  cannot add 2hop 127 selected
+552  cannot add 2hop 71 reach conn bound
+498  cannot add 2hop 819 selected
+292  cannot add 2hop 819 selected
+292  cannot add 2hop 556 selected
+292  cannot add 2hop 819 selected
+750  cannot add 2hop 886 reach conn bound
+265  cannot add 2hop 620 reach conn bound
+265  cannot add 2hop 556 selected
+572  cannot add 2hop 414 selected
+54  cannot add 2hop 819 selected
+54  cannot add 2hop 362 selected
+943  cannot add 2hop 846 reach conn bound
+943  cannot add 2hop 556 selected
+255  cannot add 2hop 846 reach conn bound
+255  cannot add 2hop 837 reach conn bound
+381  cannot add 2hop 127 selected
+533  cannot add 2hop 409 reach conn bound
+533  cannot add 2hop 587 selected
+365  cannot add 2hop 200 selected
+613  cannot add 2hop 362 selected
+820  cannot add 2hop 533 reach conn bound
+290  cannot add 2hop 556 selected
+290  cannot add 2hop 894 reach conn bound
+290  cannot add 2hop 587 selected
+719  cannot add 2hop 133 selected
+313  cannot add 2hop 600 reach conn bound
+628  cannot add 2hop 133 selected
+254  cannot add 2hop 556 selected
+254  cannot add 2hop 824 reach conn bound
+866  cannot add 2hop 587 selected
+374  cannot add 2hop 587 selected
+374  cannot add 2hop 104 reach conn bound
+864  cannot add 2hop 556 selected
+514  cannot add 2hop 556 selected
+583  cannot add 2hop 774 reach conn bound
+583  cannot add 2hop 587 selected
+57  cannot add 2hop 401 reach conn bound
+730  cannot add 2hop 630 reach conn bound
+359  cannot add 2hop 319 reach conn bound
+359  cannot add 2hop 464 reach conn bound
+173  cannot add 2hop 25 reach conn bound
+173  cannot add 2hop 278 reach conn bound
+944  cannot add 2hop 944 reach conn bound
+465  cannot add 2hop 587 selected
+856  cannot add 2hop 133 selected
+845  cannot add 2hop 556 selected
+845  cannot add 2hop 362 selected
+691  cannot add 2hop 362 selected
+542  cannot add 2hop 127 selected
+610  cannot add 2hop 362 selected
+610  cannot add 2hop 414 selected
+15  cannot add 2hop 362 selected
+104  cannot add 2hop 422 reach conn bound
+485  cannot add 2hop 819 selected
+997  cannot add 2hop 342 reach conn bound
+650  cannot add 2hop 556 selected
+159  cannot add 2hop 614 reach conn bound
+159  cannot add 2hop 841 reach conn bound
+620  cannot add 2hop 483 reach conn bound
+620  cannot add 2hop 936 reach conn bound
+377  cannot add 2hop 151 reach conn bound
+641  cannot add 2hop 432 reach conn bound
+641  cannot add 2hop 491 reach conn bound
+202  cannot add 2hop 362 selected
+269  cannot add 2hop 127 selected
+968  cannot add 2hop 587 selected
+968  cannot add 2hop 963 reach conn bound
+968  cannot add 2hop 819 selected
+968  cannot add 2hop 200 selected
+7  cannot add 2hop 819 selected
+7  cannot add 2hop 587 selected
+827  cannot add 2hop 362 selected
+436  cannot add 2hop 133 selected
+162  cannot add 2hop 230 reach conn bound
+376  cannot add 2hop 819 selected
+147  cannot add 2hop 133 selected
+228  cannot add 2hop 666 reach conn bound
+288  cannot add 2hop 127 selected
+288  cannot add 2hop 95 reach conn bound
+663  cannot add 2hop 819 selected
+204  cannot add 2hop 127 selected
+204  cannot add 2hop 963 selected
+839  cannot add 2hop 133 selected
+401  cannot add 2hop 477 reach conn bound
+414  cannot add 2hop 34 reach conn bound
+181  cannot add 2hop 127 selected
+181  cannot add 2hop 858 reach conn bound
+451  cannot add 2hop 519 reach conn bound
+211  cannot add 2hop 66 reach conn bound
+652  cannot add 2hop 963 selected
+979  cannot add 2hop 819 selected
+979  cannot add 2hop 127 selected
+936  cannot add 2hop 556 selected
+936  cannot add 2hop 824 reach conn bound
+194  cannot add 2hop 133 selected
+194  cannot add 2hop 115 reach conn bound
+511  cannot add 2hop 133 selected
+477  cannot add 2hop 151 reach conn bound
+477  cannot add 2hop 390 reach conn bound
+671  cannot add 2hop 610 selected
+599  cannot add 2hop 610 selected
+500  cannot add 2hop 996 reach conn bound
+912  cannot add 2hop 362 selected
+912  cannot add 2hop 587 selected
+912  cannot add 2hop 401 reach conn bound
+247  cannot add 2hop 963 selected
+247  cannot add 2hop 533 reach conn bound
+117  cannot add 2hop 963 selected
+898  cannot add 2hop 556 selected
+898  cannot add 2hop 414 selected
+816  cannot add 2hop 341 reach conn bound
+816  cannot add 2hop 362 selected
+923  cannot add 2hop 894 selected
+923  cannot add 2hop 133 selected
+874  cannot add 2hop 587 selected
+50  cannot add 2hop 821 reach conn bound
+50  cannot add 2hop 610 selected
+860  cannot add 2hop 811 reach conn bound
+574  cannot add 2hop 963 selected
+340  cannot add 2hop 200 selected
+340  cannot add 2hop 477 reach conn bound
+238  cannot add 2hop 963 selected
+577  cannot add 2hop 490 reach conn bound
+658  cannot add 2hop 538 selected
+287  cannot add 2hop 414 selected
+841  cannot add 2hop 133 selected
+554  cannot add 2hop 228 reach conn bound
+361  cannot add 2hop 963 selected
+803  cannot add 2hop 894 selected
+803  cannot add 2hop 133 selected
+853  cannot add 2hop 115 reach conn bound
+853  cannot add 2hop 311 selected
+853  cannot add 2hop 587 selected
+222  cannot add 2hop 819 selected
+70  cannot add 2hop 272 reach conn bound
+861  cannot add 2hop 976 reach conn bound
+421  cannot add 2hop 538 selected
+518  cannot add 2hop 936 reach conn bound
+311  cannot add 2hop 378 reach conn bound
+556  cannot add 2hop 358 reach conn bound
+556  cannot add 2hop 538 selected
+556  cannot add 2hop 133 selected
+994  cannot add 2hop 587 selected
+51  cannot add 2hop 205 reach conn bound
+60  cannot add 2hop 133 selected
+299  cannot add 2hop 311 selected
+358  cannot add 2hop 963 selected
+358  cannot add 2hop 819 selected
+941  cannot add 2hop 587 selected
+941  cannot add 2hop 587 selected
+197  cannot add 2hop 587 selected
+639  cannot add 2hop 587 selected
+639  cannot add 2hop 133 selected
+607  cannot add 2hop 181 reach conn bound
+100  cannot add 2hop 571 reach conn bound
+762  cannot add 2hop 127 selected
+793  cannot add 2hop 127 selected
+557  cannot add 2hop 963 selected
+539  cannot add 2hop 798 reach conn bound
+539  cannot add 2hop 895 reach conn bound
+911  cannot add 2hop 556 selected
+767  cannot add 2hop 894 selected
+733  cannot add 2hop 35 selected
+165  cannot add 2hop 133 selected
+165  cannot add 2hop 311 selected
+165  cannot add 2hop 66 reach conn bound
+906  cannot add 2hop 78 reach conn bound
+906  cannot add 2hop 362 selected
+203  cannot add 2hop 666 selected
+203  cannot add 2hop 963 selected
+203  cannot add 2hop 963 selected
+203  cannot add 2hop 362 selected
+4  cannot add 2hop 4 reach conn bound
+43  cannot add 2hop 610 selected
+846  cannot add 2hop 529 reach conn bound
+846  cannot add 2hop 846 reach conn bound
+751  cannot add 2hop 342 reach conn bound
+604  cannot add 2hop 610 selected
+604  cannot add 2hop 944 reach conn bound
+561  cannot add 2hop 378 reach conn bound
+561  cannot add 2hop 963 selected
+893  cannot add 2hop 824 reach conn bound
+976  cannot add 2hop 750 reach conn bound
+6  cannot add 2hop 378 reach conn bound
+6  cannot add 2hop 97 reach conn bound
+6  cannot add 2hop 819 selected
+6 2hop not enough, random choose
+364  cannot add 2hop 255 reach conn bound
+151  cannot add 2hop 620 reach conn bound
+772  cannot add 2hop 127 selected
+595  cannot add 2hop 311 selected
+132  cannot add 2hop 819 selected
+783  cannot add 2hop 610 selected
+858  cannot add 2hop 127 selected
+858  cannot add 2hop 610 selected
+858  cannot add 2hop 414 selected
+858  cannot add 2hop 819 selected
+522  cannot add 2hop 824 selected
+643  cannot add 2hop 827 reach conn bound
+712  cannot add 2hop 841 reach conn bound
+947  cannot add 2hop 963 selected
+141  cannot add 2hop 824 selected
+917  cannot add 2hop 587 selected
+917  cannot add 2hop 894 selected
+989  cannot add 2hop 33 reach conn bound
+114  cannot add 2hop 904 reach conn bound
+305  cannot add 2hop 556 selected
+415  cannot add 2hop 14 reach conn bound
+229  cannot add 2hop 362 selected
+304  cannot add 2hop 115 reach conn bound
+342  cannot add 2hop 35 selected
+342  cannot add 2hop 104 reach conn bound
+342  cannot add 2hop 595 reach conn bound
+155  cannot add 2hop 819 selected
+928  cannot add 2hop 803 reach conn bound
+928  cannot add 2hop 610 selected
+928  cannot add 2hop 86 reach conn bound
+928  cannot add 2hop 821 selected
+289  cannot add 2hop 477 reach conn bound
+661  cannot add 2hop 824 selected
+661  cannot add 2hop 821 selected
+31  cannot add 2hop 362 selected
+31  cannot add 2hop 610 selected
+31  cannot add 2hop 821 selected
+734  cannot add 2hop 898 reach conn bound
+734  cannot add 2hop 819 selected
+115  cannot add 2hop 895 reach conn bound
+115  cannot add 2hop 115 reach conn bound
+285  cannot add 2hop 127 selected
+285  cannot add 2hop 824 selected
+904  cannot add 2hop 730 reach conn bound
+536  cannot add 2hop 963 selected
+640  cannot add 2hop 821 selected
+991  cannot add 2hop 362 selected
+489  cannot add 2hop 133 selected
+487  cannot add 2hop 610 selected
+196  cannot add 2hop 666 selected
+258  cannot add 2hop 666 selected
+216  cannot add 2hop 821 selected
+967  cannot add 2hop 539 reach conn bound
+967  cannot add 2hop 944 reach conn bound
+541  cannot add 2hop 169 reach conn bound
+541  cannot add 2hop 824 selected
+541  cannot add 2hop 556 selected
+915  cannot add 2hop 317 reach conn bound
+915  cannot add 2hop 538 selected
+64  cannot add 2hop 821 selected
+64  cannot add 2hop 86 reach conn bound
+64  cannot add 2hop 556 selected
+64  cannot add 2hop 538 selected
+737  cannot add 2hop 181 reach conn bound
+737  cannot add 2hop 133 selected
+737  cannot add 2hop 311 selected
+662  cannot add 2hop 963 selected
+926  cannot add 2hop 610 selected
+280  cannot add 2hop 363 reach conn bound
+280  cannot add 2hop 824 selected
+416  cannot add 2hop 587 selected
+387  cannot add 2hop 798 selected
+398  cannot add 2hop 666 selected
+398  cannot add 2hop 133 selected
+885  cannot add 2hop 963 selected
+885  cannot add 2hop 821 selected
+175  cannot add 2hop 883 reach conn bound
+532  cannot add 2hop 133 selected
+143  cannot add 2hop 127 selected
+580  cannot add 2hop 362 selected
+580  cannot add 2hop 963 selected
+474  cannot add 2hop 798 selected
+474  cannot add 2hop 963 selected
+614  cannot add 2hop 568 reach conn bound
+614  cannot add 2hop 666 selected
+614  cannot add 2hop 362 selected
+614  cannot add 2hop 587 selected
+614 2hop not enough, random choose
+125  cannot add 2hop 255 reach conn bound
+740  cannot add 2hop 832 reach conn bound
+139  cannot add 2hop 133 selected
+139  cannot add 2hop 95 reach conn bound
+139  cannot add 2hop 414 selected
+442  cannot add 2hop 35 selected
+442  cannot add 2hop 963 selected
+590  cannot add 2hop 798 selected
+590  cannot add 2hop 401 reach conn bound
+83  cannot add 2hop 963 selected
+996  cannot add 2hop 556 selected
+996  cannot add 2hop 643 reach conn bound
+996  cannot add 2hop 556 selected
+984  cannot add 2hop 824 selected
+571  cannot add 2hop 483 selected
+418  cannot add 2hop 785 reach conn bound
+418  cannot add 2hop 133 selected
+148  cannot add 2hop 419 reach conn bound
+833  cannot add 2hop 666 selected
+833  cannot add 2hop 587 selected
+339  cannot add 2hop 894 selected
+339  cannot add 2hop 311 selected
+339  cannot add 2hop 109 reach conn bound
+693  cannot add 2hop 610 selected
+486  cannot add 2hop 133 selected
+486  cannot add 2hop 798 selected
+796  cannot add 2hop 894 selected
+341  cannot add 2hop 824 selected
+341  cannot add 2hop 556 selected
+383  cannot add 2hop 819 selected
+274  cannot add 2hop 127 selected
+274  cannot add 2hop 414 selected
+274  cannot add 2hop 35 selected
+152  cannot add 2hop 935 reach conn bound
+152  cannot add 2hop 362 selected
+686  cannot add 2hop 670 selected
+146  cannot add 2hop 86 reach conn bound
+779  cannot add 2hop 824 selected
+779  cannot add 2hop 362 selected
+779  cannot add 2hop 666 selected
+779  cannot add 2hop 483 selected
+779  cannot add 2hop 556 selected
+262  cannot add 2hop 127 selected
+262  cannot add 2hop 414 selected
+262  cannot add 2hop 610 selected
+384  cannot add 2hop 894 selected
+934  cannot add 2hop 819 selected
+27  cannot add 2hop 127 selected
+277  cannot add 2hop 798 selected
+277  cannot add 2hop 925 reach conn bound
+683  cannot add 2hop 821 selected
+424  cannot add 2hop 666 selected
+424  cannot add 2hop 105 reach conn bound
+424  cannot add 2hop 311 selected
+424  cannot add 2hop 311 selected
+424  cannot add 2hop 401 reach conn bound
+559  cannot add 2hop 133 selected
+814  cannot add 2hop 610 selected
+814  cannot add 2hop 821 selected
+714  cannot add 2hop 367 reach conn bound
+930  cannot add 2hop 824 selected
+410  cannot add 2hop 670 selected
+410  cannot add 2hop 989 reach conn bound
+190  cannot add 2hop 414 selected
+190  cannot add 2hop 378 selected
+295  cannot add 2hop 556 selected
+295  cannot add 2hop 538 selected
+164  cannot add 2hop 821 selected
+164  cannot add 2hop 610 selected
+797  cannot add 2hop 378 selected
+135  cannot add 2hop 200 selected
+448  cannot add 2hop 821 selected
+448  cannot add 2hop 127 selected
+828  cannot add 2hop 819 selected
+402  cannot add 2hop 133 selected
+626  cannot add 2hop 976 reach conn bound
+626  cannot add 2hop 550 reach conn bound
+303  cannot add 2hop 556 selected
+303  cannot add 2hop 824 selected
+706  cannot add 2hop 894 selected
+706  cannot add 2hop 169 reach conn bound
+706  cannot add 2hop 730 reach conn bound
+706  cannot add 2hop 824 selected
+706  cannot add 2hop 483 selected
+990  cannot add 2hop 610 selected
+805  cannot add 2hop 414 selected
+971  cannot add 2hop 556 selected
+795  cannot add 2hop 133 selected
+408  cannot add 2hop 127 selected
+819  cannot add 2hop 483 selected
+692  cannot add 2hop 666 selected
+692  cannot add 2hop 963 selected
+692  cannot add 2hop 666 selected
+692  cannot add 2hop 963 selected
+760  cannot add 2hop 774 reach conn bound
+760  cannot add 2hop 774 reach conn bound
+261  cannot add 2hop 824 selected
+261  cannot add 2hop 824 selected
+261  cannot add 2hop 538 selected
+163  cannot add 2hop 587 selected
+957  cannot add 2hop 483 selected
+460  cannot add 2hop 670 selected
+873  cannot add 2hop 798 selected
+467  cannot add 2hop 362 selected
+271  cannot add 2hop 326 reach conn bound
+271  cannot add 2hop 538 selected
+355  cannot add 2hop 670 selected
+14  cannot add 2hop 670 selected
+565  cannot add 2hop 556 selected
+565  cannot add 2hop 169 reach conn bound
+565  cannot add 2hop 362 selected
+565  cannot add 2hop 483 selected
+680  cannot add 2hop 824 selected
+680  cannot add 2hop 620 reach conn bound
+859  cannot add 2hop 556 selected
+859  cannot add 2hop 127 selected
+956  cannot add 2hop 996 reach conn bound
+673  cannot add 2hop 842 reach conn bound
+985  cannot add 2hop 963 selected
+512  cannot add 2hop 798 selected
+987  cannot add 2hop 538 selected
+987  cannot add 2hop 904 reach conn bound
+992  cannot add 2hop 483 selected
+685  cannot add 2hop 362 selected
+685  cannot add 2hop 846 selected
+685  cannot add 2hop 178 reach conn bound
+685  cannot add 2hop 526 reach conn bound
+685  cannot add 2hop 284 reach conn bound
+13  cannot add 2hop 821 selected
+13  cannot add 2hop 762 reach conn bound
+619  cannot add 2hop 587 selected
+99  cannot add 2hop 133 selected
+99  cannot add 2hop 894 selected
+681  cannot add 2hop 821 selected
+920  cannot add 2hop 819 selected
+920  cannot add 2hop 538 selected
+25  cannot add 2hop 963 selected
+678  cannot add 2hop 94 reach conn bound
+69  cannot add 2hop 774 selected
+18  cannot add 2hop 819 selected
+510  cannot add 2hop 127 selected
+510  cannot add 2hop 824 selected
+510  cannot add 2hop 200 selected
+457  cannot add 2hop 846 selected
+457  cannot add 2hop 66 reach conn bound
+457  cannot add 2hop 127 selected
+894  cannot add 2hop 895 reach conn bound
+44  cannot add 2hop 647 reach conn bound
+630  cannot add 2hop 670 selected
+852  cannot add 2hop 556 selected
+852  cannot add 2hop 133 selected
+852  cannot add 2hop 538 selected
+852  cannot add 2hop 362 selected
+852  cannot add 2hop 798 selected
+852  cannot add 2hop 824 selected
+257  cannot add 2hop 798 selected
+257  cannot add 2hop 414 selected
+257  cannot add 2hop 824 selected
+257  cannot add 2hop 670 selected
+776  cannot add 2hop 798 selected
+677  cannot add 2hop 382 selected
+677  cannot add 2hop 963 selected
+293  cannot add 2hop 995 reach conn bound
+293  cannot add 2hop 821 selected
+293  cannot add 2hop 774 selected
+982  cannot add 2hop 66 reach conn bound
+655  cannot add 2hop 133 selected
+399  cannot add 2hop 963 selected
+526  cannot add 2hop 198 reach conn bound
+526  cannot add 2hop 846 selected
+551  cannot add 2hop 362 selected
+602  cannot add 2hop 105 selected
+602  cannot add 2hop 556 selected
+602  cannot add 2hop 963 selected
+602  cannot add 2hop 666 selected
+948  cannot add 2hop 38 reach conn bound
+245  cannot add 2hop 483 selected
+245  cannot add 2hop 666 selected
+245  cannot add 2hop 362 selected
+298  cannot add 2hop 963 selected
+449  cannot add 2hop 963 selected
+449  cannot add 2hop 362 selected
+449  cannot add 2hop 666 selected
+449  cannot add 2hop 846 selected
+449  cannot add 2hop 382 selected
+268  cannot add 2hop 223 reach conn bound
+955  cannot add 2hop 821 selected
+955  cannot add 2hop 824 selected
+428  cannot add 2hop 610 selected
+409  cannot add 2hop 378 selected
+61  cannot add 2hop 116 reach conn bound
+113  cannot add 2hop 311 selected
+113  cannot add 2hop 35 selected
+879  cannot add 2hop 127 selected
+668  cannot add 2hop 382 selected
+668  cannot add 2hop 737 reach conn bound
+343  cannot add 2hop 690 selected
+343  cannot add 2hop 774 selected
+651  cannot add 2hop 825 selected
+651  cannot add 2hop 587 selected
+319  cannot add 2hop 133 selected
+319  cannot add 2hop 538 selected
+319  cannot add 2hop 319 reach conn bound
+965  cannot add 2hop 362 selected
+965  cannot add 2hop 963 selected
+965  cannot add 2hop 846 selected
+965  cannot add 2hop 846 selected
+406  cannot add 2hop 824 selected
+21  cannot add 2hop 200 selected
+21  cannot add 2hop 963 selected
+12  cannot add 2hop 666 selected
+12  cannot add 2hop 483 selected
+12  cannot add 2hop 556 selected
+137  cannot add 2hop 963 selected
+137  cannot add 2hop 362 selected
+137  cannot add 2hop 846 selected
+137  cannot add 2hop 666 selected
+137  cannot add 2hop 382 selected
+847  cannot add 2hop 666 selected
+847  cannot add 2hop 989 reach conn bound
+847  cannot add 2hop 610 selected
+847  cannot add 2hop 105 selected
+847  cannot add 2hop 587 selected
+847  cannot add 2hop 401 selected
+55  cannot add 2hop 610 selected
+55  cannot add 2hop 821 selected
+55  cannot add 2hop 894 selected
+55  cannot add 2hop 133 selected
+55  cannot add 2hop 587 selected
+938  cannot add 2hop 846 selected
+938  cannot add 2hop 587 selected
+476  cannot add 2hop 483 selected
+562  cannot add 2hop 401 selected
+562  cannot add 2hop 720 reach conn bound
+176  cannot add 2hop 824 selected
+900  cannot add 2hop 610 selected
+900  cannot add 2hop 205 reach conn bound
+785  cannot add 2hop 774 selected
+785  cannot add 2hop 821 selected
+785  cannot add 2hop 824 selected
+766  cannot add 2hop 976 reach conn bound
+766  cannot add 2hop 996 reach conn bound
+766  cannot add 2hop 378 selected
+297  cannot add 2hop 105 selected
+316  cannot add 2hop 774 selected
+316  cannot add 2hop 963 selected
+316  cannot add 2hop 362 selected
+234  cannot add 2hop 798 selected
+437  cannot add 2hop 587 selected
+160  cannot add 2hop 963 selected
+118  cannot add 2hop 127 selected
+508  cannot add 2hop 615 reach conn bound
+823  cannot add 2hop 228 reach conn bound
+823  cannot add 2hop 811 selected
+823  cannot add 2hop 414 selected
+823  cannot add 2hop 446 selected
+823  cannot add 2hop 587 selected
+823  cannot add 2hop 737 selected
+823 2hop not enough, random choose
+427  cannot add 2hop 539 reach conn bound
+427  cannot add 2hop 690 selected
+427  cannot add 2hop 115 reach conn bound
+427  cannot add 2hop 774 selected
+520  cannot add 2hop 133 selected
+520  cannot add 2hop 311 selected
+520  cannot add 2hop 446 selected
+586  cannot add 2hop 133 selected
+798  cannot add 2hop 445 reach conn bound
+798  cannot add 2hop 538 selected
+798  cannot add 2hop 460 reach conn bound
+309  cannot add 2hop 534 reach conn bound
+309  cannot add 2hop 382 selected
+624  cannot add 2hop 737 selected
+353  cannot add 2hop 382 selected
+112  cannot add 2hop 280 reach conn bound
+233  cannot add 2hop 362 selected
+517  cannot add 2hop 358 reach conn bound
+517  cannot add 2hop 446 selected
+524  cannot add 2hop 666 selected
+524  cannot add 2hop 846 selected
+178  cannot add 2hop 963 selected
+178  cannot add 2hop 666 selected
+178  cannot add 2hop 446 selected
+178  cannot add 2hop 401 selected
+178  cannot add 2hop 690 selected
+575  cannot add 2hop 362 selected
+575  cannot add 2hop 556 selected
+575  cannot add 2hop 666 selected
+575  cannot add 2hop 824 selected
+344  cannot add 2hop 963 selected
+344  cannot add 2hop 610 selected
+344  cannot add 2hop 587 selected
+344  cannot add 2hop 936 reach conn bound
+68  cannot add 2hop 666 selected
+68  cannot add 2hop 963 selected
+748  cannot add 2hop 936 reach conn bound
+748  cannot add 2hop 378 selected
+664  cannot add 2hop 811 selected
+664  cannot add 2hop 670 selected
+907  cannot add 2hop 483 selected
+907  cannot add 2hop 127 selected
+907  cannot add 2hop 533 reach conn bound
+801  cannot add 2hop 378 selected
+960  cannot add 2hop 825 selected
+960  cannot add 2hop 846 selected
+578  cannot add 2hop 944 selected
+515  cannot add 2hop 515 reach conn bound
+515  cannot add 2hop 133 selected
+648  cannot add 2hop 774 selected
+129  cannot add 2hop 35 selected
+129  cannot add 2hop 587 selected
+302  cannot add 2hop 690 selected
+754  cannot add 2hop 666 selected
+754  cannot add 2hop 556 selected
+850  cannot add 2hop 446 selected
+850  cannot add 2hop 963 selected
+700  cannot add 2hop 414 selected
+553  cannot add 2hop 811 selected
+101  cannot add 2hop 311 selected
+350  cannot add 2hop 556 selected
+350  cannot add 2hop 944 selected
+350  cannot add 2hop 556 selected
+728  cannot add 2hop 690 selected
+660  cannot add 2hop 963 selected
+660  cannot add 2hop 811 selected
+660  cannot add 2hop 311 selected
+660  cannot add 2hop 670 selected
+660  cannot add 2hop 808 reach conn bound
+899  cannot add 2hop 819 selected
+899  cannot add 2hop 888 selected
+899  cannot add 2hop 610 selected
+724  cannot add 2hop 127 selected
+724  cannot add 2hop 293 reach conn bound
+134  cannot add 2hop 670 selected
+134  cannot add 2hop 414 selected
+134  cannot add 2hop 127 selected
+134  cannot add 2hop 133 selected
+93  cannot add 2hop 925 reach conn bound
+93  cannot add 2hop 446 selected
+386  cannot add 2hop 115 selected
+9  cannot add 2hop 382 selected
+9  cannot add 2hop 944 selected
+252  cannot add 2hop 446 selected
+252  cannot add 2hop 796 reach conn bound
+170  cannot add 2hop 742 selected
+170  cannot add 2hop 414 selected
+653  cannot add 2hop 133 selected
+653  cannot add 2hop 798 selected
+842  cannot add 2hop 414 selected
+842  cannot add 2hop 811 selected
+842  cannot add 2hop 742 selected
+537  cannot add 2hop 774 selected
+537  cannot add 2hop 115 selected
+256  cannot add 2hop 483 selected
+291  cannot add 2hop 414 selected
+291  cannot add 2hop 378 selected
+291  cannot add 2hop 467 reach conn bound
+718  cannot add 2hop 944 selected
+718  cannot add 2hop 200 selected
+348  cannot add 2hop 888 selected
+348  cannot add 2hop 556 selected
+463  cannot add 2hop 825 selected
+463  cannot add 2hop 274 selected
+127  cannot add 2hop 846 selected
+92  cannot add 2hop 66 reach conn bound
+92  cannot add 2hop 446 selected
+946  cannot add 2hop 90 reach conn bound
+150  cannot add 2hop 742 selected
+150  cannot add 2hop 811 selected
+150  cannot add 2hop 670 selected
+150  cannot add 2hop 414 selected
+625  cannot add 2hop 927 reach conn bound
+625  cannot add 2hop 963 selected
+392  cannot add 2hop 963 selected
+392  cannot add 2hop 811 selected
+392  cannot add 2hop 670 selected
+87  cannot add 2hop 35 selected
+87  cannot add 2hop 401 selected
+331  cannot add 2hop 615 reach conn bound
+821  cannot add 2hop 378 selected
+821  cannot add 2hop 944 selected
+260  cannot add 2hop 401 selected
+199  cannot add 2hop 846 selected
+952  cannot add 2hop 382 selected
+85  cannot add 2hop 846 selected
+85  cannot add 2hop 382 selected
+85  cannot add 2hop 587 selected
+585  cannot add 2hop 824 selected
+585  cannot add 2hop 538 selected
+394  cannot add 2hop 446 selected
+705  cannot add 2hop 35 selected
+817  cannot add 2hop 666 selected
+817  cannot add 2hop 556 selected
+320  cannot add 2hop 825 selected
+439  cannot add 2hop 483 selected
+439  cannot add 2hop 944 selected
+710  cannot add 2hop 963 selected
+710  cannot add 2hop 587 selected
+710  cannot add 2hop 105 selected
+710  cannot add 2hop 401 selected
+726  cannot add 2hop 274 selected
+848  cannot add 2hop 610 selected
+848  cannot add 2hop 446 selected
+848  cannot add 2hop 821 selected
+953  cannot add 2hop 362 selected
+953  cannot add 2hop 556 selected
+953  cannot add 2hop 944 selected
+953  cannot add 2hop 362 selected
+116  cannot add 2hop 538 selected
+116  cannot add 2hop 670 selected
+637  cannot add 2hop 888 selected
+637  cannot add 2hop 846 selected
+637  cannot add 2hop 66 reach conn bound
+637  cannot add 2hop 319 reach conn bound
+637  cannot add 2hop 401 selected
+883  cannot add 2hop 274 selected
+883  cannot add 2hop 587 selected
+883  cannot add 2hop 105 selected
+875  cannot add 2hop 382 selected
+701  cannot add 2hop 774 selected
+701  cannot add 2hop 200 selected
+787  cannot add 2hop 846 selected
+787  cannot add 2hop 821 selected
+183  cannot add 2hop 378 selected
+521  cannot add 2hop 944 selected
+521  cannot add 2hop 483 selected
+591  cannot add 2hop 311 selected
+988  cannot add 2hop 382 selected
+988  cannot add 2hop 483 selected
+988  cannot add 2hop 821 selected
+988  cannot add 2hop 610 selected
+844  cannot add 2hop 963 selected
+688  cannot add 2hop 846 selected
+171  cannot add 2hop 483 selected
+171  cannot add 2hop 127 selected
+601  cannot add 2hop 610 selected
+601  cannot add 2hop 255 reach conn bound
+167  cannot add 2hop 115 selected
+253  cannot add 2hop 944 selected
+253  cannot add 2hop 774 selected
+253  cannot add 2hop 556 selected
+656  cannot add 2hop 798 selected
+506  cannot add 2hop 666 selected
+506  cannot add 2hop 358 reach conn bound
+506  cannot add 2hop 963 selected
+506  cannot add 2hop 401 selected
+506  cannot add 2hop 446 selected
+506  cannot add 2hop 362 selected
+506  cannot add 2hop 526 reach conn bound
+506  cannot add 2hop 319 selected
+455  cannot add 2hop 200 selected
+455  cannot add 2hop 378 selected
+455  cannot add 2hop 798 selected
+468  cannot add 2hop 230 reach conn bound
+468  cannot add 2hop 274 selected
+468  cannot add 2hop 587 selected
+145  cannot add 2hop 827 reach conn bound
+461  cannot add 2hop 821 selected
+323  cannot add 2hop 133 selected
+937  cannot add 2hop 935 reach conn bound
+504  cannot add 2hop 105 selected
+504  cannot add 2hop 274 selected
+504  cannot add 2hop 133 selected
+800  cannot add 2hop 666 selected
+800  cannot add 2hop 742 selected
+800  cannot add 2hop 587 selected
+[0, 1, 2, 3, 4, 8]
+graph1000-out8-keep3-2hop3-rand2-2hopRand-favorNew-test_seed1
+./plot_single.py graph1000-out8-keep3-2hop3-rand2-2hopRand-favorNew-test_seed1 0 1 2 3 4 8

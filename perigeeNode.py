@@ -40,7 +40,7 @@ def update_conn_for_all_nodes(nodes, neighbor_set):
         if len(set(peers)) != len(peers):
             print(i, peers)
 
-
+        nodes[i].seen.union(peers) 
         nodes[i].outs = set(peers)
         nodes[i].ins.clear()
         nodes[i].views.clear()
@@ -92,6 +92,7 @@ class Node:
         self.views = {} # key is peer id, value is current relative time 
         self.views_hist = defaultdict(list) # key is peer id, value is a list of time for all sub round
         self.prev_score = {} #key is combination, value is previous score
+        self.seen = set(init_outs)
 
         self.num_in_request = 0
 

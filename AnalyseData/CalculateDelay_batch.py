@@ -17,6 +17,9 @@ round_list = []
 for i in range(4, len(sys.argv)):
     round_list.append(int(sys.argv[i]))
 
+print(round_list)
+print(data_dir)
+
 def delaytopercenthash(hash_table,length_buff,DelayPercantage):
     LengthDict={}
     for i in range(len(length_buff)):
@@ -51,7 +54,7 @@ hash=np.zeros(number)
 
 hash1=[]
 
-file = open("../hash1.txt",'r',errors='replace')
+file = open("./hash1.txt",'r',errors='replace')
 line=file.readlines()
 a=line[0].split("  ")
 for j in range(number):

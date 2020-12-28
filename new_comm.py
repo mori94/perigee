@@ -26,7 +26,7 @@ def print_debug(i, node, v, peer, ld):
         print("sum", peer.recv_time + node.node_delay + ld[v][i])
         print("node.recv_time", node.recv_time)
         print()
-        sys.exit(0)
+        sys.exit(1)
 
 
 def fuzzy_greater(a, b, mismatch):

@@ -4,194 +4,94 @@ import sys
 import random
 import config 
 import visualizer
-# choose 6 out of 8
-def get_configs_ind_6():
-    return [[0,0,1,1,1,1,1,1],[0,1,0,1,1,1,1,1],[0,1,1,0,1,1,1,1],[0,1,1,1,0,1,1,1],[0,1,1,1,1,0,1,1],[0,1,1,1,1,1,0,1],[0,1,1,1,1,1,1,0],[1,0,0,1,1,1,1,1],[1,0,1,0,1,1,1,1],[1,0,1,1,0,1,1,1],[1,0,1,1,1,0,1,1],[1,0,1,1,1,1,0,1],[1,0,1,1,1,1,1,0],[1,1,0,0,1,1,1,1],[1,1,0,1,0,1,1,1],[1,1,0,1,1,0,1,1],[1,1,0,1,1,1,0,1],[1,1,0,1,1,1,1,0],[1,1,1,0,0,1,1,1],[1,1,1,0,1,0,1,1],[1,1,1,0,1,1,0,1],[1,1,1,0,1,1,1,0],[1,1,1,1,0,0,1,1],[1,1,1,1,0,1,0,1],[1,1,1,1,0,1,1,0],[1,1,1,1,1,0,0,1],[1,1,1,1,1,0,1,0],[1,1,1,1,1,1,0,0]]
+from selector import Selector
+from messages import PeersInfo
+import copy
+import comb_subset
 
-def get_configs(configs_ind, node):
-    composes = []
-    neighbors = list(node.outs)
-    for config_ind in configs_ind:
-        compose = []
-        for i, v in enumerate(config_ind):
-            if v == 1:
-                compose.append(neighbors[i])
-        composes.append(compose)
-    return composes
+# for each node, what is the best config
+def subset_complete_choose(nodes, i, selects, num_msg):
+    num_node = len(nodes)
+    best = -1
+    best_config = random.choice(selects)
+    random.shuffle(selects)
+    # print('***node', i)
+    # print("init", nodes[i].outs)
+    for compose in selects:
+        is_avail = True 
+        for peer in compose:
+            if nodes[peer].num_in_request >= nodes[peer].in_lim:
+                # print("nodes[peer].num_in_request", nodes[peer].num_in_request)
+                is_avail = False
+                break
+        if is_avail:
+            if config.use_score_decay:
+                score = get_weighted_score(nodes[i], compose, num_msg)
+            else:
+                score = get_score(nodes[i], compose, num_msg)
+             
+            if best == -1 or score < best:
+                best = score 
+                best_compose = compose 
 
-def get_configs_7(neighbors):
-    composes = []
-    num_out = config.out_lim
-    for i in range(num_out):
-        for j in range(i+1, num_out):
-            for k in range(j+1, num_out):
-                for w in range(k+1, num_out):
-                    for r in range(w+1, num_out):
-                        for t in range(r+1, num_out):
-                            for o in range(t+1, num_out):
-                                compose = [neighbors[i], neighbors[j], neighbors[k], neighbors[w], neighbors[r], neighbors[t], neighbors[o]]
-                                composes.append(compose)
-    return composes 
+    for peer in best_compose:
+         nodes[peer].num_in_request += 1
+    if (best == -1):
+        print("none of config allows for selection due to incoming neighbor")
 
-def get_configs_8(neighbors):
-    composes = []
-    num_out = config.out_lim
-    for i in range(num_out):
-        for j in range(i+1, num_out):
-            for k in range(j+1, num_out):
-                for w in range(k+1, num_out):
-                    for r in range(w+1, num_out):
-                        for t in range(r+1, num_out):
-                            for o in range(t+1, num_out):
-                                for p in range(o+1, num_out):
-                                    compose = [neighbors[i], neighbors[j], neighbors[k], neighbors[w], neighbors[r], neighbors[t], neighbors[o], neighbors[p]]
-                                    composes.append(compose)
-    return composes 
+    # for decay
+    sorted_compose = tuple(sorted(best_compose))
+    prev_score = nodes[i].prev_score
+    prev_score[sorted_compose] = best
 
-def get_configs_6(neighbors):
-    composes = []
-    num_out = config.out_lim
-    for i in range(num_out):
-        for j in range(i+1, num_out):
-            for k in range(j+1, num_out):
-                for w in range(k+1, num_out):
-                    for r in range(w+1, num_out):
-                        for t in range(r+1, num_out):
-                            compose = [neighbors[i], neighbors[j], neighbors[k], neighbors[w], neighbors[r], neighbors[t]]
-                            composes.append(compose)
-    return composes 
+    return best_compose
 
-def get_configs_5(neighbors):
-    composes = []
-    num_out = config.out_lim
-    for i in range(num_out):
-        for j in range(i+1, num_out):
-            for k in range(j+1, num_out):
-                for w in range(k+1, num_out):
-                    for r in range(w+1, num_out):
-                        compose = [neighbors[i], neighbors[j], neighbors[k], neighbors[w], neighbors[r]]
-                        composes.append(compose)
-    return composes 
-def get_configs_4(neighbors):
-    composes = []
-    num_out = config.out_lim
-    for i in range(num_out):
-        for j in range(i+1, num_out):
-            for k in range(j+1, num_out):
-                for w in range(k+1, num_out):
-                    compose = [neighbors[i], neighbors[j], neighbors[k], neighbors[w]]
-                    composes.append(compose)
-    return composes
-
-# input is a list of neighbor
-def get_configs_3(neighbors):
-    composes = []
-    num_out = config.out_lim
-    for i in range(num_out):
-        for j in range(i+1, num_out):
-            for k in range(j+1, num_out):
-                compose = [neighbors[i], neighbors[j], neighbors[k]]
-                composes.append(compose)
-    return composes
-
-def get_configs_2(neighbors):
-    composes = []
-    num_out = config.out_lim
-    for i in range(num_out):
-        for j in range(i+1, num_out):
-            compose = [neighbors[i], neighbors[j]]
-            composes.append(compose)
-    return composes 
-
-def get_configs_1(neighbors):
-    composes = []
-    num_out = config.out_lim
-    for i in range(num_out):
-        compose = [neighbors[i]]
-        composes.append(compose)
-    return composes
-# config rule is a tuple, (num_retain, num_new, num_random)
-# num msgs is used for stats collection
-def new_subset_complete(nodes, ld, num_msg, nh):
+def broadcast_msgs(nodes, ld, nh, num_msg):
     num_nodes = len(nodes)
-    # collect stats
     for _ in range(num_msg):
         broad_node = -1
         if nh is None:
             broad_node = np.random.randint(num_nodes)
+            # print('broad', broad_node)
         else:
             broad_node = new_comm.get_broadcast_node(nh)
         new_comm.broadcast_msg(broad_node, nodes, ld, nh)
-    print("after broadcast")
-
-    outs_neighbors = {}
-    all_nodes = [i for i in range(len(nodes))]
-    random.shuffle(all_nodes)
-    for i in all_nodes:
-        configs_ind =  get_configs_ind_6()
-        configs = get_configs(configs_ind, nodes[i])
-        # print(nodes[i].outs)
-        # print(configs_ind)
-        # print(configs)
-        outs_neighbors[i] = subset_complete_choose(nodes, i, configs.copy(), num_msg) 
-
-        for _ in range(2):
-            random_add(nodes, i, outs_neighbors[i])
-
-    return outs_neighbors
-
+    print('Finish. Broadcast')
 
 
 # nh is node hash
-def new_subset_two_hop(nodes, ld, num_msg, nh):
-    num_nodes = len(nodes)
-    for _ in range(num_msg):
-        broad_node = -1
-        if nh is None:
-            broad_node = np.random.randint(num_nodes)
-        else:
-            broad_node = new_comm.get_broadcast_node(nh)
-        new_comm.broadcast_msg(broad_node, nodes, ld, nh)
-
+def new_subset_two_hop(nodes, ld, num_msg, nh, selectors):
+    broadcast_msgs(nodes, ld, nh, num_msg)
     outs_neighbors = {}
 
     update_nodes = [i for i in range(len(nodes))]
     random.shuffle(update_nodes)
     
-
     # direct peers
     for i in update_nodes:
-        composes = None
-        if config.num_keep == 3:
-            composes =  get_configs_3(list(nodes[i].outs))
-        elif config.num_keep == 2: 
-            composes =  get_configs_2(list(nodes[i].outs))
-        elif config.num_keep == 1: 
-            composes =  get_configs_1(list(nodes[i].outs))
-        elif config.num_keep == 4: 
-            composes =  get_configs_4(list(nodes[i].outs))
-        elif config.num_keep == 5: 
-            composes =  get_configs_5(list(nodes[i].outs))
-        elif config.num_keep == 6: 
-            composes =  get_configs_6(list(nodes[i].outs))
-        elif config.num_keep == 7: 
-            composes =  get_configs_7(list(nodes[i].outs))
-        elif config.num_keep == 8: 
-            composes =  get_configs_8(list(nodes[i].outs))
-        else:
-            print('Error. choose a valid configs setting')
-            sys.exit(0)
-        outs_neighbors[i] = subset_complete_choose(nodes, i, composes, num_msg)
+        curr_peers = list(nodes[i].outs)
+        combs = comb_subset.get_config(config.num_keep, curr_peers, config.out_lim)
+        outs_neighbors[i] = subset_complete_choose(nodes, i, combs, num_msg)
 
     # two hop peers
     if config.num_2_hop > 0:
         for u in update_nodes:
-            subset_two_hop_choose(nodes, u, outs_neighbors)
+            assert(len(outs_neighbors[u]) == config.num_keep)
+            sel = Selector(u)
+            sel.set_1hops(outs_neighbors[u])
+            peer_info = get_peers_info(nodes, outs_neighbors, u)
+
+            peers = sel.select_two_hops( config.num_2_hop, nodes, peer_info)
+            if len(peers) != config.num_2_hop:
+                print("num peer", len(peers))
+                sys.exit(1)
+            outs_neighbors[u] += peers
+
 
     # three jop
-    if config.num_3_hop > 0:
-        for u in update_nodes:
-            subset_three_hop_choose(nodes, u, outs_neighbors)
+    # if config.num_3_hop > 0:
+        # for u in update_nodes:
+            # subset_three_hop_choose(nodes, u, outs_neighbors)
 
     # random peers
     if config.num_random > 0:
@@ -199,19 +99,28 @@ def new_subset_two_hop(nodes, ld, num_msg, nh):
             for _ in range(config.num_random):
                 random_add(nodes, i, outs_neighbors[i])
 
+    print('Finish. Select out peers')
     return outs_neighbors
 
-def sort_new_peer_first(nodes, u, peers):
-    outs = nodes[u].outs
-    sorted_by_new = []
-    for p in peers:
-        if p not in nodes[u].views_hist:
-            sorted_by_new.insert(0, p)
-        else:
-            sorted_by_new.append(p)
-    return sorted_by_new
+def get_peers_info(nodes, outs_neighbors, u):
+    one_hops = outs_neighbors[u].copy()
+    two_hops = None
+    # for now we pass all pass to the node
+    if config.is_dynamic:
+        two_hops = outs_neighbors
+    else:
+        static_outs_neighbors = copy.deepcopy(outs_neighbors)
+        two_hops = static_outs_neighbors
+    return PeersInfo(one_hops, two_hops)
 
 
+def is_all_tried(d):
+    for k,is_tried in d.items():
+        if not is_tried:
+            return False
+    return True
+
+# the procedure will run by one node
 def subset_two_hop_choose(nodes, u, outs_neighbors):
     one_hop_peers = outs_neighbors[u].copy()
     random.shuffle(one_hop_peers)
@@ -226,19 +135,17 @@ def subset_two_hop_choose(nodes, u, outs_neighbors):
     num_required = config.num_2_hop
     num_added = 0
 
-    all_2hop_peers = set()
+    all_2hop_peers = {} # key is 2hop id, value is tried:
     for v in one_hop_peers:
         for p in outs_neighbors[v]:
-            all_2hop_peers.add(p)
-    all_2hop_peers = list(all_2hop_peers)
+            all_2hop_peers[p] = False
+
 
     for v in one_hop_peers:
         peers_2 = outs_neighbors[v].copy()
         random.shuffle(peers_2)
         # take one per peers
         for w in peers_2:
-            if 
-
             if ( is_out_addable(nodes[u], outs_neighbors[u], w) and
                 nodes[w].num_in_request < nodes[w].in_lim 
             ):
@@ -267,7 +174,7 @@ def subset_two_hop_choose(nodes, u, outs_neighbors):
         num_added += 1
 
 def add_peer(nodes, u, w, out_neighbors):
-    
+    pass 
 
 
 # since subset nodes are grouped, we need to sort the group
@@ -345,41 +252,7 @@ def is_out_addable(node, selected, u):
     return True
 
 
-# for each node, what is the best config
-def subset_complete_choose(nodes, i, selects, num_msg):
-    num_node = len(nodes)
-    best = -1
-    best_config = random.choice(selects)
-    random.shuffle(selects)
-    # print('***node', i)
-    # print("init", nodes[i].outs)
-    for compose in selects:
-        is_avail = True 
-        for peer in compose:
-            if nodes[peer].num_in_request >= nodes[peer].in_lim:
-                # print("nodes[peer].num_in_request", nodes[peer].num_in_request)
-                is_avail = False
-                break
-        if is_avail:
-            if config.use_score_decay:
-                score = get_weighted_score(nodes[i], compose, num_msg)
-            else:
-                score = get_score(nodes[i], compose, num_msg)
-             
-            if best == -1 or score < best:
-                best = score 
-                best_compose = compose 
 
-    for peer in best_compose:
-         nodes[peer].num_in_request += 1
-    if (best == -1):
-        print("none of config allows for selection due to incoming neighbor")
-
-    sorted_compose = tuple(sorted(best_compose))
-    prev_score = nodes[i].prev_score
-    prev_score[sorted_compose] = best
-
-    return best_compose
 
 def get_weighted_score(node, compose, num_msg):
     # print("use weighted score")
@@ -426,6 +299,7 @@ def get_score(node, compose, num_msg):
     return sorted_best_time[int(num_msg*9.0/10)]
 
 def new_subset_two_hop_sequential(nodes, ld, num_msg, nh, schedule_node):
+    print("new_subset_two_hop_sequential")
     num_nodes = len(nodes)
     for _ in range(num_msg):
         broad_node = -1
@@ -470,9 +344,9 @@ def new_subset_two_hop_sequential(nodes, ld, num_msg, nh, schedule_node):
             subset_two_hop_choose(nodes, u, outs_neighbors)
 
     # three jop
-    if config.num_3_hop > 0:
-        for u in update_nodes:
-            subset_three_hop_choose(nodes, u, outs_neighbors)
+    # if config.num_3_hop > 0:
+        # for u in update_nodes:
+            # subset_three_hop_choose(nodes, u, outs_neighbors)
 
     # random peers
     if config.num_random > 0:
