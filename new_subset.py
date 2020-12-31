@@ -4,20 +4,23 @@ import sys
 import random
 import config 
 import visualizer
-from selector import Selector
-from messages import PeersInfo
+from oracle import PeersInfo
 import copy
 import comb_subset
 
 # for each node, what is the best config
-def subset_complete_choose(nodes, i, selects, num_msg):
+def subset_complete_choose(nodes, i, composes, num_msg, selector):
     num_node = len(nodes)
     best = -1
-    best_config = random.choice(selects)
-    random.shuffle(selects)
+    best_compose = random.choice(composes)
+
+    worst = -1
+    worst_compose = random.choice(composes)
+
+    random.shuffle(composes)
     # print('***node', i)
     # print("init", nodes[i].outs)
-    for compose in selects:
+    for compose in composes:
         is_avail = True 
         for peer in compose:
             if nodes[peer].num_in_request >= nodes[peer].in_lim:
@@ -34,17 +37,28 @@ def subset_complete_choose(nodes, i, selects, num_msg):
                 best = score 
                 best_compose = compose 
 
+            if worst == -1 or score > worst:
+                worst = score
+                worst_compose = compose
+
     for peer in best_compose:
          nodes[peer].num_in_request += 1
     if (best == -1):
         print("none of config allows for selection due to incoming neighbor")
+
+    selector.worst_compose = worst_compose
+    selector.best_compose = best_compose
 
     # for decay
     sorted_compose = tuple(sorted(best_compose))
     prev_score = nodes[i].prev_score
     prev_score[sorted_compose] = best
 
-    return best_compose
+    if config.worst_conn_attack and selector.is_adv:
+        return worst_compose
+    else:
+        return best_compose
+
 
 def broadcast_msgs(nodes, ld, nh, num_msg):
     num_nodes = len(nodes)
@@ -58,48 +72,75 @@ def broadcast_msgs(nodes, ld, nh, num_msg):
         new_comm.broadcast_msg(broad_node, nodes, ld, nh)
     print('Finish. Broadcast')
 
+def shuffle_honest_nodes(num_node, sybils):
+    update_nodes = None
+    if not config.recommend_worst_attack:
+        update_nodes = [i for i in range(num_node)]
+        random.shuffle(update_nodes)
+    else:
+        # make sure sybils node knows the information first
+        all_nodes = set([i for i in range(num_node)])
+        honest_nodes = list(all_nodes.difference(set(sybils)))
+        random.shuffle(honest_nodes)
+        update_nodes = sybils + honest_nodes
+    assert(update_nodes != None and len(update_nodes) == num_node)
+    return update_nodes
 
 # nh is node hash
-def new_subset_two_hop(nodes, ld, num_msg, nh, selectors):
+def new_subset_two_hop(nodes, ld, num_msg, nh, selectors, network):
     broadcast_msgs(nodes, ld, nh, num_msg)
     outs_neighbors = {}
-
-    update_nodes = [i for i in range(len(nodes))]
-    random.shuffle(update_nodes)
+    
+    update_nodes = shuffle_honest_nodes(len(nodes), network.sybils)
     
     # direct peers
+    num_required = config.out_lim
     for i in update_nodes:
         curr_peers = list(nodes[i].outs)
         combs = comb_subset.get_config(config.num_keep, curr_peers, config.out_lim)
-        outs_neighbors[i] = subset_complete_choose(nodes, i, combs, num_msg)
+        peers = subset_complete_choose(nodes, i, combs, num_msg, selectors[i])
+        network.update_1_hop_peers(i, peers)
+        selectors[i].set_1hops(peers) 
+        outs_neighbors[i] = peers
+        num_required -= len(peers)
 
+    num_added_3hop = 0
     # two hop peers
-    if config.num_2_hop > 0:
-        for u in update_nodes:
-            assert(len(outs_neighbors[u]) == config.num_keep)
-            sel = Selector(u)
-            sel.set_1hops(outs_neighbors[u])
-            peer_info = get_peers_info(nodes, outs_neighbors, u)
-
-            peers = sel.select_two_hops( config.num_2_hop, nodes, peer_info)
-            if len(peers) != config.num_2_hop:
-                print("num peer", len(peers))
-                sys.exit(1)
+    for u in update_nodes:
+        peers_info = network.get_multi_hop_info(u)
+        # peers = selectors[u].select_two_hops( config.num_2_hop, nodes, peers_info)
+        peers = selectors[u].select_peers(config.num_2_hop, nodes, peers_info.two_hops)
+        num_required =- len(peers)
+        # assert(len(peers) == config.num_2_hop)
+        network.update_2_hop_peers(u, peers)
+        outs_neighbors[u] += peers
+        
+        # add 3hops
+        if config.out_lim - len(outs_neighbors[u]) > config.num_random:
+            num_3_hop = config.out_lim - len(outs_neighbors[u]) - config.num_random
+            peers_info = network.get_multi_hop_info(u)
+            peers = selectors[u].select_peers(num_3_hop, nodes, peers_info.three_hops)
+            network.update_3_hop_peers(u, peers)
             outs_neighbors[u] += peers
+            num_added_3hop += len(peers) 
+
+        # add random
+        num_random = config.out_lim - len(outs_neighbors[u]) 
+        peers = selectors[u].select_random_peers(nodes, num_random)
+        for p in peers:
+            if p in outs_neighbors[u]:
+                sys.exit(1)
+        outs_neighbors[u] += peers
+
+    for u in update_nodes:
+        if len(set(outs_neighbors[u])) != config.out_lim:
+            print(u, "has less out neighbors")
+            print(outs_neighbors[u])
+            print(selectors[u].desc_conn)
+            sys.exit(1)
 
 
-    # three jop
-    # if config.num_3_hop > 0:
-        # for u in update_nodes:
-            # subset_three_hop_choose(nodes, u, outs_neighbors)
-
-    # random peers
-    if config.num_random > 0:
-        for i in update_nodes:
-            for _ in range(config.num_random):
-                random_add(nodes, i, outs_neighbors[i])
-
-    print('Finish. Select out peers')
+    print('Finish. Select out peers', num_added_3hop)
     return outs_neighbors
 
 def get_peers_info(nodes, outs_neighbors, u):
@@ -121,60 +162,57 @@ def is_all_tried(d):
     return True
 
 # the procedure will run by one node
-def subset_two_hop_choose(nodes, u, outs_neighbors):
-    one_hop_peers = outs_neighbors[u].copy()
-    random.shuffle(one_hop_peers)
+# def subset_two_hop_choose(nodes, u, outs_neighbors):
+    # one_hop_peers = outs_neighbors[u].copy()
+    # random.shuffle(one_hop_peers)
    
-    # favor high score peers
-    if config.is_sort_hop:
-        one_hop_peers = sort_neighbor_by_score(nodes, u, one_hop_peers)
+    # # favor high score peers
+    # if config.is_sort_hop:
+        # one_hop_peers = sort_neighbor_by_score(nodes, u, one_hop_peers)
 
-    # favor new peers not seen before
-    one_hop_peers = sort_new_peer_first(nodes, u, one_hop_peers)
+    # # favor new peers not seen before
+    # one_hop_peers = sort_new_peer_first(nodes, u, one_hop_peers)
    
-    num_required = config.num_2_hop
-    num_added = 0
+    # num_required = config.num_2_hop
+    # num_added = 0
 
-    all_2hop_peers = {} # key is 2hop id, value is tried:
-    for v in one_hop_peers:
-        for p in outs_neighbors[v]:
-            all_2hop_peers[p] = False
+    # all_2hop_peers = {} # key is 2hop id, value is tried:
+    # for v in one_hop_peers:
+        # for p in outs_neighbors[v]:
+            # all_2hop_peers[p] = False
 
 
-    for v in one_hop_peers:
-        peers_2 = outs_neighbors[v].copy()
-        random.shuffle(peers_2)
-        # take one per peers
-        for w in peers_2:
-            if ( is_out_addable(nodes[u], outs_neighbors[u], w) and
-                nodes[w].num_in_request < nodes[w].in_lim 
-            ):
-                outs_neighbors[u].append(w)
-                nodes[w].num_in_request += 1
-                num_added += 1
-                break
-            else:
-                if nodes[w].num_in_request < nodes[w].in_lim :
-                    print(u, " cannot add 2hop", w, "reach conn bound")
-                else:
-                    print(u, " cannot add 2hop", w, "selected")
-        # have enough 2hop nodes 
-        if num_added == num_required:
-            break
-    # if there is not
-    while num_added < num_required:
-        print(u, '2hop not enough, random choose')
-        w = np.random.randint(len(nodes))
-        while not (is_out_addable(nodes[u], outs_neighbors[u], w) and 
-                   nodes[w].num_in_request < nodes[w].in_lim):
-            w = np.random.randint(len(nodes))
+    # for v in one_hop_peers:
+        # peers_2 = outs_neighbors[v].copy()
+        # random.shuffle(peers_2)
+        # # take one per peers
+        # for w in peers_2:
+            # if ( is_out_addable(nodes[u], outs_neighbors[u], w) and
+                # nodes[w].num_in_request < nodes[w].in_lim 
+            # ):
+                # outs_neighbors[u].append(w)
+                # nodes[w].num_in_request += 1
+                # num_added += 1
+                # break
+            # else:
+                # if nodes[w].num_in_request < nodes[w].in_lim :
+                    # print(u, " cannot add 2hop", w, "reach conn bound")
+                # else:
+                    # print(u, " cannot add 2hop", w, "selected")
+        # # have enough 2hop nodes 
+        # if num_added == num_required:
+            # break
+    # # if there is not
+    # while num_added < num_required:
+        # print(u, '2hop not enough, random choose')
+        # w = np.random.randint(len(nodes))
+        # while not (is_out_addable(nodes[u], outs_neighbors[u], w) and 
+                   # nodes[w].num_in_request < nodes[w].in_lim):
+            # w = np.random.randint(len(nodes))
 
-        outs_neighbors[u].append(w)
-        nodes[w].num_in_request += 1
-        num_added += 1
-
-def add_peer(nodes, u, w, out_neighbors):
-    pass 
+        # outs_neighbors[u].append(w)
+        # nodes[w].num_in_request += 1
+        # num_added += 1
 
 
 # since subset nodes are grouped, we need to sort the group
@@ -266,7 +304,7 @@ def get_weighted_score(node, compose, num_msg):
 
     # print('best', best_times)
     sorted_best_time = sorted(best_times)
-    new_score = sorted_best_time[int(num_msg*9.0/10)]
+    new_score = sorted_best_time[int(num_msg*9.0/10)-1]
 
 
     sorted_compose = tuple(sorted(compose))
@@ -296,64 +334,64 @@ def get_score(node, compose, num_msg):
 
     # print('best', best_times)
     sorted_best_time = sorted(best_times)
-    return sorted_best_time[int(num_msg*9.0/10)]
+    return sorted_best_time[int(num_msg*9.0/10)-1]
 
-def new_subset_two_hop_sequential(nodes, ld, num_msg, nh, schedule_node):
-    print("new_subset_two_hop_sequential")
-    num_nodes = len(nodes)
-    for _ in range(num_msg):
-        broad_node = -1
-        if nh is None:
-            broad_node = np.random.randint(num_nodes)
-        else:
-            broad_node = new_comm.get_broadcast_node(nh)
-        new_comm.broadcast_msg(broad_node, nodes, ld, nh)
+# def new_subset_two_hop_sequential(nodes, ld, num_msg, nh, schedule_node):
+    # print("new_subset_two_hop_sequential")
+    # num_nodes = len(nodes)
+    # for _ in range(num_msg):
+        # broad_node = -1
+        # if nh is None:
+            # broad_node = np.random.randint(num_nodes)
+        # else:
+            # broad_node = new_comm.get_broadcast_node(nh)
+        # new_comm.broadcast_msg(broad_node, nodes, ld, nh)
 
-    outs_neighbors = {}
-    update_nodes = schedule_node
-    for i in range(len(nodes)):
-        if i not in update_nodes:
-            outs_neighbors[i] = list(nodes[i].outs)
+    # outs_neighbors = {}
+    # update_nodes = schedule_node
+    # for i in range(len(nodes)):
+        # if i not in update_nodes:
+            # outs_neighbors[i] = list(nodes[i].outs)
 
-    for i in update_nodes:
-        composes = None
-        if config.num_keep == 3:
-            composes =  get_configs_3(list(nodes[i].outs))
-        elif config.num_keep == 2: 
-            composes =  get_configs_2(list(nodes[i].outs))
-        elif config.num_keep == 1: 
-            composes =  get_configs_1(list(nodes[i].outs))
-        elif config.num_keep == 4: 
-            composes =  get_configs_4(list(nodes[i].outs))
-        elif config.num_keep == 5: 
-            composes =  get_configs_5(list(nodes[i].outs))
-        elif config.num_keep == 6: 
-            composes =  get_configs_6(list(nodes[i].outs))
-        elif config.num_keep == 7: 
-            composes =  get_configs_7(list(nodes[i].outs))
-        elif config.num_keep == 8: 
-            composes =  get_configs_8(list(nodes[i].outs))
-        else:
-            print('Error. choose a valid configs setting')
-            sys.exit(0)
-        outs_neighbors[i] = subset_complete_choose(nodes, i, composes, num_msg)
+    # for i in update_nodes:
+        # composes = None
+        # if config.num_keep == 3:
+            # composes =  get_configs_3(list(nodes[i].outs))
+        # elif config.num_keep == 2: 
+            # composes =  get_configs_2(list(nodes[i].outs))
+        # elif config.num_keep == 1: 
+            # composes =  get_configs_1(list(nodes[i].outs))
+        # elif config.num_keep == 4: 
+            # composes =  get_configs_4(list(nodes[i].outs))
+        # elif config.num_keep == 5: 
+            # composes =  get_configs_5(list(nodes[i].outs))
+        # elif config.num_keep == 6: 
+            # composes =  get_configs_6(list(nodes[i].outs))
+        # elif config.num_keep == 7: 
+            # composes =  get_configs_7(list(nodes[i].outs))
+        # elif config.num_keep == 8: 
+            # composes =  get_configs_8(list(nodes[i].outs))
+        # else:
+            # print('Error. choose a valid configs setting')
+            # sys.exit(0)
+        # outs_neighbors[i] = subset_complete_choose(nodes, i, composes, num_msg)
 
-    # two hop peers
-    if config.num_2_hop > 0:
-        for u in update_nodes:
-            subset_two_hop_choose(nodes, u, outs_neighbors)
-
-    # three jop
-    # if config.num_3_hop > 0:
+    # # two hop peers
+    # if config.num_2_hop > 0:
         # for u in update_nodes:
-            # subset_three_hop_choose(nodes, u, outs_neighbors)
+            # subset_two_hop_choose(nodes, u, outs_neighbors)
 
-    # random peers
-    if config.num_random > 0:
-        for i in update_nodes:
-            for _ in range(config.num_random):
-                random_add(nodes, i, outs_neighbors[i])
-    return outs_neighbors
+    # # three jop
+    # # if config.num_3_hop > 0:
+        # # for u in update_nodes:
+            # # subset_three_hop_choose(nodes, u, outs_neighbors)
+
+    # # random peers
+    # if config.num_random > 0:
+        # for i in update_nodes:
+            # for _ in range(config.num_random):
+                # random_add(nodes, i, outs_neighbors[i])
+    # return outs_neighbors
 
 
     # all_nodes = sorted(list(outs_neighbors.keys()))

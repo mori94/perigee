@@ -123,7 +123,7 @@ r = 0
 for dirname in data_dirname:
     c = int(i / num_col)
     r = i % num_col
-    #print(c, r)
+    #print(c, )
     dirpath = repetition_dir+'/'+dirname
     
     if num_row ==1 and num_col == 1:
@@ -140,5 +140,5 @@ for dirname in data_dirname:
 #lines, labels = axs[c,r].get_legend_handles_labels()
 fig.legend(loc='lower center', handles=patches, fontsize='small', ncol= math.ceil(len(patches)/2))
 
-fig.savefig(repetition_dir+ '/' + "result.png")
+fig.savefig(repetition_dir+ '/' + repetition_dir + ".png")
 print("finish")

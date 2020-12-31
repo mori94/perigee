@@ -20,7 +20,7 @@ for i in range(4, len(sys.argv)):
 print(round_list)
 print(data_dir)
 
-def delaytopercenthash(hash_table,length_buff,DelayPercantage):
+def delaytopercenthash(hash_table,length_buff,DelayPercantage, num_node):
     LengthDict={}
     for i in range(len(length_buff)):
         length_buff[i]=length_buff[i]*1000+i
@@ -38,17 +38,17 @@ def get_num_node(data_dir):
     for datacount in [1]:
         for method in data_method: #,'localucb'
             for r in round_list: #,8,16,32,64,128
-                if not use_node_hash:
-                    filename=data_dir +  "/"+ "unhash_"+str(method)+"V"+str(datacount)+"Round"+str(r)+".txt"
-                    with open(filename) as f:
-                        for line in f:
-                            num_node += 1
-                    return num_node
+                filename=data_dir +  "/"+ "unhash_"+str(method)+"V"+str(datacount)+"Round"+str(r)+".txt"
+                with open(filename) as f:
+                    for line in f:
+                        num_node += 1
+                return num_node
 
     return -1
 
-
+print('data_dir', data_dir)
 number = get_num_node(data_dir)
+print("number", number)
 
 hash=np.zeros(number)
 
@@ -90,8 +90,8 @@ for datacount in [1]:
                     fwl.write(str(top101_0[i])+'  ')
                 fwl.close()
             else:
-                filename = data_dir + "/"+ "unhash_"+str(method)+"V"+str(datacount)+"Round"+str(r)+".txt"
-                file = open(filename,'r',errors='replace')
+                filename = "unhash_"+str(method)+"V"+str(datacount)+"Round"+str(r)+".txt"
+                file = open(data_dir + "/"+ filename,'r',errors='replace')
                 top101=np.zeros(number)
                 mean1=np.zeros(number)
                 buff=np.zeros(number)
@@ -101,14 +101,14 @@ for datacount in [1]:
                     for j in range(number):
                         buff[j]=int(float(a[j]))
                     hash_buff=locals()['hash'+str(datacount)]
-                    mean1[i]= delaytopercenthash(hash_buff,buff,50)
+                    mean1[i]= delaytopercenthash(hash_buff,buff,50, number)
                 buff=np.zeros(number)
                 for i in range(number):
                     a=line[i].split("  ")
                     for j in range(number):
                         buff[j]=int(float(a[j]))
                     hash_buff=locals()['hash'+str(datacount)]
-                    top101[i]= delaytopercenthash(hash_buff,buff,90)
+                    top101[i]= delaytopercenthash(hash_buff,buff,90, number)
                 top101_0=sorted(top101)
                 mean1_0=sorted(mean1)
                 num_node = len(top101_0)

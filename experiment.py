@@ -1,15 +1,17 @@
 import sys
 import config
-from messages import PeersInfo
+from oracle import PeersInfo
 from perigeeNode import Node
 import networkx as nx
 import writefiles
 import new_subset
+from oracle import NetworkOracle 
+from selector import Selector
 import time
 import numpy as np
 
 class Experiment:
-    def __init__(self, node_hash, link_delay, node_delay, num_node, in_lim, out_lim, name):
+    def __init__(self, node_hash, link_delay, node_delay, num_node, in_lim, out_lim, name, num_adv):
         self.nh = node_hash
         self.ld = link_delay
         self.nd = node_delay
@@ -19,6 +21,7 @@ class Experiment:
         self.in_lim = in_lim
         self.out_lim = out_lim
         self.outdir = name
+        self.num_adv = num_adv
 
         self.timer = time.time()
 
@@ -44,7 +47,10 @@ class Experiment:
         nodes = self.nodes
         for i, peers in out_conns.items():
             if len(set(peers)) != len(peers):
+                print('Error. Repeat peer')
                 print(i, peers)
+                sys.exit(1)
+
             nodes[i].seen.union(peers) 
             nodes[i].outs = set(peers)
             nodes[i].ins.clear()
@@ -88,17 +94,33 @@ class Experiment:
         self.timer = curr_time
         print("Finish. Recording", epoch, "using time", elapsed)
 
+    def init_selectors(self, sybils):
+        selectors = {}
+        for u in range(self.num_node):
+            # if smaller then it is adv
+            if u in sybils:
+                selectors[u] = Selector(u, True)
+            else:
+                selectors[u] = Selector(u, False)
+        return selectors
+
     def start(self, max_epoch, record_epochs):
+        sybils = [i for i in range(self.num_adv)] 
         for epoch in range(max_epoch):
             if epoch in record_epochs:
                 self.take_snapshot(epoch)
+            print("epoch", epoch)
+
+            selectors = self.init_selectors(sybils)
+            oracle = NetworkOracle(config.is_dynamic, sybils, selectors)
 
             outs_conns = new_subset.new_subset_two_hop(
                 self.nodes, 
                 self.ld, 
                 config.num_msg, 
                 self.nh, 
-                self.selectors)
+                selectors,
+                oracle)
             self.update_conns(outs_conns)
 
 

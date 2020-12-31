@@ -36,7 +36,7 @@ print('Setup Graph')
 
 if config.use_reduce_link:
     print('Use reduced link latency')
-    initnetwork.reduce_link_latency(num_node, int(0.2*num_node), link_delay)
+    initnetwork.reduce_link_latency(config.num_node, int(0.2*config.num_node), link_delay)
 else:
     print('Not use reduced link latency')
 
@@ -49,6 +49,8 @@ else:
 if not use_node_hash:
     print('Not Use asymmetric node hash')
     node_hash = None 
+else:
+    print('Use asymmetric node hash')
 
 start = time.time()
 
@@ -59,7 +61,8 @@ perigee = Experiment(
     config.num_node,
     config.in_lim,
     config.out_lim, 
-    data_path
+    data_path,
+    config.num_adv
     )
 perigee.init_graph(outs_neighbors)
 perigee.start(max_epoch, record_epochs)

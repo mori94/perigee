@@ -35,9 +35,13 @@ use_node_hash=$4
 for (( i=${seed_start}; i<=${seed_end} ; i++ )); do
 	dirname="AnalyseData/${name}_seed${i}"
 	mkdir $dirname
-	echo $dirname
-	python main.py $i ${use_node_hash} ${max_round}
-	mv AnalyseData/*.txt $dirname
+	cp config.py $dirpath
+	python testbed.py ${seed} ${dirpath} ${use_node_hash} ${record_round}
+	retval=$?
+	if [ "$retval" -ne 0 ]; then
+		echo "simulation bug. Exit"
+		exit 1
+	fi	
 done
 
 # 2. group experiments
@@ -58,5 +62,5 @@ done
 plot_cmd="./plot_fig_set.py ${group_dir} ${record_round}"
 echo ${plot_cmd}
 ${plot_cmd}
-open "${group_dir}/result.png"
+open "${group_dir}/${group_dir}.png"
 
