@@ -17,7 +17,6 @@ def get_configs(configs_ind, node):
 
 def get_configs_7(neighbors, num_out):
     composes = []
-    num_out = config.out_lim
     for i in range(num_out):
         for j in range(i+1, num_out):
             for k in range(j+1, num_out):

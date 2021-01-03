@@ -1,33 +1,41 @@
 import sys
 import config
 from oracle import PeersInfo
-from perigeeNode import Node
+from communicator import Note
 import networkx as nx
 import writefiles
-import new_subset
+import schedule 
+import adversary
 from oracle import NetworkOracle 
 from selector import Selector
+from collections import defaultdict
 import time
 import numpy as np
+import comm_network
+import random
 
 class Experiment:
-    def __init__(self, node_hash, link_delay, node_delay, num_node, in_lim, out_lim, name, num_adv):
+    def __init__(self, node_hash, link_delay, node_delay, num_node, in_lim, out_lim, name, sybils):
         self.nh = node_hash
         self.ld = link_delay
         self.nd = node_delay
         self.num_node = num_node
         self.nodes = {} # nodes are used for communicating msg in network
+        self.conns = {} # key is node, value if number of connection
         self.selectors = {} # selectors for choosing outgoing conn for next time
         self.in_lim = in_lim
         self.out_lim = out_lim
         self.outdir = name
-        self.num_adv = num_adv
 
         self.timer = time.time()
 
+        self.adversary = adversary.Adversary(sybils)
+        self.snapshots = []
+
+        self.init_selectors()
+
     # generate networkx graph instance
     def construct_graph(self):
-        num_nodes = len(self.nodes)
         G = nx.Graph()
         for i, node in self.nodes.items():
             for u in node.outs:
@@ -51,7 +59,7 @@ class Experiment:
                 print(i, peers)
                 sys.exit(1)
 
-            nodes[i].seen.union(peers) 
+            # nodes[i].seen = nodes[i].seen.union(peers) 
             nodes[i].outs = set(peers)
             nodes[i].ins.clear()
             nodes[i].views.clear()
@@ -70,8 +78,7 @@ class Experiment:
     def init_graph(self, outs_neighbors):
         for i in range(self.num_node):
             node_delay = self.nd[i]
-            in_lim = self.in_lim
-            self.nodes[i] = Node(
+            self.nodes[i] = Note(
                 i,
                 node_delay,
                 self.in_lim,
@@ -94,34 +101,99 @@ class Experiment:
         self.timer = curr_time
         print("Finish. Recording", epoch, "using time", elapsed)
 
-    def init_selectors(self, sybils):
-        selectors = {}
+    def init_selectors(self):
         for u in range(self.num_node):
             # if smaller then it is adv
-            if u in sybils:
-                selectors[u] = Selector(u, True)
+            if u in self.adversary.sybils:
+                self.selectors[u] = Selector(u, True)
             else:
-                selectors[u] = Selector(u, False)
-        return selectors
+                self.selectors[u] = Selector(u, False)
+
+    def broadcast_msgs(self, num_msg):
+        # key is id, value is a dict of peers whose values are lists of relative timestamp
+        time_tables = {i:defaultdict(list) for i in range(self.num_node)}
+        for _ in range(num_msg):
+            broad_node = -1
+            if self.nh is None:
+                broad_node = np.random.randint(self.num_node)
+            else:
+                broad_node = comm_network.get_broadcast_node(nh)
+            comm_network.broadcast_msg(broad_node, self.nodes, self.ld, self.nh, time_tables)
+
+        print('Finish. Broadcast')
+        return time_tables
+
+    def update_selectors(self, outs_conns):
+        for i in range(self.num_node):
+            self.selectors[i].update(outs_conns[i])
+            
+    def shuffle_nodes(self):
+        update_nodes = None
+        if not config.sybil_update_priority:
+            update_nodes = [i for i in range(self.num_node)]
+            random.shuffle(update_nodes)
+        else:
+            # make sure sybils node knows the information first
+            all_nodes = set([i for i in range(self.num_node)])
+            honest_nodes = list(all_nodes.difference(set(self.adversary.sybils)))
+            random.shuffle(honest_nodes)
+            update_nodes = sybils + honest_nodes
+        assert(update_nodes != None and len(update_nodes) == self.num_node)
+        return update_nodes
 
     def start(self, max_epoch, record_epochs):
-        sybils = [i for i in range(self.num_adv)] 
         for epoch in range(max_epoch):
             if epoch in record_epochs:
                 self.take_snapshot(epoch)
             print("epoch", epoch)
 
-            selectors = self.init_selectors(sybils)
-            oracle = NetworkOracle(config.is_dynamic, sybils, selectors)
+            oracle = NetworkOracle(config.is_dynamic, self.adversary.sybils, self.selectors)
 
-            outs_conns = new_subset.new_subset_two_hop(
+            time_tables = self.broadcast_msgs(config.num_msg)
+            
+            node_order = self.shuffle_nodes()
+            outs_conns = schedule.select_nodes(
                 self.nodes, 
                 self.ld, 
                 config.num_msg, 
                 self.nh, 
-                selectors,
-                oracle)
+                self.selectors,
+                oracle,
+                node_order, 
+                time_tables, 
+                self.in_lim,
+                self.out_lim)
+
             self.update_conns(outs_conns)
+            self.update_selectors(outs_conns)
+
+            # print(epoch, len(self.selectors[0].seen), sorted(self.selectors[0].seen))
+
+    def start_complete_graph(self, max_epoch, record_epochs):
+        start = time.time()
+        for epoch in range(max_epoch):
+            print('epoch', epoch)
+            if epoch in record_epochs:
+                self.take_snapshot(epoch)
+        finish = time.time()
+        print(finish - start, 'elapsed')
+
+    # def analytical_complete_graph(self):
+        # print('start analytical analyze')
+        # name =  str(config.network_type)+'_'+str(config.method)+"V1"+"Round"+'0'+".txt"
+        # outpath = self.outdir + "/" + name
+        # with open(outpath, 'w') as w:
+            # for i in range(self.num_node):
+                # for j in range(self.num_node):
+                    # if i == j:
+                        # delay = 0
+                    # else:
+                        # delay = self.ld[i][j] + self.nd[j]
+                    # w.write(str(delay) + '  ')
+                # w.write('\n')
+
+
+
 
 
 

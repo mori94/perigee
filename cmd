@@ -2,9 +2,9 @@
 trap kill_batch INT
 
 if [ $1 = "help" ]; then
-	echo "./cmd name[string] seed[int] useNodeHash[y/n] roundList[intList]"
-	echo "./cmd two-hop-subset 1 y 0 1 2 3"
-	echo "./cmd two-hop-subset 1 n 0 1 2 3 4 12 20 28 36 44 52 69 68 76 84 92 100 108"
+	echo "./cmd subcommand[run/complete] name[string] seed[int] useNodeHash[y/n] out_lim[int] roundList[intList]"
+	echo "./cmd run two-hop-subset 1 8 y 0 1 2 3"
+	echo "./cmd two-hop-subset 1 8 n 0 1 2 3 4 12 20 28 36 44 52 69 68 76 84 92 100 108"
 	exit 0
 fi
 
@@ -17,19 +17,25 @@ function kill_batch() {
 	exit 0
 }
 
-name=$1
-seed=$2
-use_node_hash=$3
-record_round="${@:4}"
+subcommand=$1
+name=$2
+seed=$3
+out_lim=$4
+use_node_hash=$5
 
+record_round="${@:6}"
 
-# run experiment
 dirname="${name}_seed${seed}"
 dirpath="AnalyseData/$dirname"
 mkdir $dirpath
 cp config.py $dirpath
-# python main.py ${seed} ${use_node_hash} ${record_round}
-python testbed.py ${seed} ${dirpath} ${use_node_hash} ${record_round}
+
+# run experiment
+if [ ${subcommand} = 'run' ]; then 
+	python testbed.py run ${seed} ${dirpath} ${out_lim} ${use_node_hash} ${record_round}
+else
+	python testbed.py complete_graph ${seed} ${dirpath} ${out_lim} ${use_node_hash} ${record_round}
+fi
 retval=$?
 if [ "$retval" -ne 0 ]; then
 	echo "simulation bug. Exit"
@@ -44,7 +50,7 @@ echo ${cal_cmd}
 ${cal_cmd}
 
 # Plot it 
-plot_cmd="./plot_single.py ${dirname} ${record_round}"
+plot_cmd="./plot_single.py ${dirname} ${seed} ${record_round}"
 echo ${plot_cmd}
 ${plot_cmd}
 open "${dirname}/${dirname}.png"

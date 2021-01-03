@@ -16,19 +16,20 @@ reduce_link_ratio = 0.05
 # network config
 num_node = 1000
 num_adv = 0 # out of num node
-out_lim = 8 
+# out_lim = 999 
 in_lim = 40
 LIMIT = 40 
 
 # attack
 worst_conn_attack = False 
-recommend_worst_attack = True 
+recommend_worst_attack = False 
+sybil_update_priority = False 
 
 # node config
 num_keep = 3
-num_2_hop = 2
-num_3_hop = 2
-num_random = 1
+num_2_hop = 3
+num_3_hop = 0
+num_random = 2
 
 # peers info. If dynamic, some peers in the loop may already 
 # have num_keep+ peers, while early node only knows num_keep 

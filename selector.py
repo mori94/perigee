@@ -4,17 +4,6 @@ import random
 import config
 from oracle import PeersInfo
 from collections import namedtuple
-ConnInfo = namedtuple('ConnInfo', ['src', 'dst']) 
-
-def sort_new_peer_first(nodes, u, peers):
-    outs = nodes[u].outs
-    sorted_by_new = []
-    for p in peers:
-        if p not in nodes[u].views_hist:
-            sorted_by_new.insert(0, p)
-        else:
-            sorted_by_new.append(p)
-    return sorted_by_new
 
 def sort_neighbor_by_score(nodes, u, peers):
     node = nodes[u]
@@ -28,32 +17,36 @@ def sort_neighbor_by_score(nodes, u, peers):
     sorted_peers = [i for i, s in sorted_peer_score]
     return sorted_peers
 
-# u is src, v is dst
-def is_connectable(nodes, u, selected, v):
-    node = nodes[u]
-    if v == u:
-        return False
-    if v in node.outs:
-        return False
-    if v in selected:
-        return False
-
-    if nodes[v].num_in_request < nodes[v].in_lim:
-        return True 
-    else:
-        return False 
-
-
 class Selector:
     def __init__(self, u, is_adv):
         self.id = u
         self.is_adv = is_adv
+
+        self.conn = set()
+        self.desc_conn = set()
+
+        self.worst_compose = None
+        self.best_compose = None # subset of 1 hop nodes
+
+        # persistant
+        self.scores = {}
+        self.seen_out = set() # all peers
+
+    def update(self, out_peers):
         self.conn = set()
         self.desc_conn = set()
         self.worst_compose = None
-        self.best_compose = None # subset of 1 hop nodes
-        # self.conn_1s = one_hops.copy()
-        # self.conn_2s = [] 
+        self.best_compose = None 
+        self.seen_out = self.seen_out.union(out_peers)
+
+    def sort_new_peer_first(self, peers):
+        sorted_by_new = []
+        for p in peers:
+            if p not in self.seen_out:
+                sorted_by_new.insert(0, p)
+            else:
+                sorted_by_new.append(p)
+        return sorted_by_new
 
     def set_1hops(self, one_hops):
         for p in one_hops:
@@ -67,45 +60,97 @@ class Selector:
         return num_tried
 
     def get_selected(self):
-        # selected = set(self.conn_1s).union(set(self.conn_2s))
         return list(self.conn)
 
-    def get_1hops(self, nodes, u):
-        one_hops = self.conn_1s.copy()
-        if config.is_rand_select:
-            random.shuffle(one_hops)
-        if config.is_favor_new:
-            one_hops = sort_new_peer_first(nodes, u, one_hops)
-        if config.is_sort_hop:
-            one_hops_re = sort_neighbor_by_score(nodes, u, one_hops)
-            if len(one_hops_re) == len(one_hops):
-                one_hops = one_hops_re
-            else:
-                print('1hop', len(one_hops_re), len(one_hops))
-                sys.exit(1)
-        return one_hops
+    # subset
+    def get_weighted_score(self, table, compose, num_msg):
+        best_times = [999999 for i in range(num_msg)]
+        for peer in compose:
+            peer_times = table[peer]
+            # print(peer_times)
+            for i in range(num_msg):
+                if best_times[i] > peer_times[i]:
+                    best_times[i] = peer_times[i]
 
-    # two hops might have more than 
-    def select_2hops(self, two_hops, v, nodes, u):
-        if config.is_rand_select:
-            random.shuffle(two_hops)
-        if config.is_favor_new:
-            two_hops = sort_new_peer_first(nodes, u, two_hops)
+        sorted_best_time = sorted(best_times)
+        new_score = sorted_best_time[int(num_msg*9.0/10)-1]
 
-        if config.is_sort_hop:
-            two_hops_re = sort_neighbor_by_score(nodes, v, two_hops)
-            if len(two_hops_re) == len(two_hops):
-                two_hops = two_hops_re
-            else:
-                print('2hop', len(two_hops_re), len(two_hops))
-                sys.exit(1)
-        return two_hops
+        sorted_compose = tuple(sorted(compose))
 
-    def sort_peers(self, peers, nodes, u):
+        if sorted_compose not in self.scores:
+            score = new_score
+            return score
+        else:
+            score = config.old_weight*self.scores[sorted_compose] + config.new_weight*new_score
+            return score
+
+    def get_score(self, table, compose, num_msg):
+        best_times = [999999 for i in range(num_msg)]
+        for peer in compose:
+            peer_times = table[peer]
+            # print(peer_times)
+            for i in range(num_msg):
+                if best_times[i] > peer_times[i]:
+                    best_times[i] = peer_times[i]
+
+        # print('best', best_times)
+        sorted_best_time = sorted(best_times)
+        return sorted_best_time[int(num_msg*9.0/10)-1]
+
+    # where table belongs to the node i, conn_num makes sure outgoing conn is possible
+    def select_1hops(self, table, i, composes, num_msg, network_state):
+        # if i == 0:
+        #    print('table', sorted(table.keys()))
+        best = -1
+        best_compose = random.choice(composes)
+
+        worst = -1
+        worst_compose = random.choice(composes)
+
+        random.shuffle(composes)
+        for compose in composes:
+            for peer in compose:
+                if not network_state.is_conn_addable(peer):
+                    break
+                else:
+                    if config.use_score_decay:
+                        score = self.get_weighted_score(table, compose, num_msg)
+                    else:
+                        score = self.get_score(table, compose, num_msg)
+                     
+                    if best == -1 or score < best:
+                        best = score 
+                        best_compose = compose 
+
+                    if worst == -1 or score > worst:
+                        worst = score
+                        worst_compose = compose
+
+        for peer in best_compose:
+            network_state.add_in_connection(peer)
+
+        if (best == -1):
+            print("none of config allows for selection due to incoming neighbor")
+
+        self.worst_compose = worst_compose
+        self.best_compose = best_compose
+
+        # for decay
+        sorted_compose = tuple(sorted(best_compose))
+        self.scores[sorted_compose] = best
+
+        if config.worst_conn_attack and selector.is_adv:
+            self.set_1hops(worst_compose)
+            return worst_compose
+        else:
+            self.set_1hops(best_compose)
+            return best_compose
+
+    def sort_peers(self, peers):
         if config.is_rand_select:
             random.shuffle(peers)
         if config.is_favor_new:
-            peers = sort_new_peer_first(nodes, u, peers)
+            peers = self.sort_new_peer_first(peers)
         return peers 
 
     def add_conn_2s(self, t):
@@ -122,7 +167,7 @@ class Selector:
         self.conn.add(t)
         self.desc_conn.add((s,t))
 
-    def select_peers(self, num_required, nodes, peers_info):
+    def select_peers(self, num_required, nodes, peers_info, network_state):
         if num_required == 0:
             return []
 
@@ -139,93 +184,46 @@ class Selector:
             random.shuffle(recommenders)
             for rec in recommenders:
                 peers = peers_info[rec]
-                sorted_peers = self.sort_peers(peers, nodes, self.id)
-                peer =  self.select_sorted_peers(sorted_peers, candidates, rec, nodes)
+                sorted_peers = self.sort_peers(peers)
+                peer =  self.select_sorted_peers(sorted_peers, candidates, rec, network_state)
                 if peer != None:
                     selected.add(peer)
                     self.add_peer(rec, peer)
-                    nodes[peer].num_in_request += 1
+                    network_state.add_in_connection(peer)
                 if len(selected) == num_required:
                     break
 
-        num_nodes = len(nodes)
-        # while len(selected) < num_required:
-            # print('Insufficient peer')
-            # w = np.random.randint(num_nodes)
-            # while not is_connectable(nodes, self.id, self.conn, w):
-                # w = np.random.randint(len(nodes))
-    
-            # self.add_peer(-1, w)
-            # selected.add(w)
-            # nodes[w].num_in_request += 1
-
-        # assert(len(selected) == num_required)
         return list(selected)
 
-    def select_random_peers(self, nodes, num_required):
+    # u is src, v is dst
+    def is_connectable(self,u, selected, v, network_state):
+        if v == u:
+            return False
+        if v in selected:
+            return False
+        if network_state.is_conn_addable(v): 
+            return True 
+        else:
+            return False 
+
+    def select_random_peers(self, nodes, num_required, network_state):
         selected = set()
         while len(selected) < num_required:
             w = np.random.randint(len(nodes))
-            while not is_connectable(nodes, self.id, self.conn, w):
+            while not self.is_connectable(self.id, self.conn, w, network_state):
                 w = np.random.randint(len(nodes))
             self.add_peer(-1, w)
             selected.add(w)
+            network_state.add_in_connection(w)
+
         assert(len(selected) == num_required)
         return list(selected)
 
 
-    def select_sorted_peers(self, sorted_peers, candidates, recommender, nodes):
+    def select_sorted_peers(self, sorted_peers, candidates, recommender, network_state):
         for p in sorted_peers:
             if not candidates[p]:
                 candidates[p] = True
-                if is_connectable(nodes, self.id, self.conn, p):
+                if self.is_connectable(self.id, self.conn, p, network_state):
                     return p
         return None 
-
-
-    # peers info are info allowed for this node to know to make peers decision 
-    # def select_two_hops(self, num_required, nodes, peers_info):
-        # u = self.id
-        # all_2hop_peers = {} # key is 2hop id, value is tried:
-        # # print("self.conn_1s", self.conn_1s)
-
-        # for v in self.conn_1s:
-            # assert(v in peers_info.two_hops)
-            # two_hops = peers_info.two_hops[v]
-            # for p in two_hops:
-                # all_2hop_peers[p] = False
-
-        # num_added = 0
-        # while (self.count_checked(all_2hop_peers)<len(all_2hop_peers) and
-            # num_added < num_required
-        # ):
-            # assert(len(self.conn_1s) == config.num_keep)
-
-            # one_hops = self.get_1hops(nodes, u)
-            # for v in one_hops:
-                # one_hop_peers = peers_info.two_hops[v].copy()
-                # two_hops = self.select_2hops(one_hop_peers, v, nodes, u)
-                # for w in two_hops:
-                    # if not all_2hop_peers[w]:
-                        # all_2hop_peers[w] = True
-                        # selected = self.get_selected()
-                        # if is_connectable(nodes, u, selected, w):
-                            # self.add_conn_2s(w)
-                            # nodes[w].num_in_request += 1
-                            # num_added += 1
-                            # break
-                # if num_added == num_required:
-                    # break
-
-        # num_nodes = len(nodes)
-        # while num_added < num_required:
-            # w = np.random.randint(num_nodes)
-            # selected = self.get_selected()
-            # while not is_connectable(nodes, u, selected, w):
-                # w = np.random.randint(len(nodes))
-    
-            # self.add_conn_2s(w)
-            # nodes[w].num_in_request += 1
-            # num_added += 1
-        
-        # return self.conn_2s.copy()

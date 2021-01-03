@@ -133,21 +133,21 @@ def InitIncomLimit(num_node):
     return(IncomingLimit)
 
 
-def GenerateInitialNetwork( NetworkType, num_node):
+def GenerateInitialNetwork( NetworkType, num_node, subcommand, out_lim):
     bandwidth=InitBandWidth(num_node)
     IncomingLimit   =   InitIncomLimit(num_node)
-    G               =   GenerateInitialGraph()
+    # G               =   GenerateInitialGraph()
     NodeDelay       =   GenerateInitialDelay(num_node)
-    [OutNeighbor,IncomingNeighbor]     =   GenerateOutNeighbor(config.out_lim,IncomingLimit, num_node)
-    # NeighborSets    =   GenerateInitialConnection(OutNeighbor,len_of_neigh, num_node)
+    if subcommand == 'run':
+        [OutNeighbor,IncomingNeighbor]     =   GenerateOutNeighbor(out_lim,IncomingLimit, num_node)
+    else:
+        OutNeighbor = None
+        IncomingNeighbor = None
+
     NeighborSets = None
-    #NodeDelay      = DelayByBandwidth(NeighborSets,bandwidth)
-    # print(Datafile)
-    # print(NodeDelay)
-    # print(NetworkType)
+
     [LinkDelay,NodeHash,NodeDelay] = readfiles.Read(NodeDelay, NetworkType, num_node)
-    G = BuildNeighborConnection(G,OutNeighbor,LinkDelay,NodeDelay, config.out_lim , num_node)
-    return(G,NodeDelay,NodeHash,LinkDelay,NeighborSets,IncomingLimit,OutNeighbor,IncomingNeighbor,bandwidth)
+    return(NodeDelay,NodeHash,LinkDelay,NeighborSets,IncomingLimit,OutNeighbor,IncomingNeighbor,bandwidth)
  
 # Update graph by the latest neighbor connections
 def UpdateNetwork(G,OutNeighbor,LinkDelay,NodeDelay,len_of_neigh,NeighborSets,bandwidth):

@@ -58,6 +58,7 @@ done
 # Calculate it
 ./batch_calculate.sh ${group_dir} ${use_node_hash} ${record_round}
 
+echo 'TODO need to write ./plot_fig_set.py complete grpah seed'
 # plot it
 plot_cmd="./plot_fig_set.py ${group_dir} ${record_round}"
 echo ${plot_cmd}
