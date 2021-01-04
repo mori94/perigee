@@ -28,7 +28,6 @@ use_node_hash = sys.argv[5]=='y'
 record_epochs = [int(i) for i in sys.argv[6:]]
 max_epoch = max(record_epochs) +1
 
-print('Setup Graph')
 [ node_delay, 
   node_hash, link_delay, 
   neighbor_set, IncomingLimit, 
@@ -39,11 +38,12 @@ print('Setup Graph')
         subcommand,
         out_lim)
 
+
 if config.use_reduce_link:
-    print('Use reduced link latency')
+    print("\033[91m" + 'Use reduced link latency' + "\033[0m")
     initnetwork.reduce_link_latency(config.num_node, int(0.2*config.num_node), link_delay)
 else:
-    print('Not use reduced link latency')
+    print("\033[93m" + 'Not use reduced link latency'+ "\033[0m")
 
 # print(node_hash)
 # for i in range(len(link_delay)):
@@ -52,10 +52,10 @@ else:
     # print(i, outs_neighbors[i])
 
 if not use_node_hash:
-    print('Not Use asymmetric node hash')
+    print("\033[93m" + 'Not Use asymmetric node hash'+ "\033[0m")
     node_hash = None 
 else:
-    print('Use asymmetric node hash')
+    print("\033[91m" + 'Use asymmetric node hash'+ "\033[0m")
 
 
 if subcommand == 'run':
@@ -97,9 +97,7 @@ elif subcommand == 'complete_graph':
             data_path,
             [] 
             )
-    print('init graph')   
     perigee.init_graph(outs_neighbors)
-    print('start')
     perigee.start_complete_graph(max_epoch, record_epochs)
     # perigee.analytical_complete_graph()
 else:

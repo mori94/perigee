@@ -11,14 +11,17 @@ use_sequential = False
 use_reduce_link = False 
 use_score_decay = False 
 
+is_load_conn = False 
+conn_path = 'inputs/conn.txt'
+
 reduce_link_ratio = 0.05
 
 # network config
 num_node = 1000
 num_adv = 0 # out of num node
 # out_lim = 999 
-in_lim = 40
-LIMIT = 40 
+in_lim = 40 
+LIMIT = in_lim 
 
 # attack
 worst_conn_attack = False 
@@ -36,11 +39,10 @@ num_random = 2
 # peers from other nodes.
 is_dynamic = False #True
 
-is_sort_hop = False   # sort invalidates favor-new and rand select
+is_sort_score = False   # sort invalidates favor-new and rand select
 is_favor_new = True 
 is_rand_select = True 
 
-assert(num_2_hop >= num_3_hop)
 
 # history decay
 old_weight = 0.7 #0.85

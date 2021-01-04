@@ -147,6 +147,18 @@ def GenerateInitialNetwork( NetworkType, num_node, subcommand, out_lim):
     NeighborSets = None
 
     [LinkDelay,NodeHash,NodeDelay] = readfiles.Read(NodeDelay, NetworkType, num_node)
+
+    if config.is_load_conn:
+        print("\033[91m" + 'Use. Preset conn'+ "\033[0m")
+        out_conns = {}
+        with open(config.conn_path) as f:
+            for line in f:
+                tokens = line.strip().split(' ')
+                out_conns[int(tokens[0])] = [int(i) for i in tokens[1:]]
+        OutNeighbor = out_conns
+    else:
+        print("\033[93m" + 'Not use. Preset conn'+ "\033[0m")
+
     return(NodeDelay,NodeHash,LinkDelay,NeighborSets,IncomingLimit,OutNeighbor,IncomingNeighbor,bandwidth)
  
 # Update graph by the latest neighbor connections

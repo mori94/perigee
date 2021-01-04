@@ -23,8 +23,6 @@ def plot_figure(dirname, method, ax, snapshot_point, title, ylim, xlim, complete
     if complete_graph_file != None:
         filenames.append(complete_graph_file)
     
-
-
     colormap = plt.cm.nipy_spectral
     colors = [colormap(i) for i in np.linspace(0, 0.9, len(filenames))]
     patches = []
@@ -36,10 +34,6 @@ def plot_figure(dirname, method, ax, snapshot_point, title, ylim, xlim, complete
     if complete_graph_file != None:
         p =  mpatches.Patch(color=colors[-1], label='complete')
         patches.append(p) 
-
-
-
-
 
     ax.set_prop_cycle('color', colors)
     for filename in filenames:
@@ -54,9 +48,9 @@ def plot_figure(dirname, method, ax, snapshot_point, title, ylim, xlim, complete
     
     all_round = list(subset_data.keys())
     all_round = sorted(all_round)
-    for i in all_round:
+    for i in filenames:
         ax.grid(True)
-        ax.plot(subset_data[i]) #, label="r"+str(i))
+        ax.plot(subset_data[i])
     ax.set_ylim(ylim)
     ax.set_xlim(xlim)
     ax.set_title(title, fontsize='small')
@@ -153,7 +147,7 @@ else:
     print('Warn. More room to plot')
     sys.exit(0)
 
-fig, axs = plt.subplots(ncols=num_col, nrows=num_row, constrained_layout=False, figsize=(9,9))
+fig, axs = plt.subplots(ncols=num_col, nrows=num_row, constrained_layout=False, figsize=(9,12))
 
 
 

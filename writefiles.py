@@ -28,4 +28,13 @@ def WriteConnection(OutputDelayFile, G, delay, neighbor):
 def write(OutputDelayFile, G, NodeDelay, neighbor, num_node):
     WriteDelay(OutputDelayFile, G, NodeDelay, num_node)
     #WriteConnection(OutputDelayFile, G, NodeDelay, neighbor)
+
+def write_conn(filename, out_conns):
+    with open(filename, 'w') as w:
+        for i in range(len(out_conns)):
+            node_data = str(i) + ' '
+            for p in out_conns[i]:
+                node_data += str(int(p)) + ' '
+            node_data += '\n'
+            w.write(node_data)
        

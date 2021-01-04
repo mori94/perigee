@@ -32,7 +32,7 @@ class Experiment:
         self.adversary = adversary.Adversary(sybils)
         self.snapshots = []
 
-        self.init_selectors()
+        
 
     # generate networkx graph instance
     def construct_graph(self):
@@ -46,12 +46,26 @@ class Experiment:
 
     def update_ins_conns(self):
         all_nodes = list(self.nodes.keys())
+        conns_ins = defaultdict(list)
         for i in all_nodes:
             node = self.nodes[i]
             for out in node.outs:
                 self.nodes[out].ins.add(i)
+                conns_ins[out].append(i)
+        return conns_ins
 
     def update_conns(self, out_conns):
+        # correctness check
+        num_double_conn = 0
+        for i, peers in out_conns.items():
+            for p in peers:
+                if i in out_conns[p]:
+                    print(i, self.selectors[i].desc_conn)
+                    print(p, self.selectors[p].desc_conn)
+                    num_double_conn += 1
+        if num_double_conn> 0:
+            print("num_double_conn > 0")
+
         nodes = self.nodes
         for i, peers in out_conns.items():
             if len(set(peers)) != len(peers):
@@ -59,15 +73,12 @@ class Experiment:
                 print(i, peers)
                 sys.exit(1)
 
-            # nodes[i].seen = nodes[i].seen.union(peers) 
             nodes[i].outs = set(peers)
             nodes[i].ins.clear()
-            nodes[i].views.clear()
-            nodes[i].views_hist.clear()
             nodes[i].recv_time = 0
-            nodes[i].num_in_request = 0
             nodes[i].received = False
-        self.update_ins_conns()
+        conn_ins = self.update_ins_conns()
+        return conn_ins
 
     def get_outs_neighbors(self):
         out_neighbor = np.zeros((self.num_node, self.out_lim))
@@ -76,6 +87,7 @@ class Experiment:
         return out_neighbor
 
     def init_graph(self, outs_neighbors):
+
         for i in range(self.num_node):
             node_delay = self.nd[i]
             self.nodes[i] = Note(
@@ -85,29 +97,33 @@ class Experiment:
                 self.out_lim,
                 outs_neighbors[i]
             )
-        self.update_ins_conns()
-        print('Finish. init graph')
+        ins_conns = self.update_ins_conns()
+        self.init_selectors(outs_neighbors, ins_conns)
 
     def take_snapshot(self, epoch):
-        print("Start recording")
         name =  str(config.network_type)+'_'+str(config.method)+"V1"+"Round"+str(epoch)+".txt"
         outpath = self.outdir + "/" + name
             
         G = self.construct_graph()
         outs_neighbors = self.get_outs_neighbors()
+
+        structure_name =  self.outdir + "/" + 'structure_' +  str(epoch) + '.txt'
+        writefiles.write_conn(structure_name, outs_neighbors)
+
         writefiles.write(outpath, G, self.nd, outs_neighbors, self.num_node)
+
         curr_time = time.time()
         elapsed = curr_time - self.timer 
         self.timer = curr_time
         print("Finish. Recording", epoch, "using time", elapsed)
 
-    def init_selectors(self):
+    def init_selectors(self, out_conns, in_conns):
         for u in range(self.num_node):
             # if smaller then it is adv
             if u in self.adversary.sybils:
-                self.selectors[u] = Selector(u, True)
+                self.selectors[u] = Selector(u, True, out_conns[u], in_conns[u])
             else:
-                self.selectors[u] = Selector(u, False)
+                self.selectors[u] = Selector(u, False, out_conns[u], in_conns[u])
 
     def broadcast_msgs(self, num_msg):
         # key is id, value is a dict of peers whose values are lists of relative timestamp
@@ -119,13 +135,12 @@ class Experiment:
             else:
                 broad_node = comm_network.get_broadcast_node(nh)
             comm_network.broadcast_msg(broad_node, self.nodes, self.ld, self.nh, time_tables)
-
-        print('Finish. Broadcast')
+        
         return time_tables
 
-    def update_selectors(self, outs_conns):
+    def update_selectors(self, outs_conns, ins_conn):
         for i in range(self.num_node):
-            self.selectors[i].update(outs_conns[i])
+            self.selectors[i].update(outs_conns[i], ins_conn[i])
             
     def shuffle_nodes(self):
         update_nodes = None
@@ -142,11 +157,14 @@ class Experiment:
         return update_nodes
 
     def start(self, max_epoch, record_epochs):
+        last = time.time()
         for epoch in range(max_epoch):
+            now = time.time()
+            print("\t\tepoch", epoch, now - last)
+            last = now
             if epoch in record_epochs:
                 self.take_snapshot(epoch)
-            print("epoch", epoch)
-
+                
             oracle = NetworkOracle(config.is_dynamic, self.adversary.sybils, self.selectors)
 
             time_tables = self.broadcast_msgs(config.num_msg)
@@ -164,10 +182,23 @@ class Experiment:
                 self.in_lim,
                 self.out_lim)
 
-            self.update_conns(outs_conns)
-            self.update_selectors(outs_conns)
+            ins_conn = self.update_conns(outs_conns)
+            self.check()
+            self.update_selectors(outs_conns, ins_conn)
+
 
             # print(epoch, len(self.selectors[0].seen), sorted(self.selectors[0].seen))
+
+    def check(self):
+        for i in range(self.num_node):
+            out_conns = self.selectors[i].desc_conn
+            num = 0
+            for u, v in out_conns:
+                if u == i:
+                    num += 1
+            if num != 3:
+                print(i, out_conns)
+                sys.exit(1)
 
     def start_complete_graph(self, max_epoch, record_epochs):
         start = time.time()
