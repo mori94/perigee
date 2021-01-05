@@ -1,5 +1,5 @@
 import random
-len_of_subround= 10 # 40                    # how may subround under local simulation
+len_of_subround= 20 # 40                    # how may subround under local simulation
 num_msg = len_of_subround
 num_subround = len_of_subround
 
@@ -15,6 +15,8 @@ is_load_conn = False
 conn_path = 'inputs/conn.txt'
 
 reduce_link_ratio = 0.05
+
+num_thread =10 
 
 # network config
 num_node = 1000

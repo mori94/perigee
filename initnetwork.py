@@ -73,7 +73,8 @@ def GenerateOutNeighbor(len_of_neigh,IncomingLimit, num_node):
             out_peer = int(OutNeighbor[i][j])
             while( (out_peer in OutNeighbor[i][:j]) or 
                    (out_peer==i) or 
-                   IncomingNeighbor[out_peer]>=IncomingLimit[out_peer]):
+                   IncomingNeighbor[out_peer]>=IncomingLimit[out_peer] 
+                  or (out_peer < i and i in OutNeighbor[out_peer] )):
                 OutNeighbor[i][j]=np.random.randint(num_node)
                 out_peer = int(OutNeighbor[i][j])
             IncomingNeighbor[out_peer]=IncomingNeighbor[out_peer]+1

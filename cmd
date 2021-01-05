@@ -2,7 +2,7 @@
 trap kill_batch INT
 
 if [ $1 = "help" ]; then
-	echo "./cmd subcommand[run/complete] name[string] seed[int] useNodeHash[y/n] out_lim[int] roundList[intList]"
+	echo "./cmd subcommand[run/complete] name[string] seed[int] out_lim[int] useNodeHash[y/n] roundList[intList]"
 	echo "./cmd run two-hop-subset 1 8 y 0 1 2 3"
 	echo "./cmd two-hop-subset 1 8 n 0 1 2 3 4 12 20 28 36 44 52 69 68 76 84 92 100 108"
 	exit 0

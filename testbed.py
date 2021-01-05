@@ -39,6 +39,7 @@ max_epoch = max(record_epochs) +1
         out_lim)
 
 
+
 if config.use_reduce_link:
     print("\033[91m" + 'Use reduced link latency' + "\033[0m")
     initnetwork.reduce_link_latency(config.num_node, int(0.2*config.num_node), link_delay)

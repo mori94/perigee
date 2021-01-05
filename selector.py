@@ -4,7 +4,10 @@ import random
 import config
 from oracle import PeersInfo
 from collections import namedtuple
-
+# for multithread
+from threading import Thread
+import concurrent.futures
+import copy
 
 
 class Selector:
@@ -23,7 +26,7 @@ class Selector:
         self.seen_nodes = set() # all peers
         self.curr_ins = curr_ins.copy()
         self.curr_outs = curr_outs.copy()
-        self.seen_nodes = self.seen_nodes.union(curr_ins)
+        # self.seen_nodes = self.seen_nodes.union(curr_ins)
         self.seen_nodes = self.seen_nodes.union(curr_outs)
 
         self.seen_compose = set()
@@ -36,7 +39,7 @@ class Selector:
         self.worst_compose = None
         self.best_compose = None 
         self.seen_nodes = self.seen_nodes.union(out_peers)
-        self.seen_nodes = self.seen_nodes.union(in_peers)
+        # self.seen_nodes = self.seen_nodes.union(in_peers)
         self.curr_outs = out_peers.copy()
         self.curr_ins = in_peers.copy()
 
@@ -63,6 +66,26 @@ class Selector:
 
     def get_selected(self):
         return list(self.conn)
+
+    # return None if invalid
+    def threaded_function(self, arg):
+        compose, table, network_state, num_msg, u = arg
+        is_valid = True
+        for peer in compose:
+            if not network_state.is_conn_keepable(u, peer):
+                is_valid = False 
+                break
+        if is_valid:
+            score = -1
+            if config.use_score_decay:
+                score = self.get_weighted_score(table, compose, num_msg)
+            else:
+                score = self.get_score(table, compose, num_msg)
+            return score
+        else:
+            return None
+
+
 
     # subset
     def get_weighted_score(self, table, compose, num_msg):
@@ -99,12 +122,9 @@ class Selector:
         sorted_best_time = sorted(best_times)
         return sorted_best_time[int(num_msg*9.0/10)-1]
 
-    # where table belongs to the node i, conn_num makes sure outgoing conn is possible
-    def select_1hops(self, table, composes, num_msg, network_state):
-
+    def get_best_compose(self, table, composes, num_msg, network_state):
         best = -1
         best_compose = random.choice(composes)
-
         worst = -1
         worst_compose = random.choice(composes)
 
@@ -112,7 +132,7 @@ class Selector:
         for compose in composes:
             is_valid = True
             for peer in compose:
-                if not network_state.is_conn_addable(self.id, peer):
+                if not network_state.is_conn_keepable(self.id, peer):
                     is_valid = False 
                     break
             if is_valid:
@@ -129,12 +149,59 @@ class Selector:
                 if worst == -1 or score > worst:
                     worst = score
                     worst_compose = compose
+        return best_compose, best, worst_compose, worst, best==-1
 
+    def get_compose_multithread(self, table, composes, num_msg, network_state):
+        scores = {}
+        with concurrent.futures.ThreadPoolExecutor(config.num_thread) as executor:
+            futures = {} 
+            for compose in composes:
+                arg = (compose.copy(), table, network_state, num_msg, self.id)
+                future = executor.submit(self.threaded_function, arg)
+                futures[tuple(compose)] = future
+
+            for compose, future in futures.items():
+                score = future.result()
+                if score != None:
+                    scores[compose] = score
+        
+        # get the best and worst compose
+        best, worst = None, None
+        best_compose = random.choice(composes)
+        worst_compose = random.choice(composes)
+        for compose, score in scores.items():
+            if best == None or best < score:
+                best_compose = list(compose)
+                best = score
+            if worst == None or worst > score:
+                worst_compose = list(compose)
+                worst = score
+
+        return  best_compose, best, worst_compose, worst, best==None
+
+    # where table belongs to the node i, conn_num makes sure outgoing conn is possible
+    def select_1hops(self, table, composes, num_msg, network_state):
+        best_compose, best, worst_compose, worst, is_random = None, None, None, None, None
+        if config.num_thread == 1:
+            best_compose, best, worst_compose, worst, is_random = self.get_best_compose(
+                    table, composes, 
+                    num_msg, network_state)
+        else:
+            best_compose, best, worst_compose, worst, is_random = self.get_compose_multithread(
+                    table, composes, 
+                    num_msg, network_state)
+
+        
         for peer in best_compose:
             network_state.add_in_connection(self.id, peer)
 
-        if best == -1:
+        if is_random:
             print("none of config allows for selection due to incoming neighbor")
+            print(self.id, len(composes), best_compose, worst_compose)
+            assert(len(set(worst_compose)) == len(worst_compose))
+            assert(len(set(best_compose)) == len(best_compose))
+            worst_compose = list(set(worst_compose))
+            best_compose = list(set(best_compose))
 
         self.worst_compose = worst_compose
         self.best_compose = best_compose

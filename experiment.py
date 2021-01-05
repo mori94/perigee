@@ -100,6 +100,10 @@ class Experiment:
         ins_conns = self.update_ins_conns()
         self.init_selectors(outs_neighbors, ins_conns)
 
+        # for i in range(config.num_node):
+            # print(i, outs_neighbors[i], ins_conns[i])
+        # sys.exit(1)
+
     def take_snapshot(self, epoch):
         name =  str(config.network_type)+'_'+str(config.method)+"V1"+"Round"+str(epoch)+".txt"
         outpath = self.outdir + "/" + name
@@ -168,7 +172,7 @@ class Experiment:
             oracle = NetworkOracle(config.is_dynamic, self.adversary.sybils, self.selectors)
 
             time_tables = self.broadcast_msgs(config.num_msg)
-            
+            print("\t\tbroadcast", epoch, time.time() - last)
             node_order = self.shuffle_nodes()
             outs_conns = schedule.select_nodes(
                 self.nodes, 
@@ -181,9 +185,9 @@ class Experiment:
                 time_tables, 
                 self.in_lim,
                 self.out_lim)
-
+            print("\t\tselect", epoch, time.time() - last)
             ins_conn = self.update_conns(outs_conns)
-            self.check()
+            # self.check()
             self.update_selectors(outs_conns, ins_conn)
 
 
