@@ -75,13 +75,18 @@ def get_configs_4(neighbors, num_out):
     return composes
 
 # input is a list of neighbor
-def get_configs_3(neighbors, num_out):
+def get_configs_3(neighbors, num_out, network_state, u):
     composes = []
     for i in range(num_out):
-        for j in range(i+1, num_out):
-            for k in range(j+1, num_out):
-                compose = [neighbors[i], neighbors[j], neighbors[k]]
-                composes.append(compose)
+        if network_state.is_conn_addable(u, neighbors[i]):
+
+            for j in range(i+1, num_out):
+                if  network_state.is_conn_addable(u, neighbors[j]):
+
+                    for k in range(j+1, num_out):
+                        if  network_state.is_conn_addable(u, neighbors[k]):
+                            compose = [neighbors[i], neighbors[j], neighbors[k]]
+                            composes.append(compose)
     return composes
 
 def get_configs_2(neighbors, num_out):
@@ -89,7 +94,7 @@ def get_configs_2(neighbors, num_out):
     for i in range(num_out):
         for j in range(i+1, num_out):
             compose = [neighbors[i], neighbors[j]]
-            composes.append(compose)
+        composes.append(compose)
     return composes 
 
 def get_configs_1(neighbors, num_out):
@@ -99,24 +104,25 @@ def get_configs_1(neighbors, num_out):
         composes.append(compose)
     return composes
 
-def get_config(num_keep, curr_peers, num_out):
+def get_config(num_keep, curr_peers, num_out, network_state, u):
+    # assert(len(set(curr_peers)) == len(curr_peers))
     composes = None
     if num_keep == 3:
-        composes = get_configs_3(curr_peers, num_out)
+        composes = get_configs_3(curr_peers, num_out, network_state, u)
     elif num_keep == 2: 
-        composes = get_configs_2(curr_peers, num_out)
+        composes = get_configs_2(curr_peers, num_out, network_state, u)
     elif num_keep == 1: 
-        composes = get_configs_1(curr_peers, num_out)
+        composes = get_configs_1(curr_peers, num_out, network_state, u)
     elif num_keep == 4: 
-        composes = get_configs_4(curr_peers, num_out)
+        composes = get_configs_4(curr_peers, num_out, network_state, u)
     elif num_keep == 5: 
-        composes = get_configs_5(curr_peers, num_out)
+        composes = get_configs_5(curr_peers, num_out, network_state, u)
     elif num_keep == 6: 
-        composes = get_configs_6(curr_peers, num_out)
+        composes = get_configs_6(curr_peers, num_out, network_state, u)
     elif num_keep == 7: 
-        composes = get_configs_7(curr_peers, num_out)
+        composes = get_configs_7(curr_peers, num_out, network_state, u)
     elif num_keep == 8: 
-        composes = get_configs_8(curr_peers, num_out)
+        composes = get_configs_8(curr_peers, num_out, network_state, u)
     else:
         print('Error. choose a valid configs setting')
         sys.exit(1)

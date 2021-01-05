@@ -67,23 +67,7 @@ class Selector:
     def get_selected(self):
         return list(self.conn)
 
-    # return None if invalid
-    def threaded_function(self, arg):
-        compose, table, network_state, num_msg, u = arg
-        is_valid = True
-        for peer in compose:
-            if not network_state.is_conn_keepable(u, peer):
-                is_valid = False 
-                break
-        if is_valid:
-            score = -1
-            if config.use_score_decay:
-                score = self.get_weighted_score(table, compose, num_msg)
-            else:
-                score = self.get_score(table, compose, num_msg)
-            return score
-        else:
-            return None
+
 
 
 
@@ -151,9 +135,29 @@ class Selector:
                     worst_compose = compose
         return best_compose, best, worst_compose, worst, best==-1
 
+    # return None if invalid
+    def threaded_function(self, arg):
+        compose, table, network_state, num_msg, u = arg
+        is_valid = True
+        for peer in compose:
+            if not network_state.is_conn_keepable(u, peer):
+                print('network_state.is_conn_keepable not', u, peer, compose)
+                is_valid = False 
+                break 
+        if is_valid:
+            score = -1
+            if config.use_score_decay:
+                score = self.get_weighted_score(table, compose, num_msg)
+            else:
+                score = self.get_score(table, compose, num_msg)
+            return score
+        else:
+            return None
+
     def get_compose_multithread(self, table, composes, num_msg, network_state):
         scores = {}
-        with concurrent.futures.ThreadPoolExecutor(config.num_thread) as executor:
+        # print('start multihread', self.id)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=config.num_thread) as executor:
             futures = {} 
             for compose in composes:
                 arg = (compose.copy(), table, network_state, num_msg, self.id)
@@ -164,6 +168,8 @@ class Selector:
                 score = future.result()
                 if score != None:
                     scores[compose] = score
+                else:
+                    sys.exit(1)
         
         # get the best and worst compose
         best, worst = None, None
@@ -190,18 +196,19 @@ class Selector:
             best_compose, best, worst_compose, worst, is_random = self.get_compose_multithread(
                     table, composes, 
                     num_msg, network_state)
-
-        
-        for peer in best_compose:
-            network_state.add_in_connection(self.id, peer)
-
         if is_random:
-            print("none of config allows for selection due to incoming neighbor")
+            print("none of compose is suitable, after filter. Bug")
             print(self.id, len(composes), best_compose, worst_compose)
             assert(len(set(worst_compose)) == len(worst_compose))
             assert(len(set(best_compose)) == len(best_compose))
             worst_compose = list(set(worst_compose))
             best_compose = list(set(best_compose))
+            sys.exit(1)
+
+        
+        for peer in best_compose:
+            network_state.add_in_connection(self.id, peer)
+
 
         self.worst_compose = worst_compose
         self.best_compose = best_compose

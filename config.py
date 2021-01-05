@@ -16,7 +16,7 @@ conn_path = 'inputs/conn.txt'
 
 reduce_link_ratio = 0.05
 
-num_thread =10 
+num_thread = 1
 
 # network config
 num_node = 1000

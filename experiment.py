@@ -164,7 +164,7 @@ class Experiment:
         last = time.time()
         for epoch in range(max_epoch):
             now = time.time()
-            print("\t\tepoch", epoch, now - last)
+            print("\t\tepoch", epoch)
             last = now
             if epoch in record_epochs:
                 self.take_snapshot(epoch)
@@ -172,7 +172,7 @@ class Experiment:
             oracle = NetworkOracle(config.is_dynamic, self.adversary.sybils, self.selectors)
 
             time_tables = self.broadcast_msgs(config.num_msg)
-            print("\t\tbroadcast", epoch, time.time() - last)
+            print("broadcast", round(time.time() - last,2))
             node_order = self.shuffle_nodes()
             outs_conns = schedule.select_nodes(
                 self.nodes, 
@@ -185,7 +185,7 @@ class Experiment:
                 time_tables, 
                 self.in_lim,
                 self.out_lim)
-            print("\t\tselect", epoch, time.time() - last)
+            print("select", round(time.time() - last, 2))
             ins_conn = self.update_conns(outs_conns)
             # self.check()
             self.update_selectors(outs_conns, ins_conn)
