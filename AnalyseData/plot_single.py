@@ -5,6 +5,7 @@ import os
 import numpy as np
 import matplotlib.patches as mpatches
 import math
+import matplotlib.ticker as ticker
 
 if len(sys.argv) < 1:
     print('Require data directory')
@@ -34,7 +35,8 @@ def plot_figure(dirname, method, ax, snapshot_point, title, ylim, xlim, complete
     if complete_graph_file != None:
         p =  mpatches.Patch(color=colors[-1], label='complete')
         patches.append(p) 
-
+    tick_spacing = 50
+    ax.yaxis.set_major_locator(ticker.MultipleLocator(tick_spacing))
     ax.set_prop_cycle('color', colors)
     for filename in filenames:
         buff = []

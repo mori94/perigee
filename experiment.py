@@ -9,10 +9,12 @@ import adversary
 from oracle import NetworkOracle 
 from selector import Selector
 from collections import defaultdict
+from schedule import NetworkState
 import time
 import numpy as np
 import comm_network
 import random
+from multiprocessing.pool import Pool
 
 class Experiment:
     def __init__(self, node_hash, link_delay, node_delay, num_node, in_lim, out_lim, name, sybils):
@@ -31,6 +33,8 @@ class Experiment:
 
         self.adversary = adversary.Adversary(sybils)
         self.snapshots = []
+
+        self.pools = None # Pool(processes=config.num_thread)
 
         
 
@@ -119,15 +123,15 @@ class Experiment:
         curr_time = time.time()
         elapsed = curr_time - self.timer 
         self.timer = curr_time
-        print("Finish. Recording", epoch, "using time", elapsed)
+        print("Finish. Recording", epoch, "since last record using", elapsed)
 
     def init_selectors(self, out_conns, in_conns):
         for u in range(self.num_node):
             # if smaller then it is adv
             if u in self.adversary.sybils:
-                self.selectors[u] = Selector(u, True, out_conns[u], in_conns[u])
+                self.selectors[u] = Selector(u, True, out_conns[u], in_conns[u], self.pools)
             else:
-                self.selectors[u] = Selector(u, False, out_conns[u], in_conns[u])
+                self.selectors[u] = Selector(u, False, out_conns[u], in_conns[u], self.pools)
 
     def broadcast_msgs(self, num_msg):
         # key is id, value is a dict of peers whose values are lists of relative timestamp
@@ -162,18 +166,19 @@ class Experiment:
 
     def start(self, max_epoch, record_epochs):
         last = time.time()
+        network_state = NetworkState(self.num_node, self.in_lim) 
         for epoch in range(max_epoch):
-            now = time.time()
             print("\t\tepoch", epoch)
-            last = now
+            
             if epoch in record_epochs:
                 self.take_snapshot(epoch)
                 
             oracle = NetworkOracle(config.is_dynamic, self.adversary.sybils, self.selectors)
-
+            last = time.time()
             time_tables = self.broadcast_msgs(config.num_msg)
             print("broadcast", round(time.time() - last,2))
             node_order = self.shuffle_nodes()
+            # node_order = [i for i in range(self.num_node)]
             outs_conns = schedule.select_nodes(
                 self.nodes, 
                 self.ld, 
@@ -184,11 +189,14 @@ class Experiment:
                 node_order, 
                 time_tables, 
                 self.in_lim,
-                self.out_lim)
+                self.out_lim, 
+                network_state
+                )
             print("select", round(time.time() - last, 2))
             ins_conn = self.update_conns(outs_conns)
             # self.check()
             self.update_selectors(outs_conns, ins_conn)
+            network_state.reset(self.num_node, self.in_lim)
 
 
             # print(epoch, len(self.selectors[0].seen), sorted(self.selectors[0].seen))

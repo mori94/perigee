@@ -28,7 +28,7 @@ record_round="${@:6}"
 dirname="${name}_seed${seed}"
 dirpath="AnalyseData/$dirname"
 mkdir $dirpath
-cp config.py $dirpath
+cp *.py $dirpath
 
 # run experiment
 if [ ${subcommand} = 'run' ]; then 

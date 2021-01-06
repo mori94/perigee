@@ -5,13 +5,58 @@ import config
 from oracle import PeersInfo
 from collections import namedtuple
 # for multithread
-from threading import Thread
-import concurrent.futures
+# from threading import Thread
+# import concurrent.futures
+
 import copy
 
+# return None if invalid
+def threaded_function(arg):
+    compose, table, num_msg, u, scores = arg
+    score = -1
+    if config.use_score_decay:
+        score = get_weighted_score(table, compose, num_msg, scores)
+    else:
+        score = get_score(table, compose, num_msg)
+    return score
+
+# subset
+def get_weighted_score(table, compose, num_msg, scores):
+    best_times = [999999 for i in range(num_msg)]
+    for peer in compose:
+        peer_times = table[peer]
+        # print(peer_times)
+        for i in range(num_msg):
+            if best_times[i] > peer_times[i]:
+                best_times[i] = peer_times[i]
+
+    sorted_best_time = sorted(best_times)
+    new_score = sorted_best_time[int(num_msg*9.0/10)-1]
+
+    sorted_compose = tuple(sorted(compose))
+
+    if sorted_compose not in scores:
+        score = new_score
+        return score
+    else:
+        score = config.old_weight*scores[sorted_compose] + config.new_weight*new_score
+        return score
+
+def get_score(table, compose, num_msg):
+    best_times = [999999 for i in range(num_msg)]
+    for peer in compose:
+        peer_times = table[peer]
+        # print(peer_times)
+        for i in range(num_msg):
+            if best_times[i] > peer_times[i]:
+                best_times[i] = peer_times[i]
+
+    # print('best', best_times)
+    sorted_best_time = sorted(best_times)
+    return sorted_best_time[int(num_msg*9.0/10)-1]
 
 class Selector:
-    def __init__(self, u, is_adv, curr_outs, curr_ins):
+    def __init__(self, u, is_adv, curr_outs, curr_ins, pools):
         self.id = u
         self.is_adv = is_adv
 
@@ -30,6 +75,9 @@ class Selector:
         self.seen_nodes = self.seen_nodes.union(curr_outs)
 
         self.seen_compose = set()
+
+        self.pools = pools
+
 
     def update(self, out_peers, in_peers):
         # if self.id == 778:
@@ -71,42 +119,9 @@ class Selector:
 
 
 
-    # subset
-    def get_weighted_score(self, table, compose, num_msg):
-        best_times = [999999 for i in range(num_msg)]
-        for peer in compose:
-            peer_times = table[peer]
-            # print(peer_times)
-            for i in range(num_msg):
-                if best_times[i] > peer_times[i]:
-                    best_times[i] = peer_times[i]
 
-        sorted_best_time = sorted(best_times)
-        new_score = sorted_best_time[int(num_msg*9.0/10)-1]
 
-        sorted_compose = tuple(sorted(compose))
-
-        if sorted_compose not in self.scores:
-            score = new_score
-            return score
-        else:
-            score = config.old_weight*self.scores[sorted_compose] + config.new_weight*new_score
-            return score
-
-    def get_score(self, table, compose, num_msg):
-        best_times = [999999 for i in range(num_msg)]
-        for peer in compose:
-            peer_times = table[peer]
-            # print(peer_times)
-            for i in range(num_msg):
-                if best_times[i] > peer_times[i]:
-                    best_times[i] = peer_times[i]
-
-        # print('best', best_times)
-        sorted_best_time = sorted(best_times)
-        return sorted_best_time[int(num_msg*9.0/10)-1]
-
-    def get_best_compose(self, table, composes, num_msg, network_state):
+    def get_best_compose(self, table, composes, num_msg):
         best = -1
         best_compose = random.choice(composes)
         worst = -1
@@ -114,62 +129,43 @@ class Selector:
 
         random.shuffle(composes)
         for compose in composes:
-            is_valid = True
-            for peer in compose:
-                if not network_state.is_conn_keepable(self.id, peer):
-                    is_valid = False 
-                    break
-            if is_valid:
-                score = -1
-                if config.use_score_decay:
-                    score = self.get_weighted_score(table, compose, num_msg)
-                else:
-                    score = self.get_score(table, compose, num_msg)
-                 
-                if best == -1 or score < best:
-                    best = score 
-                    best_compose = compose 
-
-                if worst == -1 or score > worst:
-                    worst = score
-                    worst_compose = compose
-        return best_compose, best, worst_compose, worst, best==-1
-
-    # return None if invalid
-    def threaded_function(self, arg):
-        compose, table, network_state, num_msg, u = arg
-        is_valid = True
-        for peer in compose:
-            if not network_state.is_conn_keepable(u, peer):
-                print('network_state.is_conn_keepable not', u, peer, compose)
-                is_valid = False 
-                break 
-        if is_valid:
             score = -1
             if config.use_score_decay:
-                score = self.get_weighted_score(table, compose, num_msg)
+                score = get_weighted_score(table, compose, num_msg, self.scores)
             else:
-                score = self.get_score(table, compose, num_msg)
-            return score
-        else:
-            return None
+                score = get_score(table, compose, num_msg)
+             
+            if best == -1 or score < best:
+                best = score 
+                best_compose = compose 
+
+            if worst == -1 or score > worst:
+                worst = score
+                worst_compose = compose
+        return best_compose, best, worst_compose, worst, best==-1
+
+    
 
     def get_compose_multithread(self, table, composes, num_msg, network_state):
         scores = {}
         # print('start multihread', self.id)
-        with concurrent.futures.ThreadPoolExecutor(max_workers=config.num_thread) as executor:
-            futures = {} 
-            for compose in composes:
-                arg = (compose.copy(), table, network_state, num_msg, self.id)
-                future = executor.submit(self.threaded_function, arg)
-                futures[tuple(compose)] = future
+        
+        args = []
+        for compose in composes:
+            arg = (compose, table, num_msg, self.id, None)
+            args.append(arg)
 
-            for compose, future in futures.items():
-                score = future.result()
-                if score != None:
-                    scores[compose] = score
-                else:
-                    sys.exit(1)
+        results = self.pools.map(threaded_function, args)
+
+        assert(len(results) == len(composes))
+        for i in range(len(results)):
+            score = results[i]
+            compose = composes[i]
+
+            if score != None:
+                scores[compose] = score
+            else:
+                sys.exit(1)
         
         # get the best and worst compose
         best, worst = None, None
@@ -191,7 +187,7 @@ class Selector:
         if config.num_thread == 1:
             best_compose, best, worst_compose, worst, is_random = self.get_best_compose(
                     table, composes, 
-                    num_msg, network_state)
+                    num_msg)
         else:
             best_compose, best, worst_compose, worst, is_random = self.get_compose_multithread(
                     table, composes, 
@@ -219,10 +215,10 @@ class Selector:
 
         if config.worst_conn_attack and selector.is_adv:
             self.set_1hops(worst_compose)
-            return worst_compose
+            return list(worst_compose)
         else:
             self.set_1hops(best_compose)
-            return best_compose
+            return list(best_compose)
 
     def sort_peers(self, peers):
         if config.is_rand_select:
@@ -262,7 +258,7 @@ class Selector:
 
     def select_peers(self, num_required, nodes, peers_info, network_state):
         if num_required == 0:
-            return []
+            return [], 0 
         
         total_num_not_seen = 0
         candidates = {}
@@ -305,10 +301,10 @@ class Selector:
             return False
         if v in self.conn:
             return False
-        # if v in self.curr_outs:
-            # return False
-        # if v in self.curr_ins:
-            # return False
+        if v in self.curr_outs:
+            return False
+        if v in self.curr_ins:
+            return False
         if network_state.is_conn_addable(self.id, v): 
             return True 
         else:

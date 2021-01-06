@@ -18,6 +18,8 @@ reduce_link_ratio = 0.05
 
 num_thread = 1
 
+both_in_and_out = True 
+
 # network config
 num_node = 1000
 num_adv = 0 # out of num node
@@ -42,7 +44,7 @@ num_random = 2
 is_dynamic = False #True
 
 is_sort_score = False   # sort invalidates favor-new and rand select
-is_favor_new = True 
+is_favor_new = False 
 is_rand_select = True 
 
 
