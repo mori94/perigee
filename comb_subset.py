@@ -95,10 +95,10 @@ def get_configs(neighbors, num_out, network_state, u, num_keep):
     for peer in neighbors:
         if network_state.is_conn_addable(u, peer):
             valid_peers.append(peer)
+    valid_peers = sorted(valid_peers)
     composes = []
     for subset in itertools.combinations(valid_peers, num_keep):
         composes.append(subset)
-
     return composes
 
 def get_configs_2(neighbors, num_out):

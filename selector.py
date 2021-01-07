@@ -4,6 +4,7 @@ import random
 import config
 from oracle import PeersInfo
 from collections import namedtuple
+from collections import defaultdict 
 # for multithread
 # from threading import Thread
 # import concurrent.futures
@@ -13,17 +14,17 @@ import copy
 # return None if invalid
 def threaded_function(arg):
     compose, table, num_msg, u, scores = arg
-    score = -1
     if config.use_score_decay:
         score = get_weighted_score(table, compose, num_msg, scores)
+        return score
     else:
         score = get_score(table, compose, num_msg)
-    return score
+        return score
 
 # subset
 def get_weighted_score(table, compose, num_msg, scores):
-    best_times = [999999 for i in range(num_msg)]
-    for peer in compose:
+    best_times = table[compose[0]].copy()
+    for peer in compose[1:]:
         peer_times = table[peer]
         # print(peer_times)
         for i in range(num_msg):
@@ -33,18 +34,16 @@ def get_weighted_score(table, compose, num_msg, scores):
     sorted_best_time = sorted(best_times)
     new_score = sorted_best_time[int(num_msg*9.0/10)-1]
 
-    sorted_compose = tuple(sorted(compose))
-
-    if sorted_compose not in scores:
+    if compose not in scores:
         score = new_score
         return score
     else:
-        score = config.old_weight*scores[sorted_compose] + config.new_weight*new_score
+        score = config.old_weight*scores[compose] + config.new_weight*new_score
         return score
 
 def get_score(table, compose, num_msg):
-    best_times = [999999 for i in range(num_msg)]
-    for peer in compose:
+    best_times = table[compose[0]].copy()
+    for peer in compose[1:]:
         peer_times = table[peer]
         # print(peer_times)
         for i in range(num_msg):
@@ -116,70 +115,27 @@ class Selector:
         return list(self.conn)
 
 
-
-
-
-
-
     def get_best_compose(self, table, composes, num_msg):
-        best = -1
-        best_compose = random.choice(composes)
-        worst = -1
-        worst_compose = random.choice(composes)
-
-        random.shuffle(composes)
+        best = None 
+        worst = None
         for compose in composes:
-            score = -1
+            score = None 
             if config.use_score_decay:
                 score = get_weighted_score(table, compose, num_msg, self.scores)
             else:
                 score = get_score(table, compose, num_msg)
              
-            if best == -1 or score < best:
+            if best == None or score < best:
                 best = score 
                 best_compose = compose 
 
-            if worst == -1 or score > worst:
+            if worst == None or score > worst:
                 worst = score
                 worst_compose = compose
-        return best_compose, best, worst_compose, worst, best==-1
 
-    
+        return best_compose, best, worst_compose, worst, best==None
 
-    def get_compose_multithread(self, table, composes, num_msg, network_state):
-        scores = {}
-        # print('start multihread', self.id)
-        
-        args = []
-        for compose in composes:
-            arg = (compose, table, num_msg, self.id, None)
-            args.append(arg)
 
-        results = self.pools.map(threaded_function, args)
-
-        assert(len(results) == len(composes))
-        for i in range(len(results)):
-            score = results[i]
-            compose = composes[i]
-
-            if score != None:
-                scores[compose] = score
-            else:
-                sys.exit(1)
-        
-        # get the best and worst compose
-        best, worst = None, None
-        best_compose = random.choice(composes)
-        worst_compose = random.choice(composes)
-        for compose, score in scores.items():
-            if best == None or best < score:
-                best_compose = list(compose)
-                best = score
-            if worst == None or worst > score:
-                worst_compose = list(compose)
-                worst = score
-
-        return  best_compose, best, worst_compose, worst, best==None
 
     # where table belongs to the node i, conn_num makes sure outgoing conn is possible
     def select_1hops(self, table, composes, num_msg, network_state):
@@ -197,23 +153,22 @@ class Selector:
             print(self.id, len(composes), best_compose, worst_compose)
             assert(len(set(worst_compose)) == len(worst_compose))
             assert(len(set(best_compose)) == len(best_compose))
-            worst_compose = list(set(worst_compose))
-            best_compose = list(set(best_compose))
             sys.exit(1)
 
-        
-        for peer in best_compose:
-            network_state.add_in_connection(self.id, peer)
+        if not self.is_adv: 
+            for peer in best_compose:
+                network_state.add_in_connection(self.id, peer)
+        elif config.worst_conn_attack:
+            for peer in worst_compose:
+                network_state.add_in_connection(self.id, peer)
 
-
-        self.worst_compose = worst_compose
-        self.best_compose = best_compose
+        self.worst_compose = list(worst_compose)
+        self.best_compose = list(best_compose)
 
         # for decay
-        sorted_compose = tuple(sorted(best_compose))
-        self.scores[sorted_compose] = best
+        self.scores[best_compose] = best
 
-        if config.worst_conn_attack and selector.is_adv:
+        if config.worst_conn_attack and self.is_adv:
             self.set_1hops(worst_compose)
             return list(worst_compose)
         else:
@@ -236,7 +191,7 @@ class Selector:
         for v, time_list in node.views_hist.items():
             if v in peers:
                 sorted_time_list = sorted(time_list)
-                scores.append((v, sorted_time_list[int(config.num_subround*9/10)-1]))
+                scores.append((v, sorted_time_list[int(config.num_msg*9/10)-1]))
         
         sorted_peer_score = sorted(scores, key=lambda x: x[1])
         sorted_peers = [i for i, s in sorted_peer_score]
@@ -253,13 +208,11 @@ class Selector:
 
     # src is recommender, t is the node id
     def add_peer(self, s, t):
+        assert(t not in self.conn)
         self.conn.add(t)
         self.desc_conn.add((s,t))
 
-    def select_peers(self, num_required, nodes, peers_info, network_state):
-        if num_required == 0:
-            return [], 0 
-        
+    def select_peers_per_recommender(self, num_required, nodes, peers_info, network_state):
         total_num_not_seen = 0
         candidates = {}
         selected = set()
@@ -275,7 +228,8 @@ class Selector:
             for rec in recommenders:
                 peers = peers_info[rec]
                 sorted_peers = self.sort_peers(peers)
-                peer =  self.select_sorted_peers(sorted_peers, candidates, rec, network_state)
+                peer = self.select_sorted_peers(sorted_peers, candidates, rec, network_state)
+
                 if peer != None:
                     # trace
                     if peer not in self.seen_nodes:
@@ -286,7 +240,86 @@ class Selector:
                     network_state.add_in_connection(self.id, peer)
                 if len(selected) == num_required:
                     break
+        return selected, total_num_not_seen
+
+    def select_peers(self, num_required, nodes, peers_info, network_state):
+        if num_required == 0:
+            return [], 0 
+        selected, total_num_not_seen = None, None
+        if config.is_per_recommeder_select:
+            selected, total_num_not_seen = self.select_peers_per_recommender(
+                num_required, 
+                nodes, 
+                peers_info, 
+                network_state)
+
+        if config.is_rank_occurance:
+            selected, total_num_not_seen = self.select_ranked_peers(
+                num_required, 
+                nodes, 
+                peers_info, 
+                network_state)
+        assert(selected != None)
         return list(selected), total_num_not_seen
+
+    def select_ranked_peers(self, num_required, nodes, peers_info, network_state):
+        assert(num_required > 0)
+        candidates = {} # key is candidate id, value is occurance
+        selected = []
+
+        for v, peers in peers_info.items():
+            for p in peers:
+                if self.is_connectable(p, network_state):
+                    if p not in candidates:
+                        candidates[p] = 1
+                    else:
+                        candidates[p] += 1
+        num_cand = len(candidates)
+        groups = defaultdict(list)
+        sorted_occurance = None
+        if num_cand <= num_required:
+            selected = [k for k in candidates.keys()]
+        else: 
+            
+            for peer, o in candidates.items():
+                groups[o].append(peer)
+
+            sorted_occurance = sorted(groups.keys(), reverse=True)
+            for occ in sorted_occurance:
+                group = groups[occ].copy()
+                if len(selected) + len(group) > num_required:
+                    random.shuffle(group)
+                    selected += group[:num_required-len(selected)]
+                    break
+                else:
+                    selected += group
+            
+        if num_cand <= num_required:
+            assert(num_cand == len(selected))
+        else:
+            assert(len(selected) == num_required)
+            # if sorted_occurance != None and sorted_occurance[0] > 1:
+                # print('System bug')
+                # print(sorted_occurance)
+                # print('groups', groups)
+                # print('candidates', candidates)
+                # print('num_required', num_required)
+                # print('selected', selected)
+                # sys.exit(1)
+
+        for peer in selected:
+            if peer in self.conn:   
+                print(peer, 'in conn', self.desc_conn)
+                print(selected)
+                print(candidates)
+                print(groups)
+                print(sorted_occurance)
+                sys.exit(1)
+            self.add_peer(-2, peer)
+            network_state.add_in_connection(self.id, peer)
+
+        return selected, 0
+
 
     def subset_select(self, recommenders, candidates):
         for node in candidates:
@@ -331,3 +364,35 @@ class Selector:
                 if self.is_connectable(p, network_state):
                     return p
         return None 
+
+    def get_compose_multithread(self, table, composes, num_msg, network_state):
+        scores = {}
+        # print('start multihread', self.id)
+        
+        futures = []
+        for compose in composes:
+            arg = (compose, table, num_msg, self.id, None)
+            future = self.pools.submit(threaded_function, arg)
+            futures.append(future)
+
+        assert(len(futures) == len(composes))
+        for i in range(len(futures)):
+            score = futures[i].result()
+            compose = composes[i]
+
+            if score != None:
+                scores[compose] = score
+            else:
+                sys.exit(1)
+        
+        # get the best and worst compose
+        best, worst = None, None
+        for compose, score in scores.items():
+            if best == None or best > score:
+                best_compose = compose
+                best = score
+            if worst == None or worst < score:
+                worst_compose = compose
+                worst = score
+
+        return  best_compose, best, worst_compose, worst, best==None

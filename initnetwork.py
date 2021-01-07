@@ -83,7 +83,7 @@ def GenerateOutNeighbor(len_of_neigh,IncomingLimit, num_node):
     
 # NeighborSets, contains connectionconuts and  all neighbor ids (including the incomings)
 def GenerateInitialConnection(OutNeighbor,len_of_neigh, num_node):
-    NeighborSets = np.zeros([num_node, LIMIT+1+len_of_neigh ]) #225+len_of_neigh]) #225+len_of_neigh 1001
+    NeighborSets = np.zeros([num_node, config.in_lim+1+len_of_neigh ]) #225+len_of_neigh]) #225+len_of_neigh 1001
     for i in range(num_node):
         NeighborSets[i][0]=8
         for j in range(len_of_neigh):
@@ -130,7 +130,7 @@ def InitIncomLimit(num_node):
     IncomingLimit=np.zeros(num_node)
     for i in range(num_node):
         #IncomingLimit[i]=min(int(bandwidth[i]*1.5),200)
-        IncomingLimit[i]=LIMIT
+        IncomingLimit[i]=config.in_lim
     return(IncomingLimit)
 
 

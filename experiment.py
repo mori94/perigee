@@ -14,7 +14,8 @@ import time
 import numpy as np
 import comm_network
 import random
-from multiprocessing.pool import Pool
+# from concurrent.futures import ThreadPoolExecutor
+
 
 class Experiment:
     def __init__(self, node_hash, link_delay, node_delay, num_node, in_lim, out_lim, name, sybils):
@@ -34,7 +35,7 @@ class Experiment:
         self.adversary = adversary.Adversary(sybils)
         self.snapshots = []
 
-        self.pools = None # Pool(processes=config.num_thread)
+        self.pools = None # ThreadPoolExecutor(max_workers=config.num_thread)
 
         
 
@@ -141,7 +142,9 @@ class Experiment:
             if self.nh is None:
                 broad_node = np.random.randint(self.num_node)
             else:
-                broad_node = comm_network.get_broadcast_node(nh)
+                broad_node = comm_network.get_broadcast_node(self.nh)
+
+
             comm_network.broadcast_msg(broad_node, self.nodes, self.ld, self.nh, time_tables)
         
         return time_tables
