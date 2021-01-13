@@ -14,11 +14,14 @@ import time
 import numpy as np
 import comm_network
 import random
+from optimizer import Optimizer
+import initnetwork
+import math
 # from concurrent.futures import ThreadPoolExecutor
 
 
 class Experiment:
-    def __init__(self, node_hash, link_delay, node_delay, num_node, in_lim, out_lim, name, sybils):
+    def __init__(self, node_hash, link_delay, node_delay, num_node, in_lim, out_lim, name, sybils, window):
         self.nh = node_hash
         self.ld = link_delay
         self.nd = node_delay
@@ -36,6 +39,9 @@ class Experiment:
         self.snapshots = []
 
         self.pools = None # ThreadPoolExecutor(max_workers=config.num_thread)
+
+        self.optimizers = {}
+        self.window = window 
 
         
 
@@ -62,7 +68,10 @@ class Experiment:
     def update_conns(self, out_conns):
         # correctness check
         num_double_conn = 0
-        for i, peers in out_conns.items():
+
+        #for i, peers in out_conns.items():
+        for i in range(len(out_conns)):
+            peers = out_conns[i]
             for p in peers:
                 if i in out_conns[p]:
                     print(i, self.selectors[i].desc_conn)
@@ -72,7 +81,9 @@ class Experiment:
             print("num_double_conn > 0")
 
         nodes = self.nodes
-        for i, peers in out_conns.items():
+        # for i, peers in out_conns.items():
+        for i in range(len(out_conns)):
+            peers = out_conns[i]
             if len(set(peers)) != len(peers):
                 print('Error. Repeat peer')
                 print(i, peers)
@@ -91,6 +102,15 @@ class Experiment:
             out_neighbor[i] = list(self.nodes[i].outs)
         return out_neighbor
 
+    def init_optimizers(self):
+        for i in range(self.num_node):
+            self.optimizers[i] = Optimizer(
+                i,
+                self.num_node,
+                self.out_lim,
+                self.window
+            )
+
     def init_graph(self, outs_neighbors):
 
         for i in range(self.num_node):
@@ -104,6 +124,7 @@ class Experiment:
             )
         ins_conns = self.update_ins_conns()
         self.init_selectors(outs_neighbors, ins_conns)
+        self.init_optimizers()
 
         # for i in range(config.num_node):
             # print(i, outs_neighbors[i], ins_conns[i])
@@ -167,41 +188,85 @@ class Experiment:
         assert(update_nodes != None and len(update_nodes) == self.num_node)
         return update_nodes
 
+    def accumulate_optimizer(self, time_table):
+        for i in range(self.num_node):
+            table = time_table[i]
+            self.optimizers[i].append_time(table)
+
     def start(self, max_epoch, record_epochs):
         last = time.time()
         network_state = NetworkState(self.num_node, self.in_lim) 
+
         for epoch in range(max_epoch):
             print("\t\tepoch", epoch)
             
-            if epoch in record_epochs:
-                self.take_snapshot(epoch)
-                
             oracle = NetworkOracle(config.is_dynamic, self.adversary.sybils, self.selectors)
             last = time.time()
-            time_tables = self.broadcast_msgs(config.num_msg)
-            print("broadcast", round(time.time() - last,2))
-            node_order = self.shuffle_nodes()
-            # node_order = [i for i in range(self.num_node)]
-            outs_conns = schedule.select_nodes(
-                self.nodes, 
-                self.ld, 
-                config.num_msg, 
-                self.nh, 
-                self.selectors,
-                oracle,
-                node_order, 
-                time_tables, 
-                self.in_lim,
-                self.out_lim, 
-                network_state
-                )
-            print("select", round(time.time() - last, 2))
-            ins_conn = self.update_conns(outs_conns)
-            # self.check()
-            self.update_selectors(outs_conns, ins_conn)
+            outs_conns = {} 
+            # alternate optimizing
+            if config.use_matrix_completion:
+                print('MF')
+                if epoch-self.window in record_epochs:
+                    print(epoch-self.window)
+                    self.take_snapshot(epoch-self.window)
+
+                time_tables = self.broadcast_msgs(1)
+                self.accumulate_optimizer(time_tables)
+
+                if epoch > self.window:
+                    # work on matrix factorization
+                    node_order = self.shuffle_nodes()
+                    outs_conns = schedule.select_nodes_by_matrix_completion(
+                        self.nodes, 
+                        self.ld, 
+                        self.nh, 
+                        self.optimizers,
+                        node_order, 
+                        time_tables, 
+                        self.in_lim,
+                        self.out_lim, 
+                        network_state
+                        )
+                else:
+                    # random connections
+                    outs_conns = initnetwork.generate_random_outs_conns(
+                        self.out_lim, 
+                        self.in_lim, 
+                        self.num_node)
+                    for i in range(self.num_node):
+                        if len(outs_conns[i]) != self.out_lim:
+                            print(outs_conns[i])
+                            sys.exit(1)
+
+                # updates connections
+                ins_conn = self.update_conns(outs_conns)
+            else:
+                if epoch in record_epochs:
+                    self.take_snapshot(epoch)
+                # 1,2,3 hop selection
+                time_tables = self.broadcast_msgs(config.num_msg)
+                print("broadcast", round(time.time() - last,2))
+                node_order = self.shuffle_nodes()
+                outs_conns = schedule.select_nodes(
+                    self.nodes, 
+                    self.ld, 
+                    config.num_msg, 
+                    self.nh, 
+                    self.selectors,
+                    oracle,
+                    node_order, 
+                    time_tables, 
+                    self.in_lim,
+                    self.out_lim, 
+                    network_state
+                    )
+                print("select", round(time.time() - last, 2))
+                # update outs ins
+                ins_conn = self.update_conns(outs_conns)
+                # self.check()
+                self.update_selectors(outs_conns, ins_conn)
+
             network_state.reset(self.num_node, self.in_lim)
-
-
             # print(epoch, len(self.selectors[0].seen), sorted(self.selectors[0].seen))
 
     def check(self):

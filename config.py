@@ -7,11 +7,13 @@ is_load_conn = False
 conn_path = 'inputs/conn.txt'
 
 # network config
-num_node = 1000
-num_adv = 0             # out of num node
-adv_hash = 0.1          # percentage adversarial power
+num_node = 200
 in_lim = 40 
-num_msg = 20 
+num_msg = 100 
+
+# neigbor selection method
+use_matrix_completion = True 
+use_2hop = False 
 
 # node config
 num_keep = 3
@@ -25,15 +27,21 @@ both_in_and_out = True
 # how to choose two,three hops
 is_sort_score = False   
 is_favor_new = False 
-is_per_recommeder_select = False 
-is_rank_occurance = True 
+is_per_recommeder_select = True 
+is_rank_occurance = False 
 
 # history decay
 use_score_decay = False 
-old_weight = 0.75 
+old_weight = 0.5 
 new_weight = 1 - old_weight
 
+# optimizer
+max_iter = 2000
+window_constant = 3
+
 # attack
+num_adv = 0             # out of num node
+adv_hash = 0.1          # percentage adversarial power
 worst_conn_attack = False 
 recommend_worst_attack = False 
 sybil_update_priority = False 

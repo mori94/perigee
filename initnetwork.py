@@ -37,6 +37,25 @@ def reduce_link_latency(num_node, num_low_latency, ld):
             if i != j:
                 ld[i][j] *= config.reduce_link_ratio 
 
+def generate_random_outs_conns(out_lim, in_lim, num_node):
+    outs_conns = defaultdict(list) 
+    order = [i for i in range(num_node)]
+    in_counts = {i:0 for i in range(num_node)}
+
+    for _ in range(out_lim):
+        random.shuffle(order)
+        for i in order:
+            w = np.random.randint(num_node)
+            while ( w in outs_conns[i] or
+                    w == i or
+                    in_counts[w] >= in_lim or
+                    i in outs_conns[w]
+                    ):
+                w = np.random.randint(num_node)
+            outs_conns[i].append(w)
+
+    return outs_conns
+
 
 
 

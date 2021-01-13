@@ -176,8 +176,7 @@ class Selector:
             return list(best_compose)
 
     def sort_peers(self, peers):
-        if config.is_rand_select:
-            random.shuffle(peers)
+        random.shuffle(peers)
         if config.is_favor_new:
             peers = self.sort_new_peer_first(peers)
         # if config.is_sort_score:

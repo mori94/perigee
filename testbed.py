@@ -11,6 +11,7 @@ import time
 import config
 import initnetwork
 import readfiles
+import math
 
 from experiment import Experiment
 if len(sys.argv) < 4:
@@ -62,6 +63,8 @@ else:
 if subcommand == 'run':
     start = time.time()
     adv_nodes = [i for i in range(config.num_adv)]
+    window = config.window_constant * int(out_lim * math.ceil(math.log(config.num_node))) # T > L log N
+    print('window', window)
     perigee = Experiment(
         node_hash,
         link_delay,
@@ -70,9 +73,13 @@ if subcommand == 'run':
         config.in_lim,
         out_lim, 
         data_path,
-        adv_nodes
+        adv_nodes,
+        window
         )
     perigee.init_graph(outs_neighbors)
+    if config.use_matrix_completion:
+        max_epoch = max_epoch + window
+
     perigee.start(max_epoch, record_epochs)
 elif subcommand == 'complete_graph':
     if out_lim != config.num_node-1:
@@ -96,7 +103,8 @@ elif subcommand == 'complete_graph':
             config.in_lim,
             out_lim, 
             data_path,
-            [] 
+            [],
+            0
             )
     perigee.init_graph(outs_neighbors)
     perigee.start_complete_graph(max_epoch, record_epochs)
